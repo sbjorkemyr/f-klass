@@ -13,30 +13,44 @@
  	background-image: 	url("/Users/sofiabjorkemyr/Documents/Twine/Historier/f-	klass/Historier/skogbakgrund.png");
 	background-repeat: no-repeat;
 	background-size: cover; 
- 	background-color: #9eaba2;
   	font-family: Verdana;
   	color: #171717;
 }
 .container {
-  background-color: rgba(204, 197, 160, 0.9);
-  width: 100%;
-  border-radius: 20px;
-  padding: 25px;
-  margin: 25px;
-  border: solid 2px;
+  	background-color: rgba(204, 197, 160, 0.8);
+  	width: 100%;
+  	border-radius: 20px;
+  	padding: 80px;
+  	border-style: solid;
 }
-
+.rubrik {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+}
+.rubrik2 {
+  text-align: center;
+  font-size: 40px;
+  
+}
+.rubrik3 {
+  text-align: center;
+  font-size: 30px;
+}
 img {
   	max-width: 100%;
   	min-width: 100%;
+  	border-radius:40px;
+  	border-style: solid;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Början" tags="" position="500,275" size="100,100">(set: $spelarnamn to (prompt: &quot;Vad heter du?&quot;, &quot;Spelare&quot;))
 
 &lt;div class=&quot;container&quot;&gt;
-KIMS MYSTIFIKA UPPTÄCKTER
+&lt;div class=&quot;rubrik&quot;&gt;&#39;&#39;KIMS MYSTIFIKA UPPTÄCKTER&#39;&#39;&lt;/div&gt;
 
-Skogsäventyr i förskoleklass
+&lt;div class=&quot;rubrik2&quot;&gt;Skogsäventyr i förskoleklass&lt;/div&gt;
 
-[[Välkommen in]] $spelarnamn
+
+//&lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in]] $spelarnamn&lt;/div&gt;//
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Samling" tags="" position="900,275" size="100,100">&lt;div class=&quot;container&quot;&gt;
 Ni sitter i en ring på golvet, alla mammor och pappor sitter bakom på stolar. Fröken hälsar alla välkomna sen får alla barn berätta vad dom heter. Bredvid dig i ringen sitter samma pojke som vinkade till dig på skolgården. När det är hans tur att svara vet du redan att han heter Kim. Fröken har satt upp bilder på tavlan som visar vad ni ska göra idag, hon berättar att snart är det dags för rast. På rasten ska alla mammor och pappor gå hem, då ska alla barnen vara stora och vara i skolan själva. Det känns läskigt men du vet att du kommer ha roligt och dessutom har du $gosedjur i ryggsäcken. Sen när skolan är slut kommer mamma och hämtar dig igen. 
@@ -50,6 +64,9 @@ Du möts av en lång korridor, barn överallt. Du tittar med förundrande ögon 
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="625,275" size="100,100">(set: $gosedjur to (prompt: &quot;Vad heter ditt favoritgosedjur?&quot;, &quot;Gosedjur&quot;))
 &lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
+&lt;img src=&quot;/Users/sofiabjorkemyr/Documents/Twine/Historier/f-klass/Historier/old school.png&quot;&gt;
+
 Det är första dagen i förskoleklass, du har en orolig känsla i magen och håller din mama känner dig spänd och nervös, du håller din mamma hårt i handen. Men du känner dig trygg med vetskapen om att ditt favoritgosedjur $gosedjur kommer få följa med dig i väskan hela dagen. Skolgården är full av förväntansfulla barn, några leker och andra gömmer sig bakom sina föräldrar. Helt plötsligt landar en fotboll vid dina fötter, du tittar upp och ett barn kommer springandes. Barnet ler mot dig, du hör en mamman ropa på &quot;Kim&quot;. Du förstår att det är barnets namn, ni vinkar till varandra och barnet springer tillbaka till sin mamma. Klockan börjar ringa in, du och din mamma börjar gå mot skolans stora dörr. 
 
 [[Dörren]]
