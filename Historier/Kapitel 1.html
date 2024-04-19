@@ -48,7 +48,7 @@ tw-story {
   	
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Början" tags="" position="700,200" size="100,100">(set: $spelarnamn to (prompt: &quot;Vad heter du?&quot;, &quot;Upptäckare&quot;))
-
+(set: $garbage to 0)
 &lt;div class=&quot;container&quot;&gt;
 &lt;div class=&quot;rubrik&quot;&gt;&#39;&#39;KIMS MYSTIFIKA UPPTÄCKTER&#39;&#39;&lt;/div&gt;
 
@@ -66,7 +66,8 @@ Väl inne genom dörren möts du av en lång korridor, det är barn överallt. D
 &lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6f68b32215555ce9a7c8ce3109be949558fcbc12/Historier/Skola.png&quot;&gt;
 Du tittar upp på den stora skolan framför dig och känner en orolig känsla i magen. Det är är din första dag i förskoleklass och du håller hårt i mammas hand. Men mitt i oron känner du en skön trygghet i vetskapen om att ditt älskade gosedjur $gosedjur kommer att få följa med dig i väskan hela dagen. Skolgården vimlar av förväntansfulla barn, några leker medans andra håller sig nära sina föräldrar. Plötsligt rullar en boll fram till dina fötter och när du tittar upp möts du av ett barn som springer mot dig med ett leende på läpparna. En röst ropar ut namnet &quot;Kim&quot;, och du förstår att det är till barnet som just dykt upp. Ni vinkar till varandra och barnet springer tillbaka till sin förälder. Klockan börjar ringa in, du och din mamma börjar sakta gå mot skolans stora dörr. 
 
-[[Dörren]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Skolgården" tags="" position="700,700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6f68b32215555ce9a7c8ce3109be949558fcbc12/Historier/skolga%CC%8Ard.png&quot;&gt;
+[[Dörren]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Skolgården" tags="" position="700,700" size="100,100">(set: $garbageCollected to it + 1)
+&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6f68b32215555ce9a7c8ce3109be949558fcbc12/Historier/skolga%CC%8Ard.png&quot;&gt;
 Ute på skolgården skiner solen och det känns varmt i luften. Du ser barn i alla åldrar springa omkring på skolgården, vissa leker och andra spelar fotboll. En bit bort ser du några äldre barn som ska börja leka kurragömma, det skulle du gärna vara med på men vågar inte gå fram till de stora barnen. Plötsligt kommer Kim springandes, han tar tag i din hand och drar med dig till gruppen med barn som precis ska börja leka. Han viskar till dig:
 
 //&quot;Jag vet ett jättebra gömställe, följ efter mig&quot;.//
@@ -82,6 +83,11 @@ Du funderar men känner dig lite osäker, det är klart att det hade varit bäst
 Kim ber dig att blunda och tänka på en skog. Plötsligt känner du en virvlande känsla runtomkring dig. När du slutligen öppnar ögonen igen upptäcker du att ni inte längre befinner er på skolgården utan istället står du i en stor skog. Du tittar runtomkring dig med förvånade ögon. Fåglarnas sång låter så verklig och du kan höra att det prasslar i löven när du rör dig. Ni reste genom portalen till en magiska värld där allt är möjligt och äventyren väntar på er bakom varje hörn. Kim pekar och säger: 
 
 //&quot;Nu ska vi utforska, vill du gå mot sjön eller berget?&quot;//
+
+Congratulations! You have finished the game.
+
+
+
 
 [[Sjön]]
 [[Berget]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Sjön" tags="" position="475,825" size="100,100">&lt;div class=&quot;container&quot;&gt;Efter att ni har funderat en stund väljer ni att gå mot sjön, du känner dig lite osäker när ni kommer närmare eftersom du vet om att din mamma inte skulle gilla att ni lekte så nära vattnet. Hon brukar alltid varna dig för att gå för nära vattnets kant eftersom du inte kan simma. Men din nyfikenhet driver dig framåt och du tänker att ni behöver inte gå hela vägen fram till sjön. Ni ser ett stort träd som ser lite fundersam ut, men samtidigt som ni ser trädet hör ni också ett mystikt ljud från skogen. Kim vänder sig mot dig och frågar:
@@ -192,6 +198,8 @@ En geting är ett litet, randigt insekt som flyger runt på sommaren. Den har sv
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 [[Toppen]] </tw-passagedata><tw-passagedata pid="18" name="Busken" tags="" position="500,1775" size="100,100">Du öppnar ögonen, ni är tillbaka på skolgården igen klockan ringer in rasten är slut. Fylld med under av ert äventyr ler du stort och med spänning och lycka går du genom resten av skoldagen. Nu ser du fram emot nästa äventyr med din nya vän Kim.
 
+Innan ni går in i skolan passerar ni förbi en papperskorg och kastar (print: $garbage) sopor.
+
 På återseende</tw-passagedata><tw-passagedata pid="19" name="Trädet" tags="" position="300,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Tra%CC%88d.png&quot;&gt;
 Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. När ni kommer fram till det frågar Kim: 
 //&quot;Hej, du ser bekymrad ut, kan vi hjälpa dig med något?&quot;//
@@ -211,6 +219,9 @@ Kim svarar:
 Trädet ler mot er, och nickar med hela sin trädkrona. Nu ser han glad ut och ni vinkar för att gå vidare på er färd. Men ni hinner inte gå så långt innan det kommer en hare i full fart mot er på vägen.
 
 [[Haren]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Mystiskt ljud" tags="" position="650,1050" size="100,100">Ni lyssnar spänt efter ljud och precis när ni tror att ni hör en &#39;&#39;VariabelVilket djur kan ni höra?&#39; låter det som om det kommer från precis bakom en buske. Ni tittar mot busken och ser två stora horn sakta komma fram. 
+
+
+
 
 
 [[Skogens konung]]
@@ -254,7 +265,7 @@ Haren svarar://&quot;Hej, jag är Hugo Hare. Jag är en snabb och smidig varelse
 
 [[Kött]] [[Fisk]] [[Växter]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Kött" tags="" position="400,1225" size="100,100">&lt;div class=&quot;container&quot;&gt;//&quot;Nej usch jag vill absolut inte äta kött, försök igen.&quot;//
 
-[[Försök igen-&gt;Haren]]</tw-passagedata><tw-passagedata pid="25" name="Fisk" tags="" position="250,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;//&quot;Nja fisk är inte något min mage tycker om, försök igen.&quot;//
+[[Försök igen-&gt;Haren]]</tw-passagedata><tw-passagedata pid="25" name="Fisk" tags="" position="250,1350" size="100,100">&lt;div class=&quot;container&quot;&gt;//&quot;Nja fisk är inte något min mage tycker om, försök igen.&quot;//
 
 [[Försök igen-&gt;Haren]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Växter" tags="" position="50,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Hare.png&quot;&gt;
 &quot;Hel rätt, jag äter främst växter, och min kost består vanligtvis av gräs, örter, blad, bark och skott från olika växter. Ibland kan jag även äta frukt och bär. Vi harar är växtätare och kallas därför för en herbivor. Jag är noga med att välja vilka växter jag äter för att få i mig rätt näringsämnen och undvika att bli sjuk.&quot;
@@ -283,7 +294,20 @@ Kim säger: &quot;När du känner dig redo att resa tillbaka behöver du bara bl
 
 Du gör som Kim säger och plötsligt börjar du känna den där virvlande känsla runt dig igen. 
 
-[[Busken]]&lt;/div&gt;</tw-passagedata></tw-storydata>
+[[Busken]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Alternativt träd." tags="" position="100,950" size="100,100">Ni blir nyfikna på det fundersamma och väljer att fortsätta mot det. När ni kommer fram till det frågar Kim: 
+//&quot;Hej, du ser bekymmrad ut, kan vi hjälpa dig med något?&quot;//
+
+Ni tittar upp på det stora trädet och efter en stund svarar trädet vänligt:
+//&quot;Hej ungar vad snällt att ni stannade till hos mig, jag är bara lite fundersam på var jag ska lägga alla mina löv i vinter?&quot;//
+
+Kim lägger huvudet på sned och ser liten undrande ut innan han slutligen säger: 
+//&quot;Jag har alltid funderat på varför löven ändrar färg och ramlar av? Är det för att du dricker vatten med färg i som löven ändrar färg?//
+ 
+Trädet svarar://&quot;Nej det fungerar inte riktigt så. Vi träd tappar våra löv på hösten för att förbereda sig för vintern. När det blir kallare och dagarna blir kortare, så får träden svårare att ta upp vatten och näring från marken. Så för att spara på sin energi och skydda sig mot den kalla vintern, slutar träden att göra nya löv. De löv som redan finns på träden börjar att ändra färg från grönt till gult, orange och rött. Det är då träden slutligen tappar sina löv. Under vintern, när träden inte har några löv, behöver de inte använda mycket energi och vatten. Sedan när våren kommer och det blir varmare igen, börjar träden att göra nya löv och det börjar om igen.//
+
+Kim svarar://&quot;Aha, det är så det fungerar, men du har ju ett jättebra ställe att lägga dina löv, lägg dom vid dina fötter så håller dom dig varma i vinter.&quot;//
+
+Trädet ler mot er, och nickar med hela sin trädkrona. Nu ser han glad ut och ni vinkar för att gå vidare på er färd. Men ni hinner inte gå så långt när ni plötsligt ser en hare som springer emot er på vägen.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
