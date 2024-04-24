@@ -9,16 +9,17 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Kapitel 1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Kapitel 1" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="936B30AD-FDFC-4E77-A2DF-C36FDDA6A6A8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=Nunito);
+<tw-storydata name="Kapitel 1" startnode="9" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="936B30AD-FDFC-4E77-A2DF-C36FDDA6A6A8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=Nunito);
 tw-story {
- 	background-image: 	url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/6f68b32215555ce9a7c8ce3109be949558fcbc12/Historier/skogbakgrund.png");
+ 	background-image: 	url(" https://raw.githubusercontent.com/sbjorkemyr/f-klass/8becd02ca5f3612aa73c404e80b7626d45f44ce4/Historier/Kim-bakgrund.png");
+  	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover; 
   	color: #171717;
   	font-family: Nunito;
 }
 .container {
-  	background-color: rgba(204, 197, 160, 0.8);
+  	background-color: rgba(243, 206, 162, 0.8);
   	width: 100%;
   	border-radius: 20px;
   	padding: 80px;
@@ -41,7 +42,7 @@ tw-story {
   	display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
     height: auto; 
   	border: solid 1px;
   	border-radius: 40px;
@@ -85,7 +86,6 @@ Kim ber dig att blunda och föreställa dig skogen. Plötsligt känner du en vir
 
 [[Sjön]]
 [[Berget]]</tw-passagedata><tw-passagedata pid="7" name="Sjön" tags="" position="575,875" size="100,100">&lt;div class=&quot;container&quot;&gt;Efter att ni har funderat en stund bestämmer ni er för att gå mot sjön. Du känner dig lite osäker när ni närmar er vattnet, med tanke på att din mamma alltid varnar dig för att leka för nära vatten eftersom du inte kan simma. Trots det driver din nyfikenhet dig framåt, och du tänker att ni inte behöver gå ända fram till sjön. Ni ser ett stort träd som verkar ha en del att berätta, samtidigt som ni hör ett mystiskt ljud från skogen. Kim vänder sig mot dig och frågar:
-
 //&quot;Vad vill du göra? Ska vi gå till det coola trädet eller mot det mystiska ljudet?&quot;//
 
 [[Trädet]]
@@ -105,7 +105,9 @@ Ni tittar på varandra med förvåning. Ni tackade svampen för varningen och lo
 Inte sparka på svamp
 vitflugsvamp
 
-[[Gå vidare]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Gå vidare" tags="" position="1000,900" size="100,100">Ni börjar känna er trötta i benen, ni ser en härlig gräsplätt lite längre fram. Ni slår er ner i det mjuka gräset. Kim tar fram en påse med ett äppel ur fickan, han berättar att hans mamma hade delat på äpplet så han kunde dela med sig av äpplet till en kompis på rasten. Du säger tack och börjar mumsa på äpplet, när bara kärnhuset är kvar funderar du på vad du ska göra av det. 
+[[Gå vidare]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Gå vidare" tags="" position="1050,850" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/82c140349d9d2e2811bd76614b49867a8fec073e/Historier/Flugsvamp.png&quot;&gt;
+https://raw.githubusercontent.com/sbjorkemyr/f-klass/82c140349d9d2e2811bd76614b49867a8fec073e/Historier/Flugsvamp.png
+Ni börjar känna er trötta i benen, ni ser en härlig gräsplätt lite längre fram. Ni slår er ner i det mjuka gräset. Kim tar fram en påse med ett äppel ur fickan, han berättar att hans mamma hade delat på äpplet så han kunde dela med sig av äpplet till en kompis på rasten. Du säger tack och börjar mumsa på äpplet, när bara kärnhuset är kvar funderar du på vad du ska göra av det. 
 
 &quot;Äppelskrutt får man slänga i skogen, äppelskrutt blir mat till maskar och andra djur sen blir det till jord. Men plastpåsen får vi inte slänga, inget skräp får slängas i skogen! Djur kan bli sjuka och dom kan fastna i det. Så påsen tar vi tillbaka och slänger i soptunnan i skolan. Du nickar och ger tummen upp till Kim.
 
@@ -126,7 +128,26 @@ Du blir spänd men nyfiken.
 
 Ni fortsätter prata och skratta när ni plötsligt hör......
 
-[[Rassel i buskarna]]</tw-passagedata><tw-passagedata pid="10" name="Rassel i buskarna" tags="" position="1025,1025" size="100,100">&#39;&#39;ljud från räv&#39;&#39;
+[[Rassel i buskarna]]</tw-passagedata><tw-passagedata pid="10" name="Rassel i buskarna" tags="" position="1025,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;
+Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skogen. Ljudet framkallar en känsla av spänning och lite rädsla, men samtidigt väcker det er nyfikenhet om vad det kan vara för något som låter.
+
+(link-repeat: &quot;Gissa&quot;)[{
+	(set: $answer to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;&quot;))
+	(if: $answer is &quot;Älg&quot;)[
+		(replace: ?results)[Bra gissat, rätt svar är [[Älg-&gt;Skogens konung]].]
+	]
+	(else:)[
+		(replace: ?results)[Det var inte rätt, svaret ska vara [[Älg-&gt;Skogens konung]].]
+	]
+}]
+[]&lt;results|
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/8becd02ca5f3612aa73c404e80b7626d45f44ce4/Historier/foxscream.mp3&quot; autoplay&gt;
+
+
+
+
+
+&#39;&#39;ljud från räv&#39;&#39;
 
 Ni ser inget men hör ett ljud ni inte känner igen. 
 
@@ -136,7 +157,9 @@ Vad kan det vara för ett djur?
 
 [[Försök igen-&gt;Rassel i buskarna]] </tw-passagedata><tw-passagedata pid="12" name="Haret" tags="" position="850,1050" size="100,100">Detta ljud kommer inte från haren, försök igen. En hare låter såhär: LJUD FRÅN HARE?
 
-[[Rassel i buskarna]] </tw-passagedata><tw-passagedata pid="13" name="Räv" tags="" position="1150,1125" size="100,100">Hel rätt, det du hör är en räv.
+[[Rassel i buskarna]] </tw-passagedata><tw-passagedata pid="13" name="Räv" tags="" position="1150,1125" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6f68b32215555ce9a7c8ce3109be949558fcbc12/Historier/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
+
+Hel rätt, det du hör är en räv.
 
 En räv är ett smart djur som bor i skogen. Den har en vacker rödbrun päls och långa, smala ben som gör att den kan springa snabbt. Räven har också stora, spetsiga öron som hjälper den att höra bra. Ibland ser man en räv smyga runt på natten när den letar efter mat. Räven tycker om att leka och busa, och den är mycket bra på att gömma sig och smyga sig fram utan att märkas.
 
@@ -197,20 +220,17 @@ Kim ber dig att blunda och tänka på busken där ni lekte kurragömma. Plötsli
 På återseende!
 (enchant: &quot;På återseende!&quot;, (text-style: &quot;sway&quot;))</tw-passagedata><tw-passagedata pid="19" name="Trädet" tags="" position="450,900" size="100,100">(set: $garbage to it + 1)
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Tra%CC%88d.png&quot;&gt;
-Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. När ni kommer fram till det frågar Kim: 
+Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. När ni kommer fram till trädet tittar ni upp på det och Kim frågar vänligt: 
 //&quot;Hej, du ser bekymrad ut, kan vi hjälpa dig med något?&quot;//
 
-Ni tittar upp på det stora trädet och efter en stund svarar trädet vänligt:
-//&quot;Hej ungar vad snällt att ni stannade till hos mig, jag är bara lite fundersam på var jag ska lägga alla mina löv i vinter?&quot;//
+//&quot;Hej ungar vad snällt att ni stannade till hos mig, jag är bara lite fundersam på var jag ska lägga alla mina löv i vinter?&quot;//, undrar trädet och får några bekymrade rynkor i sin panna.
 
 Kim lägger huvudet på sned och ser liten undrande ut innan han slutligen säger: 
 //&quot;Jag har alltid funderat på varför löven ändrar färg och ramlar av? Är det för att du dricker vatten med färg i som löven ändrar färg?//
  
-Trädet svarar:
-//&quot;Nej det fungerar inte riktigt så. Vi träd tappar våra löv på hösten för att förbereda oss inför vintern då det blir kallare och dagarna blir kortare. Det blir svårare att ta upp vatten och näring från marken, så för att spara på vår energi och skydda oss mot den kalla vintern, slutar vi att göra nya löv. Vi slutar också att producera klorofyll vilket göra att de löv som redan finns på träden börjar att ändra färg från grönt till gult, orange och rött, det är då vi slutligen tappar våra löv. Under vintern, när vi inte har några löv, behöver vi inte använda så mycket energi och vatten. Sedan när våren kommer och det blir varmare igen, börjar träden att göra nya löv och det börjar om igen.//
+//&quot;Nej det fungerar inte riktigt så&quot;, säger trädet. &quot;Vi träd tappar våra löv på hösten för att förbereda oss inför vintern då det blir kallare och dagarna blir kortare. Det blir svårare att ta upp vatten och näring från marken, så för att spara på vår energi och skydda oss mot den kalla vintern, slutar vi att göra nya löv. Vi slutar också att producera klorofyll vilket göra att de löv som redan finns på träden börjar att ändra färg från grönt till gult, orange och rött, det är då vi slutligen tappar våra löv. Under vintern, när vi inte har några löv, behöver vi inte använda så mycket energi och vatten. Sedan när våren kommer och det blir varmare igen, börjar träden att göra nya löv och det börjar om igen.&quot;//
 
-Kim svarar:
-//&quot;Aha, det är så det fungerar. Du har ju ett jättebra ställe att lägga dina löv, lägg dom vid dina fötter så håller du dig varm i vinter. Här ligger förresten en gammal plastpåse, den tar vi med oss och slänger i skolans soptunna.&quot;//
+//&quot;Aha, det är så det fungerar. Du har ju ett jättebra ställe att lägga dina löv, lägg dom vid dina fötter så håller du dig varm i vinter. Här ligger förresten en gammal plastpåse, den tar vi med oss och slänger i skolans soptunna,&quot; säger Kim.//
 
 Trädet ler mot er, och nickar med hela sin trädkrona. Nu ser han glad ut och ni vinkar för att gå vidare på er promenad. Men ni hinner inte gå så långt innan det kommer ett djur i full fart mot er på vägen.
 
@@ -279,7 +299,8 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 Djuret tvärbromsar precis framför er. Den tittar upp på er med sina stora bruna ögon. Kim lägger huvudet på sned och frågar:
 //&quot;Hej, vem är du?&quot;//
 
-Djuret svarar: //&quot;Hej, mitt namn är Hugo och jag är en supersnabb och smidig varelse med långa ben och stora öron. Min päls är mjuk och brun, den är perfekt för att smälta in i skogen och på vinter är min päls vit så jag inte syns så bra när det är snö ute. Jag älskar att hoppa och kan göra långa skutt när jag springer över ängar och genom skogen. När jag springer viftar min lilla, fluffiga svans glatt. Jag är försiktig och håller alltid koll på min omgivning, ibland sitter jag på bakbenen och nosar i luften för att känna lukter och se om det finns några faror nära. Kan ni gissa vilket djur jag är?&quot;//
+//&quot;Hej, mitt namn är Hugo och jag är en supersnabb och smidig varelse med långa ben och stora öron&quot;//, säger djuret. //&quot;Min päls är mjuk och brun, den är perfekt för att smälta in i skogen och på vinter är min päls vit så jag inte syns så bra när det är snö ute. Jag älskar att hoppa och kan göra långa skutt när jag springer över ängar och genom skogen. När jag springer viftar min lilla, fluffiga svans glatt. Jag är försiktig och håller alltid koll på min omgivning, ibland sitter jag på bakbenen och nosar i luften för att känna lukter och se om det finns några faror nära. Kan ni gissa vilket djur jag är?&quot;//
+
 (link-repeat: &quot;Gissa&quot;)[{
 	(set: $answer to (prompt: &quot;Vilket djur är jag?&quot;, &quot;&quot;))
 	(if: $answer is &quot;Hare&quot;)[
@@ -296,9 +317,9 @@ Djuret svarar: //&quot;Hej, mitt namn är Hugo och jag är en supersnabb och smi
 [[Försök igen-&gt;Hare]]</tw-passagedata><tw-passagedata pid="25" name="Fisk" tags="" position="375,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;
 //&quot;Nja fisk är inte något min mage tycker om, försök igen.&quot;//
 
-[[Försök igen-&gt;Hare]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Växter" tags="" position="250,1350" size="100,100">(set: $garbage to it + 1)
+[[Försök igen-&gt;Hare]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Växter" tags="" position="250,1325" size="100,100">(set: $garbage to it + 1)
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Hare.png&quot;&gt;
-&quot;Helt rätt, jag äter främst växter, och min kost består vanligtvis av gräs, örter, blad, bark och skott från olika växter. Ibland kan jag även äta frukt och bär. Vi harar är växtätare och kallas därför för en herbivor. Jag är noga med att välja vilka växter jag äter för att få i mig rätt näringsämnen och undvika att bli sjuk.&quot;
+//&quot;Helt rätt, jag äter främst växter, och min kost består vanligtvis av gräs, örter, blad, bark och skott från olika växter. Ibland kan jag även äta frukt och bär. Vi harar är växtätare och kallas därför för en herbivor. Jag är noga med att välja vilka växter jag äter för att få i mig rätt näringsämnen och undvika att bli sjuk&quot;//, säger Hugo.
 
 Du och Kim kliver av från stigen och plockar massor av gräs till Hugo och svarar://&quot;Hoppas det här är tillräckligt med mat åt dig, du får ha en fortsatt fin dag.&quot;//
 
@@ -306,22 +327,23 @@ Ni vinkar hejdå till haren och plockar även upp ett godispapper som ligger sl�
 
 [[Sjön-&gt;Sjö]]</tw-passagedata><tw-passagedata pid="27" name="Sjö" tags="" position="475,1425" size="100,100">(set: $garbage to it + 1)
 (enchant: &quot;A&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;B&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;O&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;R&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;E&quot;, (text-style: &quot;sway&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/81e8810b128f9f6bcf777f6fc1a76a9d5dc10f2f/Historier/Abborre.png&quot;&gt;
-Efter ett tag kommer ni fram till sjön och stannar vid kAnten, men där ser ni ett plastlock ligga kastat bakom en sten, ni plockar upp det för att ta med er tillbaka till skolgården. Solen skiner och ni njuter av stillheten i natuRen, men plötsligt avBryts lugnet av att en fisk hOppar upp ur vattnet och gör en kullerBytta i luften för att sedan dyka neR i vattnet igen. Fisken upprepar sina cirkuskonster flera gånger, ni tittar på varandra och skrattar. Kim säger: //&quot;Det var en rolig fisk. Kan du gissa vilken sort det är? Till din hjälp har du de rörliga bokstäverna.&quot;//
+Efter ett tag kommer ni fram till sjön och stannar vid kAnten, men där ser ni ett plastlock ligga kastat bakom en sten, ni plockar upp det för att ta med er tillbaka till skolgården. Solen skiner och ni njuter av stillheten i natuRen, men plötsligt avBryts lugnet av att en fisk hOppar upp ur vattnet och gör en kullerBytta i luften för att sedan dyka neR i vattnet igen. Fisken upprepar sina cirkuskonster flera gånger, ni tittar på varandra och skrattar. Kim säger: 
+//&quot;Det var en rolig fisk. Kan du gissa vilken sort det är? Till din hjälp har du de rörliga bokstäverna.&quot;//
 
 (link-repeat: &quot;Gissa&quot;)[{
 	(set: $fish to (prompt: &quot;Vilken fisk är det?&quot;, &quot;&quot;))
 	(if: $fish is &quot;Abborre&quot;)[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[(link:&quot;Bra gissat, det var rätt svar.&quot;)[(show:?hidden)]]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara Abborre.]
+		(replace: ?results)[(link:&quot;Det var inte rätt, svaret ska vara Abborre.&quot;)[(show:?hidden)]]
 	]
 }]
 []&lt;results|
 
-Plötsligt hör ni hur skolklockan ringer. Rasten är slut och det dags att åka tillbaka till skolgården.
+|hidden)[Plötsligt hör ni hur skolklockan ringer. Det är dags att åka tillbaka till skolgården, rasten är slut.
 
-[[Portalen-&gt;Busken]]</tw-passagedata><tw-passagedata pid="28" name="Hare" tags="" position="225,1125" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Hare.png&quot;&gt;
+[[Portalen-&gt;Busken]]]</tw-passagedata><tw-passagedata pid="28" name="Hare" tags="" position="225,1125" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/3bf9b42f37c0213895bbbaf3da0cdeac394519ca/Historier/Hare.png&quot;&gt;
 //&quot;Toppen bra gissat. Men jag känner mig väldigt hungrig och trött nu och orkar inte fixa mat till mig själv. Skulle ni kunna hjälpa mig med en det?&quot;// säger Hugo. 
 
 //&quot;Givetvis kan vi hjälpa dig med det, men jag känner mig lite osäker på vad en hare äter. $namn vet du vad Hugo äter för något?&quot;// undrar Kim.
