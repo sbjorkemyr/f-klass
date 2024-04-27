@@ -93,14 +93,15 @@ Kim ber dig att blunda och föreställa dig skogen. Plötsligt känner du en vir
 [[Gå mot det mystiskt ljud]]&lt;/div&gt; </tw-passagedata><tw-passagedata pid="8" name="Gå till berget" tags="" position="925,925" size="100,100">(set: $garbage to it + 1)
 &lt;div class=&quot;container&quot;&gt;
 Ni bestämmer er för att gå mot berget, och efter en stund märker ni att terrängen börjar lutning uppåt ganska markant. Detta resulterar i att ni snabbt börjar känna er väldigt trötta. Ni bestämmer er då för att sätta er ner på en härlig gräsplätt med det mjuka gräset. Kim tar fram en påse med ett äpple ur fickan och berättar att hans mamma hade delat på äpplet så han kunde dela med sig av det till en kompis under rasten. Du tackar och börjar njuta av äpplet, och när bara kärnhuset återstår funderar du på vad du ska göra med det. Kim svarar:
-//&quot;Äppelskrutt får man slänga i skogen, äppelskrutt blir mat till maskar och andra djur sen blir det till jord. Men plastpåsen får vi inte slänga, inget skräp får slängas i skogen! Djur kan bli sjuka och dom kan fastna i det. Så påsen tar vi tillbaka och slänger i soptunnan i skolan.&quot;//  
+//&quot;Äppelskrutt får man slänga i skogen, äppelskrutt blir mat till maskar och andra djur sen blir det till jord. Men plastpåsen får vi inte slänga, inget skräp får slängas i skogen! Djur kan bli sjuka och sen kan de även fastna i skräpet. Så påsen tar vi tillbaka och slänger i soptunnan i skolan.&quot;//  
 
 Du nickar och ger tummen upp till Kim. Ni reser er upp och gör er klara för att gå vidare när ni plötsligt ser något rött som guppar upp och ner bakom en buske samtidigt som ni hör ett konstigt ljud får det andra håller. Ni tittar på varandar och funderar, ni kommer inte hinna gå åt båda hållen utan ni måste göra ett val.
 
 [[Gå till det guppande röda]]
 [[Gå till det konstiga ljudet]]
 
-</tw-passagedata><tw-passagedata pid="9" name="räv" tags="" position="850,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Räv.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="räv" tags="" position="800,1200" size="100,100">(set: $garbage to it + 1)
+&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Räv.png&quot;&gt;
 Ni ser plötsligt en svart nos sticka ut genom hålet och ganska snabbt även resten av kroppen. Den har vacker rödbrun päls och en yvig svans och ser på er med pigga och nyfikna ögon. Kim ler och säger: 
 //&quot;Hej på dig, vem är du?&quot;//
 
@@ -119,9 +120,9 @@ Den lägger sitt huvud lite på sne och säger sedan:
 
 Ingen orsak, det är kul att få dela med mig av mitt liv till er. Nu ska jag springa iväg på nya äventyr&quot;//, säger räven samtidigt som han springer iväg från er.
 
-Ni forstätter er promenad upp mot toppen när ni plötsligt hör ett surrande ljud.
+Innan ni fortsätter er promenad upp mot toppen plockar ni upp en plastburk som ligger på marken då hör ni plötsligt hör ett surrande ljud.
 
-[[Vad är det som surrar?]] </tw-passagedata><tw-passagedata pid="10" name="Gå till toppen" tags="" position="900,1500" size="100,100">(set: $garbage to it + 1)
+[[Vad är det som surrar?]] </tw-passagedata><tw-passagedata pid="10" name="Gå till toppen" tags="" position="900,1550" size="100,100">(set: $garbage to it + 1)
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/44a475c7f72291f35bdaa0d049d253ce861a595a/autum/eagel.png&quot;&gt;
 Trötta i benen tar ni de sista stora kliven upp för backen, vilken utsikt!
 
@@ -133,37 +134,19 @@ Humlans ljud?
 
 Är det en humla eller en geting?
 
-[[Portalen-&gt;Busken]]</tw-passagedata><tw-passagedata pid="11" name="Vad är det som surrar?" tags="" position="850,1350" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Humla 2.0.png&quot;&gt;[{(set: $answer to (prompt: &quot;Kan du gissa vad det är som surrar?&quot;, &quot;små bokstäver&quot;))
-	(if: $answer is &quot;humla&quot;)[
-		(replace: ?results)[Du gissade rätt, svaret är humla.]
-	](else:)[
-		(replace: ?results)[Du gissade inte rätt, svaret ska vara humla.]]}]
-[]&lt;results| Ni stannar upp och tittar på humlan. Den är liten och rund som en boll med vingar. Den är hårig och ser ut som att den är  mjuk att röra vid. Men ni vet om att även humlor kan stickas så ni håller lite avstånd. Humlan flyger från blomma till blomma för att samla nektar och pollen. Den gör ett sött surrande ljud när den flyger. Humlor är snälla och gillar att hjälpa till med att pollinera blommor, vilket betyder att de hjälper blommorna att växa sig starka och fina. Ni tittar på den söta humlan men ni vill inte störa den i sin arbetsdag. Kim vänder sig till dig och säger: //&quot;Jag har en fråga till dig, Det är något som flyger i luften på våren och kan orsaka allergier. Det fastnar ofta på humlans rumpa. Vad är det? N E L P L O&quot;//
+[[Portalen-&gt;Busken]]</tw-passagedata><tw-passagedata pid="11" name="Vad är det som surrar?" tags="" position="900,1325" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Humla 2.0.png&quot;&gt;
+Surret tillhörde en liten humla, ni stannar upp och tittar på den. Humlan är liten och rund som en boll med vingar. Den är hårig och ser ut som att den är  mjuk att röra vid. Men ni vet om att även humlor kan stickas så ni håller lite avstånd. Humlan flyger från blomma till blomma för att samla nektar och pollen. Den gör ett sött surrande ljud när den flyger. Humlor är snälla och gillar att hjälpa till med att pollinera blommor, vilket betyder att de hjälper blommorna att växa sig starka och fina. Ni tittar på den söta humlan men ni vill inte störa den i sin arbetsdag. Kim vänder sig till dig och säger: //&quot;Jag har en fråga till dig, Det är något som flyger i luften på våren och kan orsaka allergier. Det fastnar ofta på humlans rumpa. Vad är det? N E L P L O&quot;//
 
-(link-repeat: &quot;Ditt svar.&quot;)[{
-	(set: $fish to (prompt: &quot;Skriv ditt svar?&quot;, &quot;STORA BOKSTÄVER&quot;))
-	(if: $fish is &quot;POLLEN&quot;)[
-		(replace: ?results)[(link:&quot;Bra gissat, det var rätt svar.&quot;)[(show:?hidden)]]
-	]
-	(else:)[
-		(replace: ?results)[(link:&quot;Det var inte rätt, svaret ska vara POLLEN.&quot;)[(show:?hidden)]]
-	]
-}]
-[]&lt;results|
+Efter er korta paus vid humlan forsätter ni promenaden upp mot toppen. Sista biten är riktigt svår och det lutar rejält uppåt.
 
-|hidden)[Efter er korta paus vid humlan forsätter ni promenaden upp mot toppen. Sista biten är riktigt svår och det lutar rejält uppåt.
+[[Gå till toppen]]</tw-passagedata><tw-passagedata pid="12" name="Geting" tags="" position="1100,1325" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Geting.png&quot;&gt;
+Det surrande ljudet tillhör en geting. Du blir nyfiken och ville titta lite närmare, men Kim verkar mer avvaktande den här gången. Han berättar om en gång då han fick ett getingstick på armen och den svällde upp och blev alldeles röd, vilket gjorde väldigt ont. Sedan dess har han tyckt att getingar är ganska läskiga. Du håller med honom om att det är viktigt att hålla avstånd från getingen, men samtidigt känner du dig lite nyfiken. Så du går lite närmare för att kika. Getingen hade svarta och gula ränder på sin kropp, och dess långa smala vingar brummar när den flyger. Du tänker på att den verkar uppskatta söta saker eftersom du ser att den äter av äppelskruttet ni slängde tidigare. Efter att ha tittat en liten stund gick jag tillbaka till Kim.
 
-[[Gå till toppen]]] </tw-passagedata><tw-passagedata pid="12" name="Geting" tags="" position="1150,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Geting.png&quot;&gt;
+(link:&quot;Gå tillbaka till Kim&quot;)[(show:?hidden)]
+|hidden)[(set: $skriv to (prompt: &quot;Skriv tre ord som beskriver en geting?&quot;, &quot;ett, två och tre&quot;))När du kommer tillbaka till Kim är han nyfiken att höra vad du har sett. Du beskriver getingen för Kim men tre ord, $skriv. Sedan fortsätter ni vidare upp mot toppen.
 
-
-Denna gången var det inte en geting. 
-
-//Bild på geting?//
-
-En geting är ett litet, randigt insekt som flyger runt på sommaren. Den har svarta och gula ränder på sin kropp och långa, smala vingar som låter när den flyger. Getingen älskar söta saker som saft och frukt. Ibland kan den stickas om den känner sig hotad, så det är viktigt att vara försiktig och låta den vara i fred när den är ute och flyger.
-
-
-[[Berätta för Kim]] </tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="700,1550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/d2b282fa26e66a62def09025b820dec09e0ddce7/autum/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
+[[Gå till toppen]]] 
+</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="675,1550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/d2b282fa26e66a62def09025b820dec09e0ddce7/autum/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
 Kim ber dig att blunda och tänka på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. En känsla av lycka fyller dig när du reflekterar över allt du har upplevt med din nya vän, och du ser fram emot nästa äventyr ni ska uppleva tillsammans. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar (print: $garbage) sopor.
 
 På återseende!
@@ -299,25 +282,29 @@ Efter ett tag kommer ni fram till sjön och stannar vid kAnten, men där ser ni 
 
 //&quot;Givetvis kan vi hjälpa dig med det, men jag känner mig lite osäker på vad en hare äter. $namn vet du vad Hugo äter för något?&quot;// undrar Kim.
 
-[[Kött]] [[Fisk]] [[Växter]]</tw-passagedata><tw-passagedata pid="24" name="Berätta för Kim" tags="" position="1150,1400" size="100,100">berätta för kim om getingen.
-
-[[Gå till toppen]] </tw-passagedata><tw-passagedata pid="25" name="Gå till det guppande röda" tags="" position="1100,1025" size="100,100">(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;ett och två&quot;))
+[[Kött]] [[Fisk]] [[Växter]]</tw-passagedata><tw-passagedata pid="24" name="Gå till det guppande röda" tags="" position="1100,1125" size="100,100">(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;ett och två&quot;))
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Flugsvamp.png&quot;&gt;
-Ert val blir att gå mot det röda, ni går med försiktiga steg för att ni känner er lite osäkra på vad det är ni kommer möta på andra sidan stenen. Försiktigt, försiktigt kikar ni bakom stenen och ni blir så förvånade när ni ser det som är på andra sidan. Detä är en färglad svamp som är större än någon annan svamp ni sett tidigare, och den ler mot er. 
+Ert val blir att gå mot det röda, ni går med försiktiga steg för att ni känner er lite osäkra på vad det är ni kommer möta på andra sidan stenen. Försiktigt, försiktigt kikar ni bakom stenen och ni blir förvånade när ni ser det som finns på andra sidan. Det är en färglad svamp som är större än någon annan svamp ni sett tidigare, den tittar på er och ler. 
 
-//&quot;Vem är ni?&quot;// frågade svampen med en rolig, pipig röst när de kom närmare.
+//&quot;Hej på er. Vem är ni?&quot;// frågade svampen med en rolig, pipig röst när de kom närmare.
 
 //&quot;Kim och $namn,&quot;// svarar Kim försiktigt.
 
+//&quot;Kim och $namn, det är viktigt att ni vet att jag är en speciell svamp. Jag är faktiskt giftig, vilket betyder att om ni äter eller plockar mig kan ni må dåligt. Så snälla, håll er på avstånd. Jag är en röd flugsvamp men min kusin den vita flugsvampen är ännu giftigare än mig&quot;//, berättar svampen.
 
-&quot;Kim och $namn, det är viktigt att ni vet att jag är en speciell svamp. Jag är faktiskt giftig, vilket betyder att om ni äter eller plockar mig kan ni må dåligt. Så snälla, håll er på avstånd. 
+Ni tittar på varandra med förvåning och Kim säger:
+//&quot;Tack för varningen, vi håller avstånd.&quot;//
 
-Ni tittar på varandra med förvåning. Ni tackade svampen för varningen och lovade att vara försiktiga. Sedan fortsätter ni er vandring, glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen.
+//&quot;Och en sak till vill jag berätta för er innan ni går, det händer att människor sparkar på svampar. Snälla ni gör inte det. Sen har jag en liten uppgift till er. Kan ni nämna två stycken växter eller djur som finns i skogen?&quot;//, frågar svampen.
 
-Inte sparka på svamp
-vitflugsvamp
+//&quot;Det kan jag, $skriva&quot;//, svarar du.
 
-[[Vad är det som surrar?-&gt;Geting]] </tw-passagedata><tw-passagedata pid="26" name="Gå till det konstiga ljudet" tags="" position="875,1050" size="100,100">&lt;div class=&quot;container&quot;&gt;
+//&quot;Mycket bra svar&quot;//, säger svampen. //&quot;Ha en fortsatt fin dag.&quot;//
+
+
+Ni tackade svampen pratstunden och fortsätter sedan på er vandring, glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen. Efter en stund promenad hör ni något som surrar.
+
+[[Vad är det som surrar?-&gt;Geting]] </tw-passagedata><tw-passagedata pid="25" name="Gå till det konstiga ljudet" tags="" position="900,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;
 Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken. Ni stannar framför det och tittar ner i det. Det är helt klart härifrån ljudet kommer.
 
 (link-repeat: &quot;Gissa ljudet?&quot;)[{
