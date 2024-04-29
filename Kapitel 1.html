@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Kapitel 1.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Kapitel 1" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="936B30AD-FDFC-4E77-A2DF-C36FDDA6A6A8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=Nunito);
+<tw-storydata name="Kapitel 1" startnode="16" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="936B30AD-FDFC-4E77-A2DF-C36FDDA6A6A8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url(http://fonts.googleapis.com/css?family=Nunito);
 tw-story {
  	background-image: 	url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/914d946d4cc6be23d7b862c7ca32cff4e4ac53c0/autum/bakgrund-kim.png");
   	background-attachment: fixed;
@@ -189,40 +189,41 @@ Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skog
 //&quot;Varför kallas du för skogens konung?&quot;//, frågar Kim.
 
 Älgen ser på er med sina stora bruna ögon innan han svarar: 
-//&quot;Det är för att jag är en av de största och starkaste djuren i skogen&quot;//, säger älgen. //&quot;Mina imponerande horn kallas för en krona, precis som för en kung. Jag trivs med att vandra ensam här i skogen. Många av mina kompisar tycker om att utforska nya områden under sommaren och vintern, men jag är nöjd med att stanna på samma plats året om. Här i skogen finns det gott om mat som jag älskar. Risväxter som blåbär, lingon och ljung är min favoritföda tillsammans med knoppar, blad och skott från olika träd. Ibland tar jag mig ett dopp i sjön för att svalka mig. Älgar som jag är en del av naturen och vi strävar efter att bibehålla balansen i skogen. Vanligtvis håller vi oss borta från människor, eftersom vi fruktar det okända och kan bli aggressiva om vi känner oss hotade. Men ni behöver inte vara rädda för mig; jag är en vänlig och fredlig älg som inte önskar er någon skada.&quot;//
+//&quot;Det är för att jag är en av de största och starkaste djuren i skogen&quot;//, säger älgen. //&quot;Mina imponerande horn kallas för en krona, precis som för en kung. Jag trivs med att vandra ensam här i skogen. Många av mina kompisar tycker om att utforska nya områden under sommaren och vintern, men jag är nöjd med att stanna på samma plats året om. Här i skogen finns det gott om mat som jag älskar, risväxter som blåbär, lingon och ljung är min favoritföda tillsammans med knoppar, blad och skott från olika träd. Ibland tar jag mig ett dopp i sjön för att svalka mig. Vi älgar en del av naturen och vi strävar efter att bibehålla balansen i skogen. Vanligtvis håller vi oss borta från människor, eftersom vi fruktar det okända och kan bli aggressiva om vi känner oss hotade. Men ni behöver inte vara rädda för mig, jag är en vänlig och fredlig älg som inte vill skada er.&quot;//
 
 Du och Kim tittar på varandra och andas ut av lättnad, sedan ler ni mot älgen och tackar för samtalet. Innan ni går tar ni med er en plastflaska som flyter i bäcken.
 
 [[Följ bäcken]]</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="550,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/Ba%CC%88ck%20med%20insekter.png&quot;&gt;
-Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av den svaga vindpusten. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim: //&quot;Titta på alla insekter som bor här vid bäcken. Kan du hitta tre olika sorter? Du får första bokstaven till hjälp.&quot;//
+Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim: 
+//&quot;Titta på alla insekter som bor här vid bäcken. Kan du hitta tre olika sorter? Du får första bokstaven till hjälp.&quot;//
 
 (link-repeat: &quot;Insekt 1&quot;)[{
-	(set: $ant to (prompt: &quot;Vilken insekt är det?&quot;, &quot;M&quot;))
-	(if: $ant is &quot;Myra&quot;)[
+	(set: $ant to (prompt: &quot;Vilken insekt är det?&quot;, &quot;m&quot;))
+	(if: $ant is &quot;myra&quot;)[
 		(replace: ?results)[Bra gissat, det var rätt svar.]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara Myra.]
+		(replace: ?results)[Det var inte rätt, svaret ska vara myra.]
 	]
 }]
 []&lt;results|
 (link-repeat: &quot;Insekt 2&quot;)[{
-	(set: $lady to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;N&quot;))
-	(if: $lady is &quot;Nyckelpiga&quot;)[
+	(set: $lady to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;n&quot;))
+	(if: $lady is &quot;nyckelpiga&quot;)[
 		(replace: ?results2)[Bra gissat, det var rätt svar.]
 	]
 	(else:)[
-		(replace: ?results2)[Det var inte rätt, svaret ska vara Nyckelpiga.]
+		(replace: ?results2)[Det var inte rätt, svaret ska vara nyckelpiga.]
 	]
 }]
 []&lt;results2|
 (link-repeat: &quot;Insekt 3&quot;)[{
-	(set: $butter to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;F&quot;))
-	(if: $butter is &quot;Fjäril&quot;)[
+	(set: $butter to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;f&quot;))
+	(if: $butter is &quot;fjäril&quot;)[
 		(replace: ?results3)[Bra gissat, det var rätt svar.]
 	]
 	(else:)[
-		(replace: ?results3)[Det var inte rätt, svaret ska vara Fjäril.]
+		(replace: ?results3)[Det var inte rätt, svaret ska vara fjäril.]
 	]
 }]
 []&lt;results3|
@@ -255,16 +256,16 @@ Ni vinkar hejdå till haren och plockar även upp ett godispapper som ligger sl�
 
 [[Gå till sjön-&gt;Sjö]]</tw-passagedata><tw-passagedata pid="22" name="Sjö" tags="" position="400,1600" size="100,100">(set: $garbage to it + 1)
 (enchant: &quot;A&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;B&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;O&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;R&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;E&quot;, (text-style: &quot;sway&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Abborre.png&quot;&gt;
-Efter ett tag kommer ni fram till sjön och stannar vid kAnten, men där ser ni ett plastlock ligga kastat bakom en sten, ni plockar upp det för att ta med er tillbaka till skolgården. Solen skiner och ni njuter av stillheten i natuRen, men plötsligt avBryts lugnet av att en fisk hOppar upp ur vattnet och gör en kullerBytta i luften för att sedan dyka neR i vattnet igen. Fisken upprepar sina cirkuskonster flera gånger, ni tittar på varandra och skrattar. Kim säger: 
+Efter ett tag kommer ni fram till sjön och stannar lite innan kAnten, där bakom en sten, ser ni ett plastlock ligga kastat, det plockar ni upp för att ta med er tillbaka till skolgården. Solen skiner och ni njuter av stillheten i natuRen, men plötsligt avBryts lugnet av att en fisk hOppar upp ur vattnet och gör en kullerBytta i luften för att sedan dyka neR i vattnet igen. Fisken upprepar sina cirkuskonster flera gånger, ni tittar på varandra och skrattar. Kim säger: 
 //&quot;Det var en rolig fisk. Kan du gissa vilken sort det är? Till din hjälp har du de rörliga bokstäverna.&quot;//
 
 (link-repeat: &quot;Gissa&quot;)[{
-	(set: $fish to (prompt: &quot;Vilken fisk är det?&quot;, &quot;&quot;))
-	(if: $fish is &quot;Abborre&quot;)[
+	(set: $fish to (prompt: &quot;Vilken fisk är det?&quot;, &quot;STORA BOKSTÄVER&quot;))
+	(if: $fish is &quot;ABBORRE&quot;)[
 		(replace: ?results)[(link:&quot;Bra gissat, det var rätt svar.&quot;)[(show:?hidden)]]
 	]
 	(else:)[
-		(replace: ?results)[(link:&quot;Det var inte rätt, svaret ska vara Abborre.&quot;)[(show:?hidden)]]
+		(replace: ?results)[(link:&quot;Det var inte rätt, svaret ska vara ABBORRE.&quot;)[(show:?hidden)]]
 	]
 }]
 []&lt;results|
