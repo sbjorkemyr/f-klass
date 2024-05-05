@@ -10,7 +10,7 @@
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Kapitel 1.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Kapitel 1" startnode="1" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="936B30AD-FDFC-4E77-A2DF-C36FDDA6A6A8" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-story {
- 	background-image: 	url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/914d946d4cc6be23d7b862c7ca32cff4e4ac53c0/autum/bakgrund-kim.png");
+ 	background-image: 	url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/09a543cf7a508136ea8db369ab47ea202c8381a7/autum/nybakgrundhost.png");
   	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover; 
@@ -212,7 +212,7 @@ Du och Kim tittar på varandra och andas ut av lättnad, sedan ler ni mot älgen
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="550,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
 Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim: 
-//&quot;Titta på bilden och hitta alla insekter som bor vid bäcken. Du får första bokstaven som hjälp.&quot;//
+//&quot;Hitta alla insekter som bor vid bäcken. Du får första bokstaven som hjälp.&quot;// (Titta på bilden.)
 (link-repeat: &quot;Insekt 1&quot;)[{
 	(set: $ant to (prompt: &quot;Vilken insekt är det?&quot;, &quot;m&quot;))
 	(if: $ant is &quot;myra&quot;)[
@@ -223,7 +223,7 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 	]
 }][]&lt;results|
 (link-repeat: &quot;Insekt 2&quot;)[{
-	(set: $lady to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;n&quot;))
+	(set: $lady to (prompt: &quot;Vilken insekt är det?&quot;, &quot;n&quot;))
 	(if: $lady is &quot;nyckelpiga&quot;)[
 		(replace: ?results2)[Bra gissat, det var rätt svar.]
 	]
@@ -232,7 +232,7 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 	]
 }][]&lt;results2|
 (link-repeat: &quot;Insekt 3&quot;)[{
-	(set: $butter to (prompt: &quot;Kan du gissa vilket djur det är?&quot;, &quot;f&quot;))
+	(set: $butter to (prompt: &quot;Vilken insekt är det?&quot;, &quot;f&quot;))
 	(if: $butter is &quot;fjäril&quot;)[
 		(replace: ?results3)[Bra gissat, det var rätt svar.]
 	]
