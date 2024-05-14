@@ -21,7 +21,7 @@ tw-story {
 .container {
   	background-color: rgba(213, 163, 105, 0.9);
   	width: 100%;
-  	border-radius: 10px;
+  	border-radius: 15px;
   	padding: 80px;
   	border: solid 5px;
 }
@@ -33,9 +33,14 @@ tw-story {
 .rubrik2 {
   text-align: center;
   font-size: 40px;
+  font-weight: bold;
 }
 .rubrik3 {
-  text-align: center;  
+  text-align: center;
+}
+.rubrik4 {
+  text-align: center;
+  font-size: 30px;
 }
 .pic {
   	display: block;
@@ -44,16 +49,15 @@ tw-story {
     width: 60%;
     height: auto; 
   	border: solid 2px;
-  	border-radius: 40px;
-  	
+  	border-radius: 40px;	
 }
 tw-link {
 	display: inline-block;
 	padding: 3px 20px 3px 20px;
-  	margin: 20px;
+    margin: 20px;
 	background-color: #C6E7F2;
-	border: solid 2px #2E35DF;
-  	border-radius: 20px;
+	border: solid 3px #2E35DF;
+  	border-radius: 30px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="725,300" size="100,100">(set: $namn to (prompt: &quot;Vad heter du?&quot;, &quot;&quot;))
 (set: $garbage to 0)
@@ -63,20 +67,18 @@ tw-link {
 &lt;div class=&quot;rubrik2&quot;&gt;Skogsäventyr i förskoleklass&lt;/div&gt;
 
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in $namn-&gt;Välkommen in]]</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="725,675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/samling.png&quot;&gt;
+
+&lt;div class=&quot;rubrik4&quot;&gt;[[Välkommen in $namn-&gt;Välkommen in]]</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="725,675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/samling.png&quot;&gt;
 När du kliver in i klassrummet visar din lärare, som heter Birgitta, att alla barnen ska sätta sig i en ring på golvet medan föräldrarna tar plats på stolar bakom. Med ett varmt leende välkomnar Birgitta er och uppmanar att ni ska berätta lite om er själva. När det blir din tur att prata, känner du dig nervös och har svårt att få fram orden. I ringen bredvid dig sitter Kim, som vinkade till dig på skolgården. Du kastar en försiktig blick åt Kims håll när det blir hans tur att berätta om sig själv och märker att han inte har några problem att prata inför klassen. På tavlan har läraren satt upp bilder som visar dagens aktiviteter och informerar att det snart är rast, vilket innebär att föräldrarna ska lämna. Det känns lite läskigt, men du har åtminstone $gosedjur med dig i ryggsäcken. Du ger din mamma en kram och följer med klassen ut på skolgården.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="725,550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/korridor.png&quot;&gt;
 Då du kommer in genom dörren möts du av en lång korridor med barn överallt. Du tar intresserat in allt som sker omkring dig. Din mamma följer med dig fram till ditt klassrum. Läraren välkomnar dig med ett leende och visar var du kan hänga upp din jacka och väska. Eftersom det är din första dag idag får mamma stanna under den första samlingen.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]] </tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="725,425" size="100,100">(set: $gosedjur to (prompt: &quot;Vad heter ditt favoritgosedjur?&quot;, &quot;&quot;))
-&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]] </tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="725,425" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
 &lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Skola.png&quot;&gt;
 Du tittar upp på den imponerande skolbyggnaden framför dig och känner en nervös pirrning i magen. Det är din första dag i förskoleklass, och du håller hårt i mammas hand. Trots oron känner du en skön trygghet i vetskapen om att ditt älskade gosedjur, $gosedjur, kommer att följa med dig i väskan hela dagen. Skolgården är full av förväntansfulla barn, några leker medan andra håller sig nära sina föräldrar. Plötsligt rullar en boll fram till dina fötter och när du tittar upp möts du av ett barn som springer mot dig med ett leende på läpparna. En röst ropar ut namnet &quot;Kim&quot;, och du förstår att det är till barnet som just dykt upp. Ni vinkar till varandra och barnet springer tillbaka till sin förälder. Klockan börjar ringa in, du och din mamma börjar sakta gå mot skolans stora dörr.
-
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]
-
-</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="725,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/678857791e65b6243ad201f0ee4e041d1fc2e425/autum/skolga%CC%8Ard.png&quot;&gt;
+(set: $gosedjur to (prompt: &quot;Vad heter ditt favoritgosedjur?&quot;, &quot;&quot;))
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="725,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/678857791e65b6243ad201f0ee4e041d1fc2e425/autum/skolga%CC%8Ard.png&quot;&gt;
 Ute på skolgården skiner solen och luften känns varm. Barn i alla åldrar springer runt, några leker medan andra spelar fotboll. En bit bort ser du några äldre barn som ska börja leka kurragömma. Du skulle vilja vara med, men vågar inte närma dig de större barnen. Plötsligt kommer Kim springande, tar tag i din hand och drar med dig till gruppen som precis ska börja leka.
 
 //&quot;Jag vet ett jättebra gömställe, följ med mig&quot;//, viskar han.
@@ -160,7 +162,7 @@ Efter er korta paus vid humlan forsätter ni promenaden upp mot toppen.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till toppen]]</tw-passagedata><tw-passagedata pid="12" name="Geting" tags="" position="1200,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Geting.png&quot;&gt;
 Det surrande ljudet tillhör en geting, du blir nyfiken och vill titta lite närmare, men Kim verkar mer avvaktande den här gången. Han berättar om en gång då han fick ett getingstick på armen, det gjorde väldigt ont, sen svällde armen upp och blev alldeles röd. Sedan dess har han tyckt att getingar är ganska läskiga. Du håller med honom om att det är viktigt att hålla avstånd från getingen, men samtidigt känner du dig lite nyfiken. Så du går lite närmare för att kika. Getingen hade svarta och gula ränder på sin kropp, och dess långa smala vingar brummar när den flyger. Du tänker på att den verkar uppskatta söta saker eftersom du ser att den äter av äppelskruttet ni slängde tidigare. Efter att ha tittat en liten stund går du tillbaka till Kim.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="700,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/d2b282fa26e66a62def09025b820dec09e0ddce7/autum/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="700,1650" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/d2b282fa26e66a62def09025b820dec09e0ddce7/autum/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
 Kim ber dig att blunda och tänka på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. En känsla av lycka fyller dig när du tänker på allt som du har upplevt med din nya vän, och du ser fram emot nästa äventyr ni ska uppleva tillsammans. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat (print: $garbage) sopor.
 
 På återseende!
