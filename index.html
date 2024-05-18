@@ -17,6 +17,7 @@ tw-story {
 	background-size: cover; 
   	color: #171717;
   	font-family: "Nunito", Arial;
+  	padding-top: 30px;
 }
 .container {
   	background-color: rgba(213, 163, 105, 0.9);
@@ -25,6 +26,8 @@ tw-story {
   	padding: 80px;
   	border: solid 3px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
+  	padding-top: 40px;
+  	padding-bottom: 40px;
 }
 .rubrik {
   text-align: center;
@@ -42,20 +45,21 @@ tw-story {
 .rubrik4 {
   text-align: center;
   font-size: 30px;
+  font-weight: bold;
 }
 .pic {
   	display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 50%;
     height: auto; 
-  	border: solid 2px;
-  	border-radius: 40px;	
+  	border: solid 3px;
+  	border-radius: 30px;	
 }
 tw-link {
 	display: inline-block;
 	padding: 3px 20px 3px 20px;
-    margin: 20px;
+    margin: 10px;
 	background-color: #C6E7F2;
 	border: solid 3px #2E35DF;
   	border-radius: 30px;
@@ -69,14 +73,14 @@ tw-icon[alt] { opacity: 1.0; }</style><script role="script" id="twine-user-scrip
 
 
 
-&lt;div class=&quot;rubrik4&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="725,675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/samling.png&quot;&gt;
+&lt;div class=&quot;rubrik4&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="725,675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/samling.png&quot;&gt;
 När du kliver in i klassrummet visar din lärare, som heter Birgitta, att alla barnen ska sätta sig i en ring på golvet medan föräldrarna tar plats på stolar bakom. Med ett varmt leende välkomnar Birgitta er och uppmanar att ni ska berätta lite om er själva. När det blir din tur att prata, känner du dig nervös och har svårt att få fram orden. I ringen bredvid dig sitter Kim, som vinkade till dig på skolgården. Du kastar en försiktig blick åt Kims håll när det blir hans tur att berätta om sig själv och märker att han inte har några problem att prata inför klassen. På tavlan har läraren satt upp bilder som visar dagens aktiviteter och informerar att det snart är rast, vilket innebär att föräldrarna ska lämna, det känns lite läskigt. Du ger din mamma en kram och följer med klassen ut på skolgården.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="725,550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/korridor.png&quot;&gt;
 Då du kommer in genom dörren möts du av en lång korridor med barn överallt. Du tar intresserat in allt som sker omkring dig. Din mamma följer med dig fram till ditt klassrum. Läraren välkomnar dig med ett leende och visar var du kan hänga upp din jacka och väska. Eftersom det är din första dag idag får mamma stanna under den första samlingen.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]] </tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="725,425" size="100,100">(set: $namn to (prompt: &quot;Vad heter du?&quot;, &quot;&quot;))
-&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]] </tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="725,425" size="100,100">(set: $namn to (prompt: &quot;Vad heter du?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
 &lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Skola.png&quot;&gt;
 Du tittar upp på den imponerande skolbyggnaden framför dig och känner en nervös pirrning i magen. Det är din första dag i förskoleklass, och du håller hårt i mammas hand. Trots oron känner du en skön trygghet i vetskapen om att ditt älskade gosedjur kommer att följa med dig i väskan hela dagen. Skolgården är full av förväntansfulla barn, några leker medan andra håller sig nära sina föräldrar. Plötsligt rullar en boll fram till dina fötter och när du tittar upp möts du av ett barn som springer mot dig med ett leende på läpparna. En röst ropar ut namnet &quot;Kim&quot;, och du förstår att det är till barnet som just dykt upp. Ni vinkar till varandra och barnet springer tillbaka till sin förälder. Klockan börjar ringa in, du och din mamma börjar sakta gå mot skolans stora dörr.
 
@@ -98,8 +102,7 @@ Kim ber dig att blunda och föreställa dig skogen. Plötsligt känner du en vir
 //&quot;Nu ska vi utforska. Vill du gå mot sjön eller berget?&quot;//
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön]][[Gå till berget]]
-</tw-passagedata><tw-passagedata pid="7" name="Gå till sjön" tags="" position="575,925" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;
-https://raw.githubusercontent.com/sbjorkemyr/f-klass/c0623135516f02f49e386bdc576bc59186c1f463/autum/skog%2Cstig%2Csjo%CC%88.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Gå till sjön" tags="" position="575,925" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/29985ffbf96816871bb4fcb3d25c770239ee09b8/autum/skog%2Cstig%2Csj%C3%B6.png&quot;&gt;
 Efter att ni funderat en stund bestämmer ni er för att gå mot sjön. Du känner dig lite osäker, du kan inte simma och din mamma brukar varna dig för att leka för nära vatten. Trots det driver din nyfikenhet dig framåt, och du tänker att ni inte behöver gå ända fram till kanten. Ni ser ett stort träd som verkar vara bekymrad och samtidigt hör ni ett mystiskt ljud från skogen. Kim vänder sig mot dig och frågar:
 //&quot;Vad vill du göra? Ska vi gå till det bekymrade trädet eller mot det mystiska ljudet?&quot;//
 
@@ -202,7 +205,7 @@ Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skog
 []&lt;results|
 
  &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;Skogens konung]]
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="500,1200" size="100,100">(set: $garbage to it + 1)
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="550,1200" size="100,100">(set: $garbage to it + 1)
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/elk2.png&quot;&gt;
 Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är en älg. Den tittar nyfiket på er med sina stora, vänliga ögon. Trots er rädsla känner ni er också nyfikna. Älgen säger: 
  //&quot;Hej på er. Välkomna till min skog. Det är jag som kallas för skogens konung.&quot;//
@@ -214,9 +217,9 @@ Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är 
 
 Du och Kim tittar på varandra och andas ut av lättnad, sedan ler ni mot älgen och tackar för samtalet. Innan ni går tar ni med er en plastflaska som flyter i bäcken.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="500,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
-Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim: 
-//&quot;Hitta alla insekter som bor vid bäcken. Du får första bokstaven som hjälp.&quot;// (Titta på bilden.)
+&lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="550,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
+Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim (titta på bilden): 
+//&quot;Hitta alla insekter som bor vid bäcken. Du får första bokstaven som hjälp.&quot;// 
 (link-repeat: &quot;Insekt 1&quot;)[{
 	(set: $ant to (prompt: &quot;Vilken insekt är det?&quot;, &quot;m&quot;))
 	(if: $ant is &quot;myra&quot;)[
@@ -225,8 +228,7 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 	(else:)[
 		(replace: ?results)[Det var inte rätt, svaret ska vara myra.]
 	]
-}][]&lt;results|
-(link-repeat: &quot;Insekt 2&quot;)[{
+}][]&lt;results|(link-repeat: &quot;Insekt 2&quot;)[{
 	(set: $lady to (prompt: &quot;Vilken insekt är det?&quot;, &quot;n&quot;))
 	(if: $lady is &quot;nyckelpiga&quot;)[
 		(replace: ?results2)[Bra gissat, det var rätt svar.]
@@ -234,8 +236,7 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 	(else:)[
 		(replace: ?results2)[Det var inte rätt, svaret ska vara nyckelpiga.]
 	]
-}][]&lt;results2|
-(link-repeat: &quot;Insekt 3&quot;)[{
+}][]&lt;results2|(link-repeat: &quot;Insekt 3&quot;)[{
 	(set: $butter to (prompt: &quot;Vilken insekt är det?&quot;, &quot;f&quot;))
 	(if: $butter is &quot;fjäril&quot;)[
 		(replace: ?results3)[Bra gissat, det var rätt svar.]
@@ -279,7 +280,7 @@ Du och Kim kliver av från stigen och plockar massor av gräs till Hugo och svar
 
 Ni vinkar hejdå till haren och plockar även upp ett godispapper som ligger slängd på marken och beger er sedan ner mot sjön där ni hör något som plaskar.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön-&gt;Sjö]]</tw-passagedata><tw-passagedata pid="22" name="Sjö" tags="" position="300,1600" size="100,100">(set: $garbage to it + 1)
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön-&gt;Sjö]]</tw-passagedata><tw-passagedata pid="22" name="Sjö" tags="" position="400,1600" size="100,100">(set: $garbage to it + 1)
 (enchant: &quot;A&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;B&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;O&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;R&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;E&quot;, (text-style: &quot;sway&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Abborre.png&quot;&gt;
 Efter ett tag kommer ni fram till sjön och stannar lite innan kAnten, bakom en sten ser ni ett plastlock, det plockar ni upp för att ta med er tillbaka till skolgården. Solen skiner och ni njuter av stillheten i natuRen, men plötsligt avBryts lugnet av att en fisk hOppar upp ur vattnet och gör en kullerBytta i luften för att sedan dyka neR i vattnet igen. Fisken upprepar sina cirkuskonster flera gånger, ni tittar på varandra och skrattar. Kim säger: 
 //&quot;Det var en rolig fisk. Kan du gissa vilken sort det är? Till din hjälp har du de rörliga bokstäverna.&quot;//
