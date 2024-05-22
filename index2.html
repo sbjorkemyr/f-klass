@@ -102,20 +102,21 @@ Efter en stund börjar Kim gå lite långsammare. Du hinner se dig omkring och n
 Du tycker att en magisk plats låter väldigt spännande och du bestämmer därför att ni ska  ta vägen till höger. Stigen ni följer leder fram till en glänta där mängder av färgglada lampor blinkar. Du börjar fundera på vad det kan vara för något, det skulle kunna vara ett nöjesfält, men det är konstigt om det skulle finnas mitt i snölandskapet. När ni kommer fram till gläntan ser du att det är en stor byggnad. Kim vinkar till dig att du ska följa efter honom. Vid husväggen hittar ni två lådor nedanför ett fönster, som ni klättrar upp på. Försiktigt kikar ni in genom fönstret. Ni kan knappt tro era ögon när ni får se vad som finns därinne.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad finns i byggnaden?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Vänster" tags="" position="400,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/7c379876232722f08081a29727751b85585f4c74/Vinter/Sno%CC%88landskap.png&quot;&gt;
-Du väljer att ni ska ta stigen åt vänster, ni följer den en bit innan Kim plötsligt stannar, han kastar sig i snön och vänder sig på rygg för att göra en snöängel. Du skrattar och bestämmer dig för att göra likadant.
+Du väljer att ni ska ta stigen åt vänster, ni följer den en bit innan Kim plötsligt stannar, han kastar sig i snön och vänder sig på rygg för att göra en snöängel. Du skrattar och bestämmer dig för att göra likadant. Kim säger:
+//&quot;Vad är det som är vitt, runt och går att kasta?&quot;//
 (link-repeat: &quot;Gissa!&quot;)[{
-	(set: $hare to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
-	(set: $lowercaseHare to (lowercase: $hare))
-	(if: (either: ($lowercaseHare) is &quot;hare&quot;, ($lowercaseHare) is &quot;hare&quot;))[
+	(set: $ball to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
+	(set: $lowercaseBall to (lowercase: $ball))
+	(if: (either: ($lowercaseBall) is &quot;snöboll&quot;, ($lowercaseBall) is &quot;snöboll&quot;))[
 		(replace: ?results)[Bra gissat, det var rätt svar.]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara hare.]
+		(replace: ?results)[Det var inte rätt, svaret ska vara snöboll.]
 	]
 }]
 []&lt;results|
 
-När ni ligger där i snön börjar små fina snöflingor segla ner på er. Kim försöker fånga snöflingor på tungan. 
+Kim gör en snöboll och kastar iväg den. När ni ligger där i snön börjar små fina snöflingor segla ner på er. Kim försöker fånga snöflingor på tungan. 
 
 //&quot;Visst är det konstigt att så fort snöflingan landar på min tunga så förvandlas den till vatten!&quot;// säger Kim.
 
