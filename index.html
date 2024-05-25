@@ -46,7 +46,7 @@ tw-story {
   	display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
     height: auto; 
   	border: solid 3px;
   	border-radius: 30px;	
@@ -149,10 +149,10 @@ Surret tillhörde en liten humla, ni stannar upp och tittar på den. Humlan är 
 	(set: $pollen to (prompt: &quot;Vad är det?&quot;, &quot;&quot;))
 	(set: $lowercasePollen to (lowercase: $pollen))
 	(if: (either: ($lowercasePollen) is &quot;pollen&quot;, ($lowercasePollen) is &quot;pollen&quot;))[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara POLLEN.]
+		(replace: ?results)[Svaret är pollen.]
 	]
 }]
 []&lt;results|
@@ -211,32 +211,32 @@ Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är 
 
 Du och Kim tittar på varandra och andas ut av lättnad, sedan ler ni mot älgen och tackar för samtalet. Innan ni går tar ni med er en plastflaska som flyter i bäcken.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="550,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="500,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
 Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim (titta på bilden): 
 //&quot;Hitta alla insekter som bor vid bäcken. Du får första bokstaven som hjälp.&quot;// 
-(link-repeat: &quot;Insekt 1&quot;)[{
+(link-repeat: &quot;1&quot;)[{
 	(set: $ant to (prompt: &quot;Vilken insekt är det?&quot;, &quot;m&quot;))
 	(if: $ant is &quot;myra&quot;)[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara myra.]
+		(replace: ?results)[Svaret är myra.]
 	]
-}][]&lt;results|(link-repeat: &quot;Insekt 2&quot;)[{
+}][]&lt;results|(link-repeat: &quot;2&quot;)[{
 	(set: $lady to (prompt: &quot;Vilken insekt är det?&quot;, &quot;n&quot;))
 	(if: $lady is &quot;nyckelpiga&quot;)[
-		(replace: ?results2)[Bra gissat, det var rätt svar.]
+		(replace: ?results2)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results2)[Det var inte rätt, svaret ska vara nyckelpiga.]
+		(replace: ?results2)[Svaret är nyckelpiga.]
 	]
-}][]&lt;results2|(link-repeat: &quot;Insekt 3&quot;)[{
+}][]&lt;results2|(link-repeat: &quot;3&quot;)[{
 	(set: $butter to (prompt: &quot;Vilken insekt är det?&quot;, &quot;f&quot;))
 	(if: $butter is &quot;fjäril&quot;)[
-		(replace: ?results3)[Bra gissat, det var rätt svar.]
+		(replace: ?results3)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results3)[Det var inte rätt, svaret ska vara fjäril.]
+		(replace: ?results3)[Svaret är fjäril.]
 	]
 }][]&lt;results3|
 
@@ -250,13 +250,12 @@ Djuret tvärbromsar precis framför er. Den tittar upp på er med sina stora bru
 	(set: $hare to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
 	(set: $lowercaseHare to (lowercase: $hare))
 	(if: (either: ($lowercaseHare) is &quot;hare&quot;, ($lowercaseHare) is &quot;hare&quot;))[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara hare.]
+		(replace: ?results)[Svaret är hare.]
 	]
-}]
-[]&lt;results|
+}][]&lt;results|
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Kött" tags="" position="350,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/95cab7c02f2437ae82d544e70eebc0d5829dfdb1/autum/ko%CC%88ttbit.png&quot;&gt;
 //&quot;Nej usch, jag vill absolut inte äta kött.&quot;//
@@ -281,14 +280,12 @@ Efter ett tag kommer ni fram till sjön och stannar lite innan kAnten, bakom en 
 	(set: $fish to (prompt: &quot;Vad är det för fisk?&quot;, &quot;&quot;))
 	(set: $lowercaseFish to (lowercase: $fish))
 	(if: (either: ($lowercaseFish) is &quot;abborre&quot;, ($lowercaseFish) is &quot;abborre&quot;))[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara abborre.]
+		(replace: ?results)[Svaret är abborre.]
 	]
-}]
-[]&lt;results|
-
+}][]&lt;results|
 
 Plötsligt hör ni hur skolklockan ringer. Det är dags att åka tillbaka till skolgården, rasten är slut.
 
