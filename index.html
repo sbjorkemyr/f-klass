@@ -140,7 +140,20 @@ Ni hoppar till av rädsla och vrider er runt för att ta reda på varifrån rös
 
 //&quot;Jag är kungsörnen Esmeralda och jag har världens viktigaste jobb. Mitt jobb är att hålla koll så att alla här i skogen uppför sig. Det är inget lätt jobb ska ni veta, så jag har inte tid att prata med er mer. Adjö.&quot;//
 
-Kungsörnen vrider sig bort från er, det blev en kort pratstund. Men det börjar snart bli dags att åka tillbaka till skolan och plötsligt hör ni hur skolklockan ringer. Rasten är slut.
+Kungsörnen vrider sig bort från er, det blev en kort pratstund. Kim säger till dig: 
+//&quot;Vad tror du en så stor fågel äter för någonting? Kött eller växter?
+(link-repeat: &quot;Gissa!&quot;)[{
+	(set: $eat to (prompt: &quot;Vad äter en kungsörn?&quot;, &quot;&quot;))
+	(set: $lowercaseEat to (lowercase: $eat))
+	(if: (either: ($lowercaseEat) is &quot;kött&quot;, ($lowercaseHem) is &quot;kött&quot;))[
+		(replace: ?results)[Rätt svar!]
+	]
+	(else:)[
+		(replace: ?results)[Svaret är kött.]
+	]
+}][]&lt;results|
+
+Men det börjar snart bli dags att åka tillbaka till skolan och plötsligt hör ni hur skolklockan ringer. Rasten är slut.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Vad är det som surrar?" tags="" position="825,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Humla 2.0.png&quot;&gt;
 Surret tillhörde en liten humla, ni stannar upp och tittar på den. Humlan är liten och rund som en boll med vingar. Den är hårig och ser ut som att den är mjuk att röra vid. Men ni vet om att även humlor kan stickas så ni håller er lite på avstånd. Humlan flyger från blomma till blomma för att samla nektar och pollen. Den gör ett sött surrande ljud när den flyger. Humlor är snälla och gillar att hjälpa till med att pollinera blommor, vilket betyder att de hjälper blommorna att växa sig starka och fina. Ni tittar på den söta humlan men ni vill inte störa den i sin arbetsdag. Kim vänder sig till dig och säger: 
@@ -154,8 +167,7 @@ Surret tillhörde en liten humla, ni stannar upp och tittar på den. Humlan är 
 	(else:)[
 		(replace: ?results)[Svaret är pollen.]
 	]
-}]
-[]&lt;results|
+}][]&lt;results|
 Efter er korta paus vid humlan forsätter ni promenaden upp mot toppen.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till toppen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Geting" tags="" position="1125,1275" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/Geting.png&quot;&gt;
@@ -185,31 +197,38 @@ Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. 
 Trädet ler mot er, och nickar med hela sin trädkrona. Nu ser han glad ut och ni vinkar och går vidare på er promenad. Men ni hinner inte gå så långt innan det kommer ett djur i full fart mot er på vägen.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vem där?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Gå mot mystiskt ljud" tags="" position="600,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/adb4c185f0515a0ac60ab5089177121704ae7f86/autum/B%C3%A4ck.png&quot;&gt;
-Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skogen. Ljudet framkallar en känsla av spänning och lite rädsla, men samtidigt väcker det er nyfikenhet om vad det kan vara för något som låter. Ni kommer fram till en bäck som ni börjar följa. Plötsligt hör ni hur det brakar till i skogen, det är något stort som är påväg. Vad är det för något?
+Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skogen. Ljudet framkallar en känsla av spänning och lite rädsla, men samtidigt väcker det er nyfikenhet om vad det kan vara för något som låter. Ni kommer fram till en bäck som ni börjar följa. Plötsligt hör ni hur det brakar till i skogen, det är något stort som är påväg. Ni kan se att den har brun päls och stora horn. Vad är det för något?
 (link-repeat: &quot;Gissa!&quot;)[{
 	(set: $elk to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
 	(set: $lowercaseElk to (lowercase: $elk))
 	(if: (either: ($lowercaseElk) is &quot;älg&quot;, ($lowercaseElk) is &quot;älg&quot;))[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara älg.]
+		(replace: ?results)[Svaret är älg.]
 	]
-}]
-[]&lt;results|
+}][]&lt;results|
 
  &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;Skogens konung]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="550,1200" size="100,100">(set: $garbage to it + 1)
-&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/elk2.png&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="550,1225" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/elk2.png&quot;&gt;
 Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är en älg. Den tittar nyfiket på er med sina stora, vänliga ögon. Trots er rädsla känner ni er också nyfikna. Älgen säger: 
  //&quot;Hej på er. Välkomna till min skog. Det är jag som kallas för skogens konung.&quot;//
 
 //&quot;Varför kallas du för skogens konung?&quot;//, frågar Kim.
 
 Älgen ser på er med sina stora bruna ögon innan han svarar: 
-//&quot;Det är för att jag är en av de största och starkaste djuren i skogen&quot;//, säger älgen. //&quot;Mina imponerande horn kallas för en krona, precis som för en kung. Jag trivs med att vandra ensam här i skogen. Många av mina kompisar tycker om att utforska nya områden under sommaren och vintern, men jag är nöjd med att stanna på samma plats året om. Här i skogen finns det gott om mat som jag älskar, risväxter som blåbär, lingon och ljung är min favoritföda tillsammans med knoppar, blad och skott från olika träd. Ibland tar jag mig ett dopp i sjön för att svalka mig. Vi älgar en del av naturen och vi strävar efter att bibehålla balansen i skogen. Vanligtvis håller vi oss borta från människor, eftersom vi fruktar det okända och kan bli aggressiva om vi känner oss hotade. Men ni behöver inte vara rädda för mig, jag är en vänlig och fredlig älg som inte vill skada er.&quot;//
-
-Du och Kim tittar på varandra och andas ut av lättnad, sedan ler ni mot älgen och tackar för samtalet. Innan ni går tar ni med er en plastflaska som flyter i bäcken.
+//&quot;Det är för att jag är en av de största och starkaste djuren i skogen&quot;//, säger älgen. //&quot;Mina imponerande horn kallas för en krona, precis som för en kung. Jag trivs med att vandra ensam här i skogen. Många av mina kompisar tycker om att utforska nya områden under sommaren och vintern, men jag är nöjd med att stanna på samma plats året om. Här i skogen finns det gott om mat som jag älskar, risväxter som blåbär, lingon och ljung är min favoritföda tillsammans med knoppar, blad och skott från olika träd. Ibland tar jag mig ett dopp i sjön för att svalka mig. Vanligtvis håller vi oss borta från människan, eftersom vi fruktar det okända och kan bli aggressiva om vi känner oss hotade. Men ni behöver inte vara rädda för mig, jag är en vänlig och fredlig älg som inte vill skada er. Jag har en fråga till er, vet ni vad älgens barn kallas?&quot;//
+(link-repeat: &quot;Gissa!&quot;)[{
+	(set: $kalv to (prompt: &quot;Vad heter älgens barn?&quot;, &quot;&quot;))
+	(set: $lowercaseKalv to (lowercase: $kalv))
+	(if: (either: ($lowercaseKalv) is &quot;kalv&quot;, ($lowercaseKalv) is &quot;kalv&quot;))[
+		(replace: ?results)[Rätt svar!]
+	]
+	(else:)[
+		(replace: ?results)[Svaret är kalv.]
+	]
+}][]&lt;results|
+Sedan ler ni mot älgen och tackar för samtalet. Ni är glada över att ni har fått träffa på en snäll älg idag, det var roligt att få veta lite mer om den. Innan ni går vidare tar ni med er en plastflaska som flyter i bäcken.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="500,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
 Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vattnet. Det är en underbar dag och ni njuter av solen som värmer. Efter en stund sätter ni er ner på en sten och betraktar det glittrande vattnet. Plötsligt utbrister Kim (titta på bilden): 
@@ -334,9 +353,22 @@ Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigar
 
 </tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1125,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))
 &lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/adb4c185f0515a0ac60ab5089177121704ae7f86/autum/talk-kim.png&quot;&gt;
-När du kommer tillbaka till Kim är han nyfiken att höra vad du har sett. Du beskriver getingen för Kim: //&quot;$skriv&quot;// 
+När du kommer tillbaka till Kim är han nyfiken att höra vad du har sett. Du beskriver getingen för Kim: 
+//&quot;$skriv&quot;// 
 
-Sedan fortsätter ni vidare upp mot toppen.
+//&quot;Mycket intressant, tack för informationen. En fundering bara, jag undrar ifall du vet vad getingens hem heter?&quot;// frågar Kim.
+(link-repeat: &quot;Gissa!&quot;)[{
+	(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))
+	(set: $lowercaseHem to (lowercase: $hem))
+	(if: (either: ($lowercaseHem) is &quot;getingbo&quot;, ($lowercaseHem) is &quot;getingbo&quot;))[
+		(replace: ?results)[Rätt svar!]
+	]
+	(else:)[
+		(replace: ?results)[Svaret är getingbo.]
+	]
+}][]&lt;results|
+
+Sedan fortsätter ni vidare på er promenad upp till toppen.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till toppen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
