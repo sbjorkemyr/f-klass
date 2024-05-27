@@ -345,18 +345,17 @@ Ni tittar på varandra med förvåning och Kim säger:
 Ni tackar svampen för pratstunden och fortsätter sedan på er vandring, glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen. Efter en stunds promenad hör ni något som surrar.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det som surrar?-&gt;Geting]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Gå till det konstiga ljudet" tags="" position="875,1050" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/adb4c185f0515a0ac60ab5089177121704ae7f86/autum/ra%CC%88vgryt.png&quot;&gt;
-Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken. Ni stannar framför det och tittar ner i det. Det är helt klart härifrån ljudet kommer. Ni kikar in i hålet och ser två ögon som lyser i mörkret. Vad är det för något?
+Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken, ni stannar framför det och tittar in. Det är helt klart härifrån ljudet kommer, i hålet ser ni två ögon som lyser i mörkret. Vad är det för något?
 (link-repeat: &quot;Gissa!&quot;)[{
 	(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
 	(set: $lowercaseFox to (lowercase: $fox))
 	(if: (either: ($lowercaseFox) is &quot;räv&quot;, ($lowercaseFox) is &quot;räv&quot;))[
-		(replace: ?results)[Bra gissat, det var rätt svar.]
+		(replace: ?results)[Rätt svar!]
 	]
 	(else:)[
-		(replace: ?results)[Det var inte rätt, svaret ska vara räv.]
+		(replace: ?results)[Svaret är räv.]
 	]
-}]
-[]&lt;results|
+}][]&lt;results|
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/foxscream.mp3&quot; autoplay&gt;
