@@ -176,14 +176,11 @@ Det surrande ljudet tillhör en geting, du blir nyfiken och vill titta lite när
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="650,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/d2b282fa26e66a62def09025b820dec09e0ddce7/autum/Portal%26stja%CC%88rnhimmel%20(2).png&quot;&gt;
 Kim ber dig att blunda och tänka på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. En känsla av lycka fyller dig när du tänker på allt som du har upplevt med din nya vän, och du ser fram emot nästa äventyr ni ska uppleva tillsammans. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat (print: $garbage) sopor.
-
-På återseende!
-(enchant: &quot;På återseende!&quot;, (text-style: &quot;sway&quot;))
+På återseende!(enchant: &quot;På återseende!&quot;, (text-style: &quot;sway&quot;))
 
 Psst... om du är nyfiken på de andra valen i denna berättelse kan du gå tillbaka och välja en annan väg för att göra nya spännande möten.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Portalen-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Gå till trädet" tags="" position="375,950" size="100,100">(set: $garbage to it + 1)
-&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/Tra%CC%88d.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Portalen-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Gå till trädet" tags="" position="375,950" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/Tra%CC%88d.png&quot;&gt;
 Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. När ni kommer fram till trädet tittar ni upp på det och Kim frågar vänligt: 
 //&quot;Hej, du ser bekymrad ut, kan vi hjälpa dig med något?&quot;//
 
@@ -203,14 +200,13 @@ Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skog
 	(set: $elk to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
 	(set: $lowercaseElk to (lowercase: $elk))
 	(if: (either: ($lowercaseElk) is &quot;älg&quot;, ($lowercaseElk) is &quot;älg&quot;))[
-		(replace: ?results)[Rätt svar!]
+		(replace: ?results)[Bra jobbat!]
 	]
 	(else:)[
 		(replace: ?results)[Svaret är älg.]
 	]
 }][]&lt;results|
-
- &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;Skogens konung]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="550,1225" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/elk2.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;Skogens konung]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="550,1225" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/49f5717bad35a23526dc22e6b107b8a8d39d6632/autum/elk2.png&quot;&gt;
 Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är en älg. Den tittar nyfiket på er med sina stora, vänliga ögon. Trots er rädsla känner ni er också nyfikna. Älgen säger: 
  //&quot;Hej på er. Välkomna till min skog. Det är jag som kallas för skogens konung.&quot;//
 
@@ -228,7 +224,6 @@ Ett stort djur med väldiga horn kliver ner i bäcken som ni står vid, det är 
 		(replace: ?results)[Svaret är kalv.]
 	]
 }][]&lt;results|
-
 Sedan ler ni mot älgen och tackar för samtalet. Ni är glada över att få träffa på en så snäll älg, det var roligt att få veta lite mer om den. Innan ni går vidare tar ni med er en plastflaska som flyter i bäcken.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Följ bäcken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Följ bäcken" tags="" position="500,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/cd1be68bdea213b4e39a6f44dc035b6b8748108c/autum/Sto%CC%88rre%20insekter.png&quot;&gt;
@@ -259,8 +254,7 @@ Ni fortsätter längs med bäcken och turas om att hoppa över det porlande vatt
 		(replace: ?results3)[Svaret är fjäril.]
 	]
 }][]&lt;results3|
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön-&gt;Sjö]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Vem där?" tags="" position="250,1075" size="100,100">(set: $answer to &quot;0&quot;)
-&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/8637423c087d476c5f8e7887b537400b2de4e63b/autum/Ny%20dammoln.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön-&gt;Sjö]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Vem där?" tags="" position="250,1075" size="100,100">(set: $answer to &quot;0&quot;)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/8637423c087d476c5f8e7887b537400b2de4e63b/autum/Ny%20dammoln.png&quot;&gt;
 Djuret tvärbromsar precis framför er. Den tittar upp på er med sina stora bruna ögon. Kim frågar:
 //&quot;Hej, vem är du?&quot;//
 
@@ -269,21 +263,19 @@ Djuret tvärbromsar precis framför er. Den tittar upp på er med sina stora bru
 	(set: $hare to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
 	(set: $lowercaseHare to (lowercase: $hare))
 	(if: (either: ($lowercaseHare) is &quot;hare&quot;, ($lowercaseHare) is &quot;hare&quot;))[
-		(replace: ?results)[Rätt svar!]
+		(replace: ?results)[Bra jobbat!]
 	]
 	(else:)[
 		(replace: ?results)[Svaret är hare.]
 	]
 }][]&lt;results|
-
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Kött" tags="" position="350,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/95cab7c02f2437ae82d544e70eebc0d5829dfdb1/autum/ko%CC%88ttbit.png&quot;&gt;
 //&quot;Nej usch, jag vill absolut inte äta kött.&quot;//
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Fisk" tags="" position="275,1350" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/95cab7c02f2437ae82d544e70eebc0d5829dfdb1/autum/fisk%20pa%CC%8A%20tallrik.png&quot;&gt;
 //&quot;Nja, fisk är inte något min mage tycker om.&quot;//
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Växter" tags="" position="100,1400" size="100,100">(set: $garbage to it + 1)
-&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/adb4c185f0515a0ac60ab5089177121704ae7f86/autum/haregras.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Växter" tags="" position="100,1400" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/adb4c185f0515a0ac60ab5089177121704ae7f86/autum/haregras.png&quot;&gt;
 //&quot;Helt rätt, jag äter främst växter, och min kost består vanligtvis av gräs, örter, blad, bark och skott från olika växter. Ibland kan jag även äta frukt och bär. Vi harar är växtätare och kallas därför för en herbivor. Jag är noga med att välja vilka växter jag äter för att få i mig rätt näringsämnen och undvika att bli sjuk&quot;//, säger Hugo.
 
 Du och Kim kliver av från stigen och plockar massor av gräs till Hugo och svarar:
@@ -344,7 +336,6 @@ Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigar
 		(replace: ?results)[Svaret är räv.]
 	]
 }][]&lt;results|
-
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/24a762e62cc5c4056c4e8b67656f74d14bea2751/autum/foxscream.mp3&quot; autoplay&gt;
 
