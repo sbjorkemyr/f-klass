@@ -90,24 +90,14 @@ Eftersom ni klädde på er så snabbt, är ni de första från er klass som komm
 //&quot;Ja, det var ett jättebra förslag. Minns du hur vi tar oss igenom portalen?&quot;// frågar Kim.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Vägskälet" tags="" position="500,600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/crossroad.jpg&quot;&gt;
-Efter en stund börjar Kim gå lite långsammare. Du hinner se dig omkring och njuta av den kalla och friska luften. Du tittar förundrat på den glittrande vackra snön som ligger överallt. Nyfikenheten över vad som ska hända gör att det pirrar i din mage. Till slut kommer ni fram till ett vägskäl. Kim säger:
-//&quot;Om vi går till vänster kommer vi träffa magiska figurer. Och om vi går till höger kommer vi att hamna på en magisk plats. Vilken väg ska vi ta?&quot;//
-
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vänster]] [[Stigen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Höger" tags="" position="900,575" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/fabric.jpg&quot;&gt;
+Nyfikna på att träffa magiska figurer följer ni stigen åt vänster. Efter en stund börjar Kim gå lite långsammare. Blicken vandrar runt, och den kalla, friska luften fyller lungorna. Överallt glittrar snön vackert, som ett gnistrande täcke. Spänningen över vad som väntar får det att pirra i magen. Till slut når ni ett vägskäl. Kim stannar upp och säger:
+//&quot;Går vi till vänster hamnar vi tillslut i tomtebyn, åt höger hittar vi Tomtens renars stall. Vad ska vi utforska?&quot;//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå mot tomtebyn-&gt;Vänster]] [[Följ stigen till stallet-&gt;Stigen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Höger" tags="" position="900,575" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/fabric.jpg&quot;&gt;
 Ni väljer att gå mot en magisk plats och når en glänta där färgglada lampor blinkar. Först tror du att det är ett nöjesfält. När ni kommer närmare ser ni en stor byggnad. Kim vinkar åt dig att följa med. Vid väggen hittar ni två lådor att klättra på och kikar in genom fönstret – där inne ligger tomtens verkstad! Nyfikna sträcker ni er för att se bättre och funderar på hur ni ska ta er in. Kim pekar mot en dörr lite längre bort. Men det står någon där, ska ni våga gå dit eller försöka hitta en annan väg in?
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå fram till dörrvakten]][[Hitta en annan väg in-&gt;Genvägen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Vänster" tags="" position="300,700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/winterland.jpg&quot;&gt;
 Du väljer stigen till vänster, och ni följer den en bit innan Kim plötsligt stannar, kastar sig i snön och vänder sig på rygg för att göra en snöängel. Du skrattar och bestämmer dig för att göra likadant. Kim säger:
 //&quot;Vad är det som är vitt, runt och går att kasta?&quot;//
-(link-repeat: &quot;Gissa!&quot;)[{
-	(set: $ball to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))
-	(set: $lowercaseBall to (lowercase: $ball))
-	(if: (either: ($lowercaseBall) is &quot;snöboll&quot;, ($lowercaseBall) is &quot;snöboll&quot;))[
-		(replace: ?results)[Bra jobbat!]
-	]
-	(else:)[
-		(replace: ?results)[Svaret är snöboll.]
-	]
-}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $ball to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseBall to (lowercase: $ball))(if: (either: ($lowercaseBall) is &quot;snöboll&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är snöboll.]]}][]&lt;results|
 Efter att ni legat stilla en stund och tittat på himlen känner ni hur små, fina snöflingor börjar falla på er. Kim försöker fånga snöflingorna med tungan och säger sedan:
 //&quot;Visst är det konstigt att så fort en snöflinga landar på min tunga så förvandlas den till vatten!&quot;//
 
@@ -161,11 +151,11 @@ Ni tackar snögubben för pratstunden och vinkar hejdå, men ni känner att det 
 
 Plötsligt ser ni något som swischar förbi på himlen. Båda två stannar för att titta upp mot himlen. Vad kan det vara?
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[BRAK]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Vad är det där?" tags="" position="500,1150" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/raindeer.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[BRAK]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Vad är det där?" tags="" position="575,1175" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/raindeer.jpg&quot;&gt;
 Ni hör ljudet av bjällror och ser på himlen något som rusar fram i en hisnande fart. Plötsligt ser ni hur föremålet dyker ner och störtar till marken med ett brak. Ni börjar springa mot platsen för olyckan. När ni kommer fram ser ni en släde som har kraschat, renarna som drog släden ser utmattade ut och presenter ligger utspridda på marken. Ni spanar omkring efter någon som kan ha kört släden. Plötsligt hör ni //&quot;HJÄLP!&quot;//
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[HJÄLP!]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/Bj%C3%A4llror.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="12" name="HJÄLP!" tags="" position="400,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/cane.jpg&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/Bj%C3%A4llror.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="12" name="HJÄLP!" tags="" position="650,1350" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/cane.jpg&quot;&gt;
 Ropet kommer från släden, och ni går fram för att kika under den. Där ser ni en tomtenisse som sitter fast. Med gemensamma krafter försöker ni lyfta den tunga släden, men den är alldeles för tung.
 
 //&quot;Det ligger morötter i släden. Använd morötterna för att locka renarna framåt, så att jag kan komma loss&quot;//, säger tomtenissen.
@@ -184,7 +174,7 @@ Ni gör som nissen säger, och renarna tar glatt några steg framåt när de loc
 
 //&quot;Vi hjälper dig!&quot;// säger du och Kim.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Hjälp tomtenissen-&gt;Uppstädning]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Uppstädning" tags="" position="600,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/findthings.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Hjälp tomtenissen-&gt;Uppstädning]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Uppstädning" tags="" position="675,1550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/findthings.jpg&quot;&gt;
 Eftersom det är nissen som har ställt till det, får han uppgiften att plocka upp sakerna, men ni kan hjälpa till att leta. Ni ser en stor snöhög och klättrar snabbt högst upp. Perfekt, härifrån har ni en bra utsikt. Tillsammans spanar ni efter sakerna och upptäcker flera föremål en bit bort. Ni förklarar för nissen var han ska leta.
 (link-repeat: &quot;Paket&quot;)[{
 	(set: $paket to (prompt: &quot;Paketet finns //i//...&quot;, &quot;&quot;))
@@ -231,13 +221,10 @@ När nissen har lyckats samla ihop alla saker och ni har gett renarna vatten, b�
 
 //&quot;Ja, det vill vi!&quot;// svarar ni och hoppar upp och ner av glädje. Ni sätter er i släden, som sakta lyfter innan den i magisk fart swishar fram över himlen.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Åk släde till stallet-&gt;Stallet]]</tw-passagedata><tw-passagedata pid="14" name="Tomtebyn" tags="" position="750,1775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/village.jpg&quot;&gt;
-När ni kommer in i byn hör ni julmusik och en nisse som sjunger med. Doften av pepparkakor fyller luften och ni känner verkligen av julstämningen som råder i tomtebyn. Men snart är rasten och även äventyret slut för den här gången. Julmusiken tystnar och istället hör ni hur skolklockan ringer. Ni blundar och tänker er tillbaka till snöhögen, dags att fortsätta skoldagen och invänta nästa äventyr.
-&lt;div class=&quot;rubrik3&quot;&gt;[[snöhögen]]&lt;/div&gt;&lt;/div&gt;
-
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/elf-singing-89296.mp3&quot; autoplay&gt;
-
-</tw-passagedata><tw-passagedata pid="15" name="Gå fram till dörrvakten" tags="" position="1150,525" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/8eb6827ba354256c12100196c8804eff6ab9cbf6/winter/penguin.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Åk släde till stallet-&gt;Stallet]]</tw-passagedata><tw-passagedata pid="14" name="Tomtebyn" tags="" position="600,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/village.jpg&quot;&gt;
+När ni kommer in i byn hör ni julmusik och en nisse som sjunger med. Doften av pepparkakor fyller luften och ni känner verkligen av julstämningen som råder i tomtebyn. Men snart är rasten och även äventyret slut för den här gången. Julmusiken tystnar och istället hör ni hur skolklockan ringer.
+&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;snöhögen]]&lt;/div&gt;&lt;/div&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/elf-singing-89296.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="15" name="Gå fram till dörrvakten" tags="" position="1150,525" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/8eb6827ba354256c12100196c8804eff6ab9cbf6/winter/penguin.jpg&quot;&gt;
 Ni hoppar ner från lådorna och börjar gå mot dörrvakten, ni ser att det är en pingvin som vaktar ingången. Den vänder sig mot er och frågar med sträng röst: //&quot;Vad gör ni här?&quot;// 
 
 //&quot;Vi är på äventyr. Vi ville så gärna se tomtens verkstad&quot;//, svarar Kim.
@@ -280,12 +267,11 @@ När ni känner direkt värmen som kommer inifrån och ni känner doften av nyba
 &lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;Julgranskula]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Glad" tags="" position="1125,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/sun.jpg&quot;&gt;
 //&quot;Glad som en sol kan man alltid vara, men det är inte svaret på denna gåtan.&quot;//
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;Julgranskula]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Leksaksavdelningen" tags="" position="1000,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/0bff845bf4d99193be4f3782796e3bc50d4b4a33/winter/findbear.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;Julgranskula]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Leksaksavdelningen" tags="" position="1050,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/0bff845bf4d99193be4f3782796e3bc50d4b4a33/winter/findbear.jpg&quot;&gt;
 Ni bestämmer er för att kolla vad som händer på leksaksavdelnigen. När i kommer fram dit ser ni massor av maskiner som är igång och jobbar. Dockor får hår, gosedjur fylls med vadd och legobitar formas. I en annan del av leksaksavdelningen kan ni ser hur cyklar och skateboards blir tillverkade. Ni håller lite avstånd från maskinerna då det kan bara farligt att gå för nära. Överallt springer stressade tomtenissar runt och jobbar för fullt, men trots att de har mycket att göra verkar de ändå vara glada. Ni tittar intresserat på allt som händer. Kim säger: //&quot;$namn, ser du leksakshyllan där, kan du räkna hur många rosa nallar som finns där?&quot;//
-(link-repeat: &quot;Gissa!&quot;)[{(set: $nalle to (prompt: &quot;Hur många rosa nallar ser du på bilden?&quot;, &quot;&quot;))(if: $nalle is &quot;8&quot;)[(replace: ?results)[Bra jobbat!]](else:)[
-		(replace: ?results)[Svaret är 8.]]}][]&lt;results|
-Efter att ha titta ett tag på de arbetsamma nissarna bestämmer ni er för att ni inte vill störa, så ni vänder om för att gå vidare när ni ser ett intressant rum....ni bestämmer er för att undersöka.
-&lt;div class=&quot;rubrik3&quot;&gt;[[Undersök rummet-&gt;Gymmet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Godisavdelningen" tags="" position="1200,1000" size="100,100">(set: $godis to (prompt: &quot;Vilket är ditt favoritgodis?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/496bfd57e5bc666c1dc54a335da8f451769fd7f3/winter/candy.jpg&quot;&gt;
+(link-repeat: &quot;Gissa!&quot;)[{(set: $nalle to (prompt: &quot;Hur många rosa nallar ser du på bilden?&quot;, &quot;&quot;))(if: $nalle is &quot;8&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 8.]]}][]&lt;results|
+Efter att ha titta ett tag på de arbetsamma nissarna bestämmer ni er för att ni inte vill störa. Men i direkt anslutning till leksaksavdelningen ser ni ett annat rum som ni bestämmer er för att undersöka.
+&lt;div class=&quot;rubrik3&quot;&gt;[[Undersök rummet-&gt;Gymmet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Godisavdelningen" tags="" position="1250,1075" size="100,100">(set: $godis to (prompt: &quot;Vilket är ditt favoritgodis?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/496bfd57e5bc666c1dc54a335da8f451769fd7f3/winter/candy.jpg&quot;&gt;
 Godisavdelningen känns väldigt lockande, så du pekar åt Kim att du vill gå dit. Där arbetas det för fullt. Ni kan se att det rörs i grytor, karameller skärs upp, choklad paketeras, och pepparkakor åker in och ur ugnen i en rasande fart. Men det som är konstigt är att alla dessa saker sker utan att ni ser någon som arbetar. Du tittar med stora ögon och Kim skrattar till och säger:
 //&quot;Visst är det häftigt?! Allt görs med magi. Hela den här byggnaden är magisk så saker händer på något oförklarligt sätt av sig själv. Tänk på ditt favoritgodis.&quot;//
 
@@ -305,12 +291,12 @@ Nissen springer iväg i full fart och ni har svårt att hålla jämna steg med h
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/clock-alarm-8761.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="25" name="Kontoret" tags="" position="1275,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/insidedoor.jpg&quot;&gt;
 Ni kommer fram till en stor röd dörr. Nissen letar stressat efter rätt nyckel i sin knippa för att snabbt låsa upp dörren till rummet. När ni väl är inne, tar ni er en titt omkring. Nissen förklarar att han redan har sökt igenom alla vrår, men utan framgång. Ni betraktar rummet noggrant. Det är inte stort, det innehåller en bokhylla, ett skrivbord och en ståtlig julgran. Var ska ni börja leta?
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Skrivbord]][[Julgran]][[Bokhylla]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Stallet" tags="" position="600,1625" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/stable.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Skrivbord]][[Julgran]][[Bokhylla]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Stallet" tags="" position="725,1775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/702f8b9d80828a953d9c093bfeb533b1a3013541/winter/stable.jpg&quot;&gt;
 Efter en spännande luftfärd landar släden slutligen intill stallet, som ligger i utkanten av byn. Ni hjälper tomtenissen att leda in renarna till sin inhängnad, där de blir serverade mat och vatten. Sedan hjälper ni nissen att dra in släden under taket så den inte får en massa snö på sig. 
 
 //&quot;Nu måste jag gå och ringa tomten för att vad som har hänt, han och tomtemor är bortresta. Tack för all er hjälp och att ni lärt mig om att man måste fråga om lov, det kommer jag göra nästa gång&quot;//, säger nissen och vinkar hejdå till er när ni börjar gå mot byn.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till tomtebyn-&gt;Tomtebyn]]
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå till Portalen-&gt;snöhögen]]&lt;/div&gt;&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="27" name="Början" tags="firstpage" position="700,0" size="100,100">
 
@@ -362,15 +348,34 @@ På återseende!(enchant: &quot;På återseende!&quot;, (text-style: &quot;sway&
 
 //&quot;Psst... om du är nyfiken på de andra valen i denna berättelse kan du gå tillbaka och välja en annan väg för att göra nya spännande möten.&quot;//
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Portalen-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="Gymmet" tags="" position="1050,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/81536702e8a9c6f8331aa3eba194723923cf9291/winter/gym.jpg&quot;&gt;
-Ni kikar in i ett rum där ni hör peppig musik, rummet är fullt med löpband och andra maskiner. Ni tittar förundrat på varandra.//&quot;$namn, vad tror du dom gör här inne?&quot;// frågar Kim.
+Ni kikar in i ett rum där ni hör peppig musik, rummet är fullt med löpband och andra maskiner. Ni tittar förundrat på varandra. //&quot;$namn, vad tror du dom gör här inne?&quot;// frågar Kim.
 (link-repeat: &quot;Gissa!&quot;)[{(set: $svar to (prompt: &quot;Vad gör de här inne?&quot;, &quot;&quot;))}(replace: ?results)[$svar]][]&lt;results|
 Men plötsligt hör ni ett högt PFFZZZT och POFF, sen blir allt mörkt och maskinerna inne i leksaksavdelningen stannar.
 
-//&quot;Åh nej!&quot;// ropar nissarna. //&quot;Elbatteriet är TOMT!&quot;//
-
-En nisse ropade. //&quot;Vi behöver mer energi, snabbt! Vi har bara några timmar kvar innan arbetsdagen är slut!&quot;//
+//&quot;Åh nej!&quot;// ropar nissarna. //&quot;Batteriet som ger fabriken ström är helt slut! Vi behöver mer energi, snabbt! Vi har några timmar kvar innan arbetsdagen är slut!&quot;//
 &lt;div class=&quot;rubrik3&quot;&gt;[[Hur skapar de mer el?-&gt;Renarnas Gym – den hemliga elstationen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="Renarnas Gym – den hemliga elstationen" tags="" position="1025,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/81536702e8a9c6f8331aa3eba194723923cf9291/winter/raindeergym.jpg&quot;&gt;
-Rummet ni står vid är &quot;Renarnas Gym&quot;, där de tränade året om för att vara i toppform inför julafton. Men det var ingen vanlig träningslokal – varje löpband, cykel och roddmaskin var kopplad till Stora Julbatteriet!
+Rummet ni står i är Renarnas Gym, där de tränar året om för att vara i toppform inför julafton. Men det är ingen vanlig träningslokal - varje löpband, cykel och roddmaskin är kopplad till Stora Julbatteriet.
+
+Plötsligt hörs ljudet av hovslag som närmar sig.
+
+//&quot;Dags för Laddningsloppet!&quot;// ropar ledarrenen Blitzen och hoppar upp på ett löpband. //&quot;Alla renar, spring så snabbt ni kan!&quot;//
+
+Renarna galopperar på löpbanden, trampar på cyklar med sina hovar och drar tunga slädvikter fram och tillbaka. Energimätaren börjar lysa.
+
+//&quot;Snabbare! Snabbare!&quot;// ropar nissarna och hejar på.
+
+Plötsligt hörs ett DING! – batteriet är fulladdat! Maskinerna startar, lamporna tänds och hela verkstaden fylls av julmusik.
+
+&quot;Wohoo!&quot; ropar alla. &quot;Nu kan vi börja arbeta igen!&quot;
+
+Men så frågar Kim: &quot;Varför tog elen slut?&quot;
+
+&quot;DET KAN JAG BERÄTTA!&quot; ropar någon utanför verkstaden.
+
+
+
+
+En nisse som står alldelRummet ni står vid är &quot;Renarnas Gym&quot;, där de tränade året om för att vara i toppform inför julafton. Men det var ingen vanlig träningslokal – varje löpband, cykel och roddmaskin var kopplad till Stora Julbatteriet!
 
 Ni hör renhovar som kommer springade mot er.
 
@@ -389,39 +394,34 @@ Wohoo, ropade alla i verkstaden nu kan vi börja arbeta igen.
 &quot;DET KAN JAG BERÄTTA&quot;, ropade någon utifrån verkstadslokalen...
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till Nissen Knas förklarar elbrist -&gt;Nissen Knas förklarar elbrist]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Nissen Knas förklarar elbrist" tags="" position="1000,1750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/81536702e8a9c6f8331aa3eba194723923cf9291/winter/nisseknas.jpg&quot;&gt;
-Nisse Knas, som alltid har en förklaring till allt – står upp på en hög med paket och harklade sig.
+In kliver en nisse med rufsigt hår och stora glasögon. Han ler stort och ställer sig på en hög med paket för att synas bättre. //&quot;Jag är Nisse Knas! Uppfinnare, vetenskapsnisse och expert på alla knasiga problem.&quot;// säger han stolt. //&quot;Och just nu har vi ett elproblem!&quot;//
 
-&quot;Lugn, lugn!&quot; sa han och pekade mot Stora Julbatteriet. &quot;Vi har använt mer el än vi laddat in – därför blev batteriet tomt!&quot;
+Han pekar på Stora Julbatteriet. //&quot;Vi har använt mer el än vi laddat, därför blev batteriet tomt!&quot;// 
 
-&quot;Men hur kan det ta slut?&quot; frågade Kim
+//&quot;Men hur kan det ta slut?&quot;// frågar Kim.
 
-Nisse Knas justerade sina glasögon och drog fram en krita. Han ritade på golvet:
+Nisse Knas justerar sina glasögon och drar fram en krita. Han ritar på golvet:
 
-🕯️ &quot;Förr i tiden hade vi bara ljus och eld. Nu har vi lampor överallt – men vi glömmer ofta att släcka dem!&quot;
+🕯️ //&quot;Förr i tiden hade vi bara ljus och eld. Nu har vi lampor överallt, men vi glömmer ofta att släcka dem!&quot;//
 
-🎮 &quot;Nissarnas spelhörna är jättekul, men tv:n och spelet stod på hela natten fast ingen spelade!&quot;
+🎮 //&quot;Nissarnas spelhörna är jättekul, men tv:n och spelet står på hela natten fast ingen spelar!&quot;//
 
-🔌 &quot;Maskiner som inte används drar ändå lite el om de är inkopplade. Som laddare – de äter el fast ingen mobil är ansluten!&quot;
+🔌 //&quot;Maskiner som inte används drar ändå lite el om de är inkopplade. Som laddare, de äter el fast ingen mobil är ansluten!&quot;//
 
-&quot;Så vi har slösat el?&quot; frågade en nisse och såg skyldig ut.
+//&quot;Så vi har slösat el?&quot;// frågade en nisse och såg skyldig ut.
 
-&quot;Exakt!&quot; sa Nisse Knas och klappade händerna. &quot;Men vi kan spara el och slippa fler strömavbrott!&quot;
+//&quot;Exakt!&quot;// säger Nisse Knas och klappar händerna. //&quot;Men vi kan spara el och slippa fler strömavbrott!&quot;//
 
-Han skrev upp Tre nisse-regler för att spara el:
-✨ Släck lampor när du lämnar ett rum
-✨ Dra ur sladden om du inte använder något
-✨ Stäng dörren till kyl och frys snabbt
+Han skriver upp Tre nisse-regler för att spara el:
+✨ //&quot;Släck lampor när du lämnar ett rum!&quot;//
+✨ //&quot;Dra ur sladden om du inte använder något!&quot;//
+✨ //&quot;Stäng dörren till kyl och frys snabbt!&quot;//
 
-Alla nissarna nickade och skyndade iväg för att släcka onödiga lampor, stänga av maskiner och dra ur sladdar.
+Alla nissarna nickar och skyndar iväg för att släcka onödiga lampor, stänga av maskiner som inte används och dra ut sladdar.
 
-&quot;Smart tänkt!&quot; sa Kim 
-
-Vad ska du tänka på att göra hemma för att spara el? frågar Kim
-
-Frisvar
-
-Ni tackar Nissen Knas för den bra lärdomen, då börjar Kims mage knorra. &quot;Åh nej jag glömde äta min frukt på rasten, vi måste hoppa tillbaka så jag kan äta min apelsin innan lektionen börjar igen.&quot;
-
+//&quot;Smart tänkt!&quot;// säger Kim. //&quot;$namn, vad ska du tänka på att göra hemma för att spara el?&quot;// frågar Kim.
+(link-repeat: &quot;Gissa!&quot;)[{(set: $spar to (prompt: &quot;Vad kan du göra hemma för att spara el?&quot;, &quot;&quot;))}(replace: ?results)[$spar]][]&lt;results|
+Ni tackar Nissen Knas för den bra lärdomen och funderar på var ni ska gå härnäst. Men då ringer skolans klocka.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;snöhögen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="BRAK" tags="" position="300,1650" size="100,100">När du och Kim går genom skogen på väg mot tomtebyn hörs plötsligt ett mystiskt brak!
 
  &quot;MÄÄÄH!&quot; hörs från en snöig glänta.
@@ -434,7 +434,7 @@ Vilket ska vi göra först?
 
 [[Rädda julklapparna innan de flyter bort!]]
 [[Lirka loss Julbocken från julkransen]] 
-</tw-passagedata><tw-passagedata pid="37" name="Rädda julklapparna innan de flyter bort!" tags="" position="325,1900" size="100,100">&quot;Paket överallt!&quot; ropar Kim och pekar. &quot;Vi måste skynda oss innan de försvinner i snön!&quot;
+</tw-passagedata><tw-passagedata pid="37" name="Rädda julklapparna innan de flyter bort!" tags="" position="375,1875" size="100,100">&quot;Paket överallt!&quot; ropar Kim och pekar. &quot;Vi måste skynda oss innan de försvinner i snön!&quot;
 
 Ni kastar er fram – ett paket bakom en stubbe! Ett annat halvt nedgrävt i snön! Ett rött paket börjar sakta glida ner mot den frusna bäcken.
 
@@ -453,7 +453,7 @@ Kan ni hitta alla paketen, räkna hur många ni ser!
 
 När båda uppgifterna var klara pustade ni ut och gick vidare..
 
-[[snöhögen]] </tw-passagedata><tw-passagedata pid="38" name="Lirka loss Julbocken från julkransen" tags="" position="550,1825" size="100,100">Kim tittar på Julbocken som fortfarande står där, viftar irriterat på svansen och försöker ruska av sig den stora julkransen som fastnat runt halsen. Men varje gång någon kommer för nära, stampar bocken bestämt med hoven och ger ifrån sig ett varnings-&quot;MÄÄÄH!&quot;
+[[Tomtebyn]] </tw-passagedata><tw-passagedata pid="38" name="Lirka loss Julbocken från julkransen" tags="" position="550,1725" size="100,100">Kim tittar på Julbocken som fortfarande står där, viftar irriterat på svansen och försöker ruska av sig den stora julkransen som fastnat runt halsen. Men varje gång någon kommer för nära, stampar bocken bestämt med hoven och ger ifrån sig ett varnings-&quot;MÄÄÄH!&quot;
 
 &quot;Försiktigt nu,&quot; viskar Kim. &quot;Julbockar kan sparkas om de blir stressade. Vi måste hjälpa den på rätt sätt!&quot;
 
@@ -469,32 +469,19 @@ När kransen till slut lossnar skakar bocken på sig, ser förvånad ut – och 
 
 När båda uppgifterna är klara fortsätter ni framåt.
 
-[[snöhögen]]</tw-passagedata><tw-passagedata pid="39" name="Stigen" tags="" position="475,800" size="100,100">När ni fortsätter genom den snötäckta skogen hörs plötsligt ett &quot;Hoo-hoo!&quot; från en gren ovanför er.
+[[Tomtebyn]]</tw-passagedata><tw-passagedata pid="39" name="Stigen" tags="" position="500,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/59e184133e8f2165cfd9a1e7a4fc975c189a6c63/winter/owl.jpg&quot;&gt;
+När ni vandrar vidare genom den snötäckta skogen hörs plötsligt ett &quot;Hoo-hoo!&quot; från en gren ovanför er. Där sitter en stor, uggla med en liten tomteluva på huvudet – Professor Uggelbert, skogens klokaste varelse!
 
-Där sitter en stor, vis uggla med en liten tomteluva på huvudet. Det är Professor Uggelbert, skogens klokaste varelse!
+//&quot;Stopp där!&quot;// kraxar Uggelbert och spänner sina skarpa ögon i er. //&quot;Ingen får passera förrän ni löser min julrebus som jag har här i min pergamentrulle!&quot;// Med en svepande rörelse rullar han ut en gammal pergamentsrulle, där en klurig bildrebus avslöjas. För att komma vidare måste ni lista ut det hemliga julordet.
 
- &quot;Stopp där!&quot; kraxar Uggelbert och spänner ögonen i er. &quot;Ingen får passera förrän ni löser min julrebus!&quot;
+Kim betraktar pappret ugglan har rullat ut. //&quot;$namn, vad är en pergamentsrulle?&quot;// frågar han dig.
+(link-repeat: &quot;Gissa!&quot;)[{(set: $rulle to (prompt: &quot;Vad är en pergamentrulle?&quot;, &quot;&quot;))}(replace: ?results)[$rulle]][]&lt;results|&lt;div class=rubrik3&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[//&quot;En pergamentsrulle är en gammaldags rulle av papper eller pergament (ett material gjort av djurhud) som människor använde innan böcker fanns. Den kunde rullas ihop för att förvara text och rullas ut igen när man ville läsa den. Pergamentsrullar användes ofta av kungar, trollkarlar och visa personer!&quot;//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Fortsätt-&gt;Julrebusar]]&lt;/div&gt;&lt;/div&gt;]
 
-Han rullar ut en gammal pergamentrulle där en klurig bildrebus syns. För att komma vidare måste ni lista ut det hemliga julordet!
+</tw-passagedata><tw-passagedata pid="40" name="Julrebusar" tags="" position="500,1000" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/59e184133e8f2165cfd9a1e7a4fc975c189a6c63/winter/rebus.jpg&quot;&gt;
+Uggelbert sträcker på sig och fladdrar med vingarna. //&quot;Är ni redo att lösa mina julrebusar?&quot;// frågar han med ett mystiskt leende.
+(link-repeat: &quot;1&quot;)[{(set: $kotte to (prompt: &quot;Vad är svaret på rebus 1?&quot;, &quot;&quot;))(set: $lowercaseKotte to (lowercase: $kotte))(if: (either: ($lowercaseKotte) is &quot;grankotte&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är grankotte.]]}][]&lt;results|(link-repeat: &quot;2&quot;)[{(set: $sko to (prompt: &quot;Vad är svaret på rebus 2?&quot;, &quot;&quot;))(set: $lowercaseSko to (lowercase: $sko))(if: (either: ($lowercaseSko) is &quot;snösko&quot;))[(replace: ?results2)[Bra jobbat!]](else:)[(replace: ?results2)[Svaret är snösko.]]}][]&lt;results2|(link-repeat: &quot;3&quot;)[{(set: $ren to (prompt: &quot;Vad är svaret på rebus 3?&quot;, &quot;&quot;))(set: $lowercaseRen to (lowercase: $ren))(if: (either: ($lowercaseRen) is &quot;rudolf&quot;))[(replace: ?results3)[Bra jobbat!]](else:)[(replace: ?results3)[Svaret är Rudolf.]]}][]&lt;results3|
 
-Kim tittar på pappret ugglan rullat ut, Vad är en pergamentsrulle? frågar han dig 
-
-(frisvar) skriva vad dom tror
-
-text kommer fram: En pergamentsrulle är en gammaldags rulle av papper eller pergament (ett material gjort av djurhud) som folk förr i tiden skrev på innan det fanns böcker. Man kunde rulla ihop den för att förvara texten, och när man ville läsa den rullade man ut den igen. Den användes ofta av kungar, trollkarlar och visa personer!
-
-&quot;Är ni redo att lösa mina julrebusar?&quot; frågar Ugglebert
-
-[[Julrebusar]]</tw-passagedata><tw-passagedata pid="40" name="Julrebusar" tags="" position="400,1000" size="100,100">Bild på en gran + en kotte = &quot;Grankotte&quot;
-
-Frisvar...rätt/fel 
-
- En snöflinga + en sko = &quot;Snösko&quot;
- frisvar rätt/fel
- 
- Bild på en ren + Bild på en röd näsa = &quot;Rudolf
- 
- 
 Ugglan blinkar nöjt med sina visdomsögon och nickar sakta. &quot;Ni har löst min gåta, och nu är ni redo att fortsätta.&quot;
 
 Med en mystisk fladd av sina vingar rör sig Uggelbert åt sidan och avslöjar en hemlig stig som försvinner in i den snötäckta skogen. Stigen är smal, täckt av snöflingor som glittrar som små stjärnor.
