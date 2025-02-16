@@ -226,7 +226,7 @@ Plötsligt hör ni hur skolklockan ringer. Det är dags att åka tillbaka till s
 //&quot;Bra gissat, det var helt rätt. Nu vill jag fråga er en till sak. Jag har sprungit så långt och är därför väldigt hungrig och trött. Men jag orkar inte leta mat åt mig själv. Skulle ni kunna tänka er att hjälpa mig med det?&quot;// undrar Vilda. 
 
 //&quot;Givetvis kan vi hjälpa dig med det, men jag känner mig lite osäker på vad en hare äter&quot;//, säger Kim. //&quot;$namn vet du vad Vilda äter för något?&quot;//
-&lt;div class=&quot;rubrik3&quot;&gt;[[Kött]] [[Växter]] [[Fisk]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Gå till det röda" tags="" position="1125,1075" size="100,100">(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/mushroom.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Kött]] [[Växter]] [[Fisk]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Gå till det röda" tags="" position="1125,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/mushroom.jpg&quot;&gt;
 Ert val blir att gå mot det röda, ni går med försiktiga steg eftersom ni känner er lite osäkra på vad ni kommer möta på andra sidan busken. Försiktigt, försiktigt kikar ni bakom busken och ni blir förvånade när ni ser det som finns på andra sidan. Det är en färgglad svamp som är större än någon annan svamp ni sett tidigare, den tittar på er och ler. 
 
 //&quot;Hej på er. Vilka är ni?&quot;//, frågar svampen med en rolig, pipig röst när ni kommer närmare.
@@ -239,22 +239,17 @@ Ni tittar på varandra med förvåning och Kim säger:
 //&quot;Tack för varningen, vi håller avstånd.&quot;//
 
 //&quot;Och en sak till vill jag berätta för er innan ni går, det händer att människor sparkar på svampar. Snälla ni gör inte det. Sen har jag en liten fråga till er. Kan ni nämna två stycken växter eller djur som finns i skogen?&quot;//, frågar svampen.
-
-//&quot;Det kan jag, $skriva&quot;//, svarar du.
-
+(link-repeat: &quot;Gissa!&quot;)[{(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))}(replace: ?results)[$skriva]][]&lt;results|
 //&quot;Mycket bra svar. Ha en fortsatt fin dag&quot;//, säger svampen.
-
 
 Ni tackar svampen för pratstunden och fortsätter sedan på er vandring, glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen. Ni bestämmer er för att gå uppför ett litet berg. Efter en stunds promenad hör ni något som surrar.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det som surrar?-&gt;Geting]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Gå mot ljudet" tags="" position="875,1100" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxnest.jpg&quot;&gt;
 Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken, ni stannar framför det och tittar in. Det är helt klart härifrån ljudet kommer, i hålet ser ni två ögon som lyser i mörkret. Vad är det för något?
 (link-repeat: &quot;Gissa!&quot;)[{(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseFox to (lowercase: $fox))(if: (either: ($lowercaseFox) is &quot;räv&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är räv.]]}][]&lt;results|
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
 När du kommer tillbaka till Kim frågar han: //&quot;$namn, hur såg getingen ut?&quot;//
-
-Du berättar för Kim om getingen: //&quot;$skriv&quot;// 
-
+(link-repeat: &quot;Gissa!&quot;)[{(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))}(replace: ?results)[$skriv]][]&lt;results|
 //&quot;Mycket intressant, tack för informationen,&quot;// säger Kim.
 
 Sedan fortsätter ni er promenad, efter en stunds vandring uppåt blir ni mycket trötta och väljer att ta en paus.
@@ -308,12 +303,10 @@ Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en g
 Ekorren fnissar. //”Det är så jag håller mig varm! Ingen vill frysa när de sover på vintern. Brr! Innan ni går vidare har jag en till gåta åt er. Det är något som tillhör dig, men som dina vänner använder mer än du. Vad är det?”// 
 (link-repeat: &quot;Gissa!&quot;)[{(set: $riddle2 to (prompt: &quot;Vad är det?&quot;, &quot;&quot;))(set: $lowercaseName to (lowercase: $riddle2))(if: (either: ($lowercaseName) is &quot;namnet&quot;, ))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är namnet.]]}][]&lt;results|
 Då hör ni att skolklockan ringer, det är dags att åka tillbaka till skolan. Ni säger hejdå till ekorren, som vinkar glatt med svansen.
-&lt;div class=&quot;rubrik3&quot;&gt;[[Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="800,1500" size="100,100">(set: $write to (prompt: &quot;Vad tror du bor i grottan?.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/9c7b4e98d2849bc53c890c246a77f97740dfd176/autum/cave.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="800,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/9c7b4e98d2849bc53c890c246a77f97740dfd176/autum/cave.jpg&quot;&gt;
 Efter en stunds promenad når ni äntligen fram till berget, där stannar ni och betraktar det. Ni kan se en mörk öppning i berget, en grotta. Den ser inte ut att vara särskilt stor, men den ger ett lockande intryck, som om den väntar på att bli utforskad.  Ni stannar vid ingången och ser på den mörka öppningen. Kim rynkar pannan och säger: //&quot;Det känns som något kan bo där inne. $namn, vad tror du bor i grottan?&quot;//
-
-Du funderar en liten stund och svarar sedan: //&quot;$write&quot;//
-
-Kim nickar och säger sedan: //&quot;Jag gissar på en björn. Tänk om den ligger där inne och sover?&quot;// säger Kim och ser mot grottmörkret. //&quot;Björnar gillar ju skogar och berg, och när det blir kallt söker de skydd. Ofta letar de sig till grottor eller håligheter för att gå i ide, det hjälper dem att hålla sig varma och säkra under vintern.&quot;//
+(link-repeat: &quot;Gissa!&quot;)[{(set: $write to (prompt: &quot;Vad tror du bor i grottan?&quot;, &quot;&quot;))}(replace: ?results)[$write]][]&lt;results|
+Kim nickar och säger sedan: //&quot;Jag gissar på björn. Tänk om den ligger där inne och sover?&quot;// säger Kim och ser mot grottmörkret. //&quot;Björnar gillar ju skogar och berg, och när det blir kallt söker de skydd. Ofta letar de sig till grottor eller håligheter för att gå i ide, det hjälper dem att hålla sig varma och säkra under vintern.&quot;//
 
 Ni står ett tag vid grottans öppning och funderar på alla möjliga saker som kan finnas där inne, kanske en sovande björn, eller kanske en plats som någon gång varit ett tillhåll för ett annat djur. Till slut bestämmer ni er för att lämna grottan orörd och vänder om för att fortsätta vidare. Då hör ni det. Ett ljud inifrån mörkret i grottan. Ni stannar upp och tittar på varandra.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är i grottan?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Höger" tags="" position="1000,925" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/85f19ddf69087c4ec3be9577bd508e6d158ce374/autum/pause.jpg&quot;&gt;
