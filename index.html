@@ -164,7 +164,7 @@ Det surrande ljudet kommer från en geting. Kim stannar och verkar tveka.
 Du nickar. //&quot;Ja, det är viktigt att hålla avstånd. Men samtidigt, så blir jag lite nyfiken att titta närmare på den.&quot;//
 
 //&quot;Var tror du den bor någonstans?&quot;// frågar Kim plötsligt och ser sig omkring.
-(link-repeat: &quot;Berätta!&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är getingbo.]]}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är getingbo.]]}][]&lt;results|
 Du berättar för Kim att du vill gå lite närmare för att se hur den ser ut. Kim vill inte följa med. Du går en bit fram men håller fortfarande avstånd till getingen som svävar över ett äppelskrutt, den verkar uppskatta söta saker. Getingen har gula och svarta ränder som blänker i solljuset och dess långa smala vingar brummar när den flyger. Efter att ha tittat en liten stund går du tillbaka till Kim.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/1b97eabd210d7c94c42b62352cc65af8c73695ff/autum/bee_wasp-97053.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="525,1825" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/534a11b1acfa0901c7c070fdfa362a19bc599d9b/autum/portalcloud.jpg&quot;&gt;
@@ -256,7 +256,7 @@ Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigar
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
 När du kommer tillbaka till Kim frågar han: //&quot;$namn, hur såg getingen ut?&quot;//
-(link-repeat: &quot;Gissa!&quot;)[{(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))}(replace: ?results)[$skriv]][]&lt;results|
+(link-repeat: &quot;Berätta!&quot;)[{(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))}(replace: ?results)[$skriv]][]&lt;results|
 //&quot;Mycket intressant, tack för informationen,&quot;// säger Kim.
 
 Sedan fortsätter ni er promenad. Efter en stunds vandring uppåt blir ni mycket trötta och väljer att ta en paus.
@@ -274,16 +274,7 @@ Ekorren spärrar upp ögonen av förtjusning.
 
 Ekorren ler finurligt och lutar huvudet åt sidan.
 //”Men först måste ni klara min gåta! Vilket djur går sämst i djungeln?”//
-(link-repeat: &quot;Gissa!&quot;)[{
-	(set: $riddle to (prompt: &quot;Vilket djur går sämst i djungeln?&quot;, &quot;&quot;))
-	(set: $lowercaseApe to (lowercase: $riddle))
-	(if: (either: ($lowercaseApe) is &quot;gorilla&quot;, ($lowercaseApe) is &quot;Gorilla&quot;))[
-		(replace: ?results)[Bra jobbat!]
-	]
-	(else:)[
-		(replace: ?results)[Svaret är gorilla(går-illa).]
-	]
-}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle to (prompt: &quot;Vilket djur går sämst i djungeln?&quot;, &quot;&quot;))(set: $lowercaseApe to (lowercase: $riddle))(if: (either: ($lowercaseApe) is &quot;gorilla&quot;,($lowercaseApe) is &quot;gorilla&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är gorilla(går-illa).]]}][]&lt;results|
 När ni svarat på gåtan sätter ekorren iväg i en väldig fart, samtidigt som hon ropar att ni ska följa efter. Ni måste springa fort för att hinna med ekorren som är väldigt snabb.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ekorrens hem]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Vad är i grottan?" tags="" position="650,1625" size="100,100">(set: $garbage to it + 2)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/9c7b4e98d2849bc53c890c246a77f97740dfd176/autum/caveanimal.jpg&quot;&gt;
 Ni ropar in i grottan: //&quot;Hallå? Är någon där?&quot;//
