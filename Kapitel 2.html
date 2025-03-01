@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Kapitel 2.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Kapitel 2" startnode="4" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="EC386DD8-9854-4241-AC43-11284B2C282F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+<tw-storydata name="Kapitel 2" startnode="27" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="EC386DD8-9854-4241-AC43-11284B2C282F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 tw-story {
  	background: linear-gradient(45deg,  
 	 #a2dcde, #e3ebec, #b2a498, #99d3e4);
@@ -289,16 +289,7 @@ Julgranen måste undersökas och ni börjar leta bland paketen för att se ifall
 &lt;div class=&quot;rubrik3&quot;&gt;[[Leta vidare-&gt;Kontoret]]</tw-passagedata><tw-passagedata pid="31" name="Bokhylla" tags="" position="1200,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6830617d2254a9cbfa63c3480950f8276df16d9a/winter/bookshelf.jpg&quot;&gt;
 Ni riktar era blickar mot bokhyllan och suckar, den är full med böcker. Det kommer bli som att hitta en nål i en höstack. Kim vänder sig mot dig och frågar:
 //”$namn, minns du vilken färg boken hade?”//
-(link-repeat: &quot;Gissa!&quot;)[{
-	(set: $bok to (prompt: &quot;Vilken färg är boken ni letar?&quot;, &quot;&quot;))
-	(set: $lowercaseBok to (lowercase: $bok))
-	(if: (either: ($lowercaseBok) is &quot;grön&quot;, ($lowercaseBok) is &quot;grön&quot;))[
-		(replace: ?results)[Bra jobbat!]
-	]
-	(else:)[
-		(replace: ?results)[Svaret är grön.]
-	]
-}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $bok to (prompt: &quot;Vilken färg är boken ni letar?&quot;, &quot;&quot;))(set: $lowercaseBok to (lowercase: $bok))(if: (either: ($lowercaseBok) is &quot;grön&quot;, ($lowercaseBok) is &quot;grön&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är grön.]]}][]&lt;results|
 Sökandet efter boken fortsätter och ni drar slumpmässigt ut böcker som har rätt färg. Det känns nästan omöjligt att hitta rätt bok bland alla dessa böcker. Efter att ni har letat en lång stund lutar du dig fram och kikar in bakom bokhyllan, och där fastkilad mot väggen är den.
 
 //”Där är den!&quot;// ropar du så högt så att Kim hoppar rakt upp av rädsla. Du pekar bakom hyllan. Ni hämtar boken och lämnar över den till nissen.

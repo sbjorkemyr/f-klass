@@ -49,14 +49,18 @@ tw-story {
 }
 
 .pic {
-  	display: block;
     border-style: solid;
   	border-width: thin;
     width: 100%;
   	border-radius: 20px;
   	
 }
-
+video {
+  border-style: solid;
+  	border-width: thin;
+    width: 100%;
+  	border-radius: 20px;
+}
  tw-story[tags~="firstpage"] {
    background-image:url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/background.jpg"); background-repeat: no-repeat;
    		background-attachment: fixed;
@@ -160,7 +164,7 @@ Det surrande ljudet kommer från en geting. Kim stannar och verkar tveka.
 Du nickar. //&quot;Ja, det är viktigt att hålla avstånd. Men samtidigt, så blir jag lite nyfiken att titta närmare på den.&quot;//
 
 //&quot;Var tror du den bor någonstans?&quot;// frågar Kim plötsligt och ser sig omkring.
-(link-repeat: &quot;Berätta!&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är getingbo.]]}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är getingbo.]]}][]&lt;results|
 Du berättar för Kim att du vill gå lite närmare för att se hur den ser ut. Kim vill inte följa med. Du går en bit fram men håller fortfarande avstånd till getingen som svävar över ett äppelskrutt, den verkar uppskatta söta saker. Getingen har gula och svarta ränder som blänker i solljuset och dess långa smala vingar brummar när den flyger. Efter att ha tittat en liten stund går du tillbaka till Kim.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/1b97eabd210d7c94c42b62352cc65af8c73695ff/autum/bee_wasp-97053.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="525,1825" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/534a11b1acfa0901c7c070fdfa362a19bc599d9b/autum/portalcloud.jpg&quot;&gt;
@@ -228,7 +232,7 @@ Plötsligt hör ni hur skolklockan ringer. Det är dags att åka tillbaka till s
 //&quot;Bra gissat, det var helt rätt. Nu vill jag fråga er en till sak. Jag har sprungit så långt och är därför väldigt hungrig och trött. Men jag orkar inte leta mat åt mig själv. Skulle ni kunna tänka er att hjälpa mig med det?&quot;// undrar Vilda. 
 
 //&quot;Givetvis kan vi hjälpa dig med det, men jag känner mig lite osäker på vad en hare äter&quot;//, säger Kim. //&quot;$namn vet du vad Vilda äter för något?&quot;//
-&lt;div class=&quot;rubrik3&quot;&gt;[[Kött]] [[Växter]] [[Fisk]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Gå till det röda" tags="" position="1125,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/mushroom.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Kött]] [[Växter]] [[Fisk]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Gå till det röda" tags="" position="1125,1075" size="100,100">(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;video autoplay&gt;&lt;source src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f005512222c962c51b9c6e802ed0ae6bc53b7dcf/autum/movingmushroom.mp4&quot; type=&quot;video/mp4&quot;&gt;Your browser does not support the video tag.&lt;/video&gt;
 Ert val blir att gå mot det röda, ni går med försiktiga steg eftersom ni känner er lite osäkra på vad ni kommer möta på andra sidan busken. Försiktigt, försiktigt kikar ni bakom busken och ni blir förvånade när ni ser det som finns på andra sidan. Det är en färgglad svamp som är större än någon annan svamp ni sett tidigare, den tittar på er och ler. 
 
 //&quot;Hej på er. Vilka är ni?&quot;//, frågar svampen med en rolig, pipig röst när ni kommer närmare.
@@ -242,7 +246,7 @@ Ni tittar på varandra med förvåning och Kim säger:
 
 //&quot;Och en sak till vill jag berätta för er innan ni går, det händer att människor sparkar på svampar. Snälla ni gör inte det. För vi svampar är superviktiga för skogen! Tänk på oss som skogens städare. Vi hjälper till att bryta ner gamla löv och träd så att jorden får ny näring. Och vet du vad? Massor av små djur, som sniglar och insekter äter svampar. Om du sparkar på oss blir deras mat förstörd. Och vissa av oss är dessutom sällsynta. Så snälla låt oss stå där ni hittar oss.
 Men jag har en liten fråga till er. Kan ni nämna två stycken växter eller djur som finns i skogen?&quot;//, frågar svampen.
-(link-repeat: &quot;Gissa!&quot;)[{(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))}(replace: ?results)[$skriva]][]&lt;results|
+//&quot;$skriva&quot;//, svarar du.
 //&quot;Mycket bra svar. Ha en fortsatt fin dag&quot;//, säger svampen.
 
 Ni tackar svampen för pratstunden och fortsätter sedan på er vandring. Glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen. Ni bestämmer er för att gå uppför ett litet berg. Efter en stunds promenad hör ni något som surrar.
@@ -250,9 +254,9 @@ Ni tackar svampen för pratstunden och fortsätter sedan på er vandring. Glada 
 Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken, ni stannar framför det och tittar in. Det är helt klart härifrån ljudet kommer, i hålet ser ni två ögon som lyser i mörkret. Vad är det för något?
 (link-repeat: &quot;Gissa!&quot;)[{(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseFox to (lowercase: $fox))(if: (either: ($lowercaseFox) is &quot;räv&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är räv.]]}][]&lt;results|
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
 När du kommer tillbaka till Kim frågar han: //&quot;$namn, hur såg getingen ut?&quot;//
-(link-repeat: &quot;Gissa!&quot;)[{(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))}(replace: ?results)[$skriv]][]&lt;results|
+//&quot;$skriv&quot;//, svar du.
 //&quot;Mycket intressant, tack för informationen,&quot;// säger Kim.
 
 Sedan fortsätter ni er promenad. Efter en stunds vandring uppåt blir ni mycket trötta och väljer att ta en paus.
@@ -270,16 +274,7 @@ Ekorren spärrar upp ögonen av förtjusning.
 
 Ekorren ler finurligt och lutar huvudet åt sidan.
 //”Men först måste ni klara min gåta! Vilket djur går sämst i djungeln?”//
-(link-repeat: &quot;Gissa!&quot;)[{
-	(set: $riddle to (prompt: &quot;Vilket djur går sämst i djungeln?&quot;, &quot;&quot;))
-	(set: $lowercaseApe to (lowercase: $riddle))
-	(if: (either: ($lowercaseApe) is &quot;gorilla&quot;, ($lowercaseApe) is &quot;Gorilla&quot;))[
-		(replace: ?results)[Bra jobbat!]
-	]
-	(else:)[
-		(replace: ?results)[Svaret är gorilla(går-illa).]
-	]
-}][]&lt;results|
+(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle to (prompt: &quot;Vilket djur går sämst i djungeln?&quot;, &quot;&quot;))(set: $lowercaseApe to (lowercase: $riddle))(if: (either: ($lowercaseApe) is &quot;gorilla&quot;,($lowercaseApe) is &quot;gorilla&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är gorilla(går-illa).]]}][]&lt;results|
 När ni svarat på gåtan sätter ekorren iväg i en väldig fart, samtidigt som hon ropar att ni ska följa efter. Ni måste springa fort för att hinna med ekorren som är väldigt snabb.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ekorrens hem]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Vad är i grottan?" tags="" position="650,1625" size="100,100">(set: $garbage to it + 2)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/9c7b4e98d2849bc53c890c246a77f97740dfd176/autum/caveanimal.jpg&quot;&gt;
 Ni ropar in i grottan: //&quot;Hallå? Är någon där?&quot;//
