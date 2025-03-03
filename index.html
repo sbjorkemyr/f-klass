@@ -278,16 +278,14 @@ När ni har hittat alla insekter fortsätter ni att följa bäcken, som porlar n
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå till sjön-&gt;Sjö]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Vem där?" tags="" position="175,1025" size="100,100">(set: $answer to &quot;0&quot;)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/dust.jpg&quot;&gt;
 
-Djuret tvärbromsar precis framför er och tittar upp med sina stora, bruna ögon.
+Djuret tvärbromsar precis framför er och tittar upp med sina stora, bruna ögon. Kim frågar:
+– Hej, vem är du?
 
-Kim frågar:
-— Hej, vem är du?
+– Hej! Mitt namn är Vilda, och jag är en supersnabb och smidig varelse med långa ben och stora öron. Min päls är mjuk och brun, perfekt för att smälta in i skogen. På vintern blir den vit, så jag inte syns när snön ligger på marken.
 
-— Hej! Mitt namn är Vilda, och jag är en supersnabb och smidig varelse med långa ben och stora öron. Min päls är mjuk och brun, perfekt för att smälta in i skogen. På vintern blir den vit, så jag inte syns när snön ligger på marken.
+– Jag älskar att hoppa och kan göra långa skutt när jag springer över ängar och genom skogen. När jag rör mig viftar min lilla, fluffiga svans glatt. Jag är försiktig och håller alltid koll på min omgivning. Ibland sitter jag på bakbenen och nosar i luften för att känna lukter och se om det finns några faror i närheten.
 
-— Jag älskar att hoppa och kan göra långa skutt när jag springer över ängar och genom skogen. När jag rör mig viftar min lilla, fluffiga svans glatt. Jag är försiktig och håller alltid koll på min omgivning. Ibland sitter jag på bakbenen och nosar i luften för att känna lukter och se om det finns några faror i närheten.
-
-— Kan ni gissa vilket djur jag är? frågar djuret.
+– Kan ni gissa vilket djur jag är? frågar djuret.
 (link-repeat: &quot;Gissa!&quot;)[{(set: $hare to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseHare to (lowercase: $hare))(if: (either: ($lowercaseHare) is &quot;hare&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är hare.]]}][]&lt;results|
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;hare]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Kött" tags="" position="250,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/meatonplate.jpg&quot;&gt;
 
@@ -321,10 +319,10 @@ Kim säger:
 Plötsligt hör ni hur skolklockan ringer. Det är dags att åka tillbaka till skolgården, rasten är slut.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="hare" tags="" position="100,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/hare.jpg&quot;&gt;
 
-— Bra gissat, det var helt rätt. Nu vill jag fråga er en sak till. Jag har sprungit så långt att jag är både hungrig och trött. Men jag orkar inte leta mat själv. Skulle ni kunna tänka er att hjälpa mig? undrar Vilda.
+– Bra gissat, det var helt rätt. Nu vill jag fråga er en sak till. Jag har sprungit så långt att jag är både hungrig och trött. Men jag orkar inte leta mat själv. Skulle ni kunna tänka er att hjälpa mig? undrar Vilda.
 
 Kim ler och svarar:
-— Givetvis kan vi hjälpa dig! Men jag är lite osäker på vad en hare äter. $namn, vet du vad Vilda brukar äta?
+– Givetvis kan vi hjälpa dig! Men jag är lite osäker på vad en hare äter. $namn, vet du vad Vilda brukar äta?
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Kött]] [[Växter]] [[Fisk]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Gå till det röda" tags="" position="1125,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;video autoplay&gt;&lt;source src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f005512222c962c51b9c6e802ed0ae6bc53b7dcf/autum/movingmushroom.mp4&quot; type=&quot;video/mp4&quot;&gt;Your browser does not support the video tag.&lt;/video&gt;
 
@@ -349,7 +347,7 @@ Ni tackar svampen för pratstunden och fortsätter sedan på er vandring. Glada 
 Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken, ni stannar framför det och tittar in. Det är helt klart härifrån ljudet kommer, i hålet ser ni två ögon som lyser i mörkret. Vad är det för något?
 (link-repeat: &quot;Gissa!&quot;)[{(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseFox to (lowercase: $fox))(if: (either: ($lowercaseFox) is &quot;räv&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är räv.]]}][]&lt;results|
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b71c2a6d280160d7f4c69b31f66dd037cb7dbcb0/autum/kimtalk.jpg&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/4a1ec8b974b3fdbdeb79d94e77b8da720bb22930/autum/talk-kim.jpg&quot;&gt;
 
 När du kommer tillbaka frågar Kim:
 – $namn, hur såg getingen ut?
@@ -365,10 +363,10 @@ Sedan fortsätter ni er promenad. Efter en stunds vandring uppåt blir ni mycket
 Ni går i riktningen kotten kom ifrån och ser något röra sig mellan buskarna. 
 
 Plötsligt hoppar en liten ekorre fram. Den viftar med svansen, ser på er med stora, nyfikna ögon och säger: 
-–Hej, jag heter Sally! Förlåt att jag kastade en kotte på er, men jag ville så gärna prata med er. Vad gör ni här? Är ni vilse?
+– Hej, jag heter Sally! Förlåt att jag kastade en kotte på er, men jag ville så gärna prata med er. Vad gör ni här? Är ni vilse?
 
 Kim lutar sig framåt mot Sally och svarar: 
-–Vi är bara ute på äventyr! Vi utforskar skogen och plockar upp skräp som vi hittar.”//
+– Vi är bara ute på äventyr! Vi utforskar skogen och plockar upp skräp som vi hittar.
 
 Ekorren spärrar upp ögonen av förtjusning och svarar:
 – Åh, vad bra att ni plockar skräp! Då kanske ni kan hjälpa mig också. Jag håller på att städa mitt bo, det är viktigt att vara redo inför vintern. Ingen vill vakna med frost i morrhåren!
@@ -430,7 +428,7 @@ Ni står ett tag vid grottans öppning och funderar på alla möjliga saker som 
 
 Ni väljer att gå till höger, en bit bor kan ni se ett litet berg som sticker upp över träden. Efter en stund hör ni ett konstigt ljud inifrån skogen, det låter lite kusligt. Kim pekar mot en buske åt motsatta hållet från ljudet och då kan du se något rött som vaggar fram och tillbaka. Ni tittar på varandra och funderar, ni kommer inte hinna gå åt båda hållen utan ni måste göra ett val.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå mot ljudet]][[Gå till det röda]]&lt;/div&gt;</tw-passagedata></tw-storydata>
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå mot ljudet]] [[Gå till det röda]]&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
