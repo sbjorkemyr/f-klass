@@ -11,75 +11,101 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Kapitel 3.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Kapitel 3" startnode="24" creator="Twine" creator-version="2.8.1" format="Harlowe" format-version="3.3.8" ifid="D3EB10CC-A399-4485-BF0E-98F3B5358604" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 tw-story {
- 	background-image: 	url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/2c0aacb1192d94dcb62954149d11e77bd531b82c/Va%CC%8Ar%20examensarbete/bakgrundmoln.png");
-  	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover; 
+ 	background: linear-gradient(45deg,  
+	#5995b2, #d7a497, #908397, #dcd0bb);
   	color: #171717;
   	font-family: "Nunito", Arial;
-  	padding-top: 20px;
-  	padding-bottom: 20px;
-}
-.container {
-  	background-color: rgba(220, 181, 174, 0.9);
-  	width: 100%;
-  	border-radius: 15px;
-  	padding: 50px;
-  	border: solid 2px;
-  	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
-  	padding-top: 30px;
+    padding-top: 30px;
   	padding-bottom: 30px;
 }
+.container {
+  	background-color: rgba(231, 217, 213, 0.8);
+  	width: 100%;
+  	border-radius: 50px;
+  	padding: 30px;
+  	border: solid;
+  	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  	
+}
+
 .rubrik {
   text-align: center;
-  font-size: 50px;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: bold;
 }
+
 .rubrik2 {
   text-align: center;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+ 
 }
 .rubrik3 {
   text-align: center;
 }
-.pic {
-  	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-    height: auto; 
-  	border: solid 2px;
-  	border-radius: 30px;	
+.rubrik4 {
+  font-size: 20px;
+  line-height: 1.3;
 }
+
+.pic {
+    border-style: solid;
+  	border-width: thin;
+    width: 100%;
+  	border-radius: 20px;
+  	
+}
+video {
+  border-style: solid;
+  	border-width: thin;
+    width: 100%;
+border-radius: 20px;
+}
+ tw-story[tags~="firstpage"] {
+   background-image:url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/background.jpg"); background-repeat: no-repeat;
+   		background-attachment: fixed;
+   		background-size:cover; 
+}
+
 tw-link {
 	display: inline-block;
-	padding: 3px 20px 3px 20px;
+	padding: 5px 15px 5px 15px;
     margin: 10px;
 	background-color: #C6E7F2;
 	border: solid 2px #2E35DF;
   	border-radius: 30px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-tw-icon[alt] { opacity: 1.0; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Välkommen in" tags="" position="650,325" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2c0aacb1192d94dcb62954149d11e77bd531b82c/Va%CC%8Ar%20examensarbete/Barn%20p%C3%A5%20gr%C3%A4smatta.png&quot;&gt;
-Du och Kim beger er ut till den stora gräsmattan, där sitter redan andra barn som njuter av vädret. 
 
-Ni väljer en plats och börjar mumsa på melonen, när ni är klara lägger ni er ner och tittar på molnen som flyger förbi. 
 
--Kolla på det molnet, det ser ut som en val, säger Kim och pekar mot himlen.
+tw-icon[alt] { 
+  opacity: 1.0;
 
-Du kollar upp där Kim pekar, men du tycker det ser ut som en (något annat).
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Välkommen in" tags="" position="650,275" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/kidsongras.jpg&quot;&gt;
 
--Visst hade det varit häftigt om det fanns ett slott bland molnen? säger Kim
+Du och Kim beger er ut till den stora gräsmattan, där flera barn redan sitter och njuter av det vackra vädret.
 
-Du börjar fundera på de olika figurer som skulle kunna bo i det slottet. 
--Kan vi inte åka dit?
+Ni hittar en plats i solen och börjar mumsa på den saftiga melonen. När ni har ätit klart lägger ni er ner i gräset och låter blicken vandra över himlen, där molnen sakta seglar förbi.
 
--Visst kan vi det, men vi får tänka extra noga på vart vi vill att portalen tar oss. 
+– Kolla på det där molnet! Det ser ut som en val, säger Kim och pekar upp mot skyn.
 
-Ni blundar.....
+Du följer med blicken dit Kim pekar, men du ser något annat.
+(link-repeat: &quot;Berätta!&quot;)[(set: $cloud to (prompt: &quot;Vad ser du i molnen?&quot;, &quot;&quot;))(replace: ?results)[$cloud]](set: $cloud to &quot;&quot;)|results&gt;[]
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Slottet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Slottet" tags="" position="650,450" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/59d9d3534952a53e2ef58a7efc178523cfefd62c/V%C3%A5r%20examensarbete/Slott.png&quot;&gt;
+Kim ler och vänder sig mot dig.
+
+– Visst hade det varit häftigt om det fanns ett slott bland molnen?
+
+Tankarna börjar genast snurra i ditt huvud. Vem skulle kunna bo i ett slott bland molnen? Vilka magiska varelser skulle ni kunna möta där?
+
+– Kan vi inte åka dit? frågar du ivrigt.
+
+– Självklart! Men vi måste tänka extra noga på vart vi vill att portalen ska ta oss.
+
+Ni blundar …
+
+&lt;div class=&quot;rubrik3&quot;&gt;[[Slottet]]&lt;/div&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="2" name="Slottet" tags="" position="650,400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/castle.jpg&quot;&gt;
 
 -Jag ser en massa moln, vi står på det mjukaste molnet som finns. Framför oss står ett slott, med många torn och fönster, säger Kim
 
@@ -97,7 +123,7 @@ Du funderar på saken, tittar dig omkring. Du ser vad som ser ut som brofästen 
 
 -Ni har helt rätt barn, något oroväckande är pågång i molnstaden, säger en röst.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Det svåra valet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Det svåra valet" tags="" position="650,575" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/59d9d3534952a53e2ef58a7efc178523cfefd62c/V%C3%A5r%20examensarbete/Enh%C3%B6rning.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Det svåra valet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Det svåra valet" tags="" position="650,550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/unicorn.jpg&quot;&gt;
 Framför er landar en vacker enhörning, den travar fram till er. 
 
 -Mitt namn är Solstråle, jag är väktare av molnstaden och regnbågsbron.
@@ -119,7 +145,7 @@ Men du vet inte riktigt vad du vill göra, piraterna kan vara läskiga men följ
 
 -Eller så går vi tillsammans och letar? föreslår du.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Enhörningen]] [[Kim]] [[Tilsammans]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Enhörningen" tags="" position="800,750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/59d9d3534952a53e2ef58a7efc178523cfefd62c/V%C3%A5r%20examensarbete/Enh%C3%B6rning.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Enhörningen]] [[Kim]] [[Tilsammans]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Enhörningen" tags="" position="825,725" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/&quot;&gt;
 //bild på sur pojke//
 
 Du bestämmer dig för att följa med enhörningen. När du börjar gå bort märker du att Kim står kvar. Han ser inte glad ut.
@@ -142,12 +168,12 @@ Det känns lite bättre i magen. Just nu måste du fokusera på att hitta regnb�
 
 Du tar ett djupt andetag och gör dig redo för att ge dig iväg.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Den blå lagunen]] [[Följ efter Kim]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Kim" tags="" position="400,775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/70d5f4552717058fa741f5dae13df8ffc6ef40bb/V%C3%A5r%20examensarbete/Flyger%20iv%C3%A4g.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Den blå lagunen]] [[Följ efter Kim]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Kim" tags="" position="325,675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/fly-away.jpg&quot;&gt;
 Du håller ihop med Kim och tillsammans ska ni ge er efter piratskeppet.  Enhörningen breder ut sina vingar och börjar flyga iväg, men innan den kommer för långt bort: &quot;Stöter ni på för mycket trubbel , bara ropa så kommer jag flygandes&quot; de orden ekar när enhörningen flygger in i ett moln och försvinner.
 
 Du tittar på Kim, han har ett bestämt ansiktsuttryck. Ni börjar gå bort från slottet och påbörjar er jakt på piraterna.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Mörka moln]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Piratskeppet" tags="" position="300,1025" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/M%C3%B6rka%20moln.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Mörka moln]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Piratskeppet" tags="" position="150,925" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/pirateship.jpg&quot;&gt;
 Genom de mörka molnen kommer ett stort priatskepp flygandes.  Ni tittar upp på det massiva skeppet som stannar en bit bort. 
 
 &quot;Kom igen, nu har vi chansen att smita ombord och leta efter kristallerna!&quot; Kim vinkar till dig att du ska skynda.
@@ -160,7 +186,7 @@ Väl uppe på däck, gömd bakom trä tunnorna börjar ni kolla av ifall några 
 
 Allt verkar lugnt, plötsligt hör ni.....
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vad händer?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Mörka moln" tags="" position="350,900" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/M%C3%B6rka%20moln.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad händer?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Mörka moln" tags="" position="200,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/darkclouds.jpg&quot;&gt;
 Helt plötsligt hör ni vad som bara kan beskrivas som muller och åska. 
 
 &quot;Åhh nej, det är en storm påväg!&quot; säger Kim 
@@ -179,7 +205,8 @@ Så, vattnet åker runt och runt i en stor cirkel. Det är som en stor dans som 
 Du är glad att du har en kompis som kan lära dig så mycket.  
 Plötsligt slutar det åska och mullra, ni tittar fram från ert gömställe och ser.....
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Piratskeppet]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/%C3%85ska.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="8" name="Den blå lagunen" tags="" position="850,900" size="100,100">//Lagun//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Piratskeppet]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/%C3%85ska.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="8" name="Den blå lagunen" tags="" position="850,900" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/&quot;&gt;
+//Lagun//
 Du hoppar upp på enhörningens rygg, ni flyger iväg i snabb fart. 
 
 &quot;Vi ska börja leta på piraternas favorit badplats, där har dom lämnat saker förut.&quot; säger enhörningen
@@ -193,7 +220,7 @@ Vart ska ni börja leta!? Enhörningen som har varit här tidigare visar dig omk
 
 Även att du går på simskola varje helg så är du inte redo att ge dig ut och simma utan varken armpuffarna eller någon vuxen i närheten. Du ser något som blänker till under ytan, det ser ut som en stor sjöstjärna....
 
-[[Sjöstjärna?]]</tw-passagedata><tw-passagedata pid="9" name="Sjöstjärna?" tags="" position="900,1050" size="100,100">//bild på bläckfisk//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Sjöstjärna?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Sjöstjärna?" tags="" position="900,1050" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/octopus.jpg&quot;&gt;
 
 Nej, det var ju en. (vad heter djuret på bilden?) 
 
@@ -214,10 +241,7 @@ Vi är på jakt efter regnbågskristallerna som piraterna gömt. Vet du vart dom
 
 &quot;Vi ses om en stund.&quot; Olle börjar simma bort mot flaskan.
 
-[[Flaskpost]]
-
-
-</tw-passagedata><tw-passagedata pid="10" name="Flaskpost" tags="" position="950,1200" size="100,100">//bild på flaska//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Flaskpost]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Flaskpost" tags="" position="1025,1150" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/bottle.jpg&quot;&gt;
 
 Olle lyckas få tag på flaskan utan bekymmer, han simmar tillbaka med den. Han är lika nyfiken som ni på vad som kan finnas inuti. 
 
@@ -239,7 +263,7 @@ Vad är jag? (svar Palm)
 
 Aha nu förstår du vart ni ska gå näst...
 
-[[Nästa punkt]]</tw-passagedata><tw-passagedata pid="11" name="Nästa punkt" tags="" position="950,1325" size="100,100">//Bild på papegoja//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Nästa punkt]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Nästa punkt" tags="" position="1200,1275" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/parot.jpg&quot;&gt;
 
 På kartan ser ni tre palmer, ni börjar gå dit. Palmerna står lite längre bort på standen. 
 
@@ -259,8 +283,8 @@ Ni tittar upp , precis när en kokosnöt kommer flygande mot er. Ni hoppar undan
 
 &quot; Ja ge oss utmaningarna, vi är redo!&quot; säger Solstråle bestämt.
 
- [[Hitta saker]]
-</tw-passagedata><tw-passagedata pid="12" name="Rebus" tags="" position="900,1450" size="100,100">//bild på rebus//
+ &lt;div class=&quot;rubrik3&quot;&gt;[[Hitta saker]]&lt;/div&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Rebus" tags="" position="1100,1650" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/rebus.jpg&quot;&gt;
 
 &quot;Jag har bildat ett ord i sanden, kan ni gissa vad jag vill säga? &quot;
 
@@ -271,7 +295,7 @@ Ni tittar upp , precis när en kokosnöt kommer flygande mot er. Ni hoppar undan
 
 &quot;Bra jobbat ni klarade min utmaning, ni har visat er värdiga att gå vidare. Kraaa, lycka till!&quot; sa papegojan medans han flög iväg.
 
-[[Röda krysset]] </tw-passagedata><tw-passagedata pid="13" name="Hitta saker" tags="" position="1025,1450" size="100,100">//bild på sandslott//
+&lt;div class=&quot;rubrik3&quot;&gt;[[Röda krysset]] &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Hitta saker" tags="" position="1225,1475" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/sand-castle.jpg&quot;&gt;
 
 Hur många saker ser du på bilden som man inte ska lämna på en strand?
 
@@ -287,7 +311,7 @@ F _ _ _ _ _
 
 &quot;Bra jobbat! Ni har visat er värdiga att få fortsätta. Kraa lycka till!&quot; säger papegojan mednas han flyger iväg
 
-[[Rebus]]</tw-passagedata><tw-passagedata pid="14" name="Röda krysset" tags="" position="1000,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com//sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/palmer%20med%20g%C3%B6mt%20kryss.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Rebus]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Röda krysset" tags="" position="1200,1775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com//sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/cross.jpg&quot;&gt;
 //bild på palmer med litet kryss //
 
 Ni kommer fram till vad som på kartan är det röda krysset men ni ser inget när ni kollar upp. Ni ser sand,palmer,stenar och snäckor, var ska ni börja leta.
@@ -312,7 +336,7 @@ där ligger en skatt, väl skyddad och fint.&quot;
 Bra jobbat! 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Skattkista]]&lt;/div&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="15" name="Färger" tags="" position="275,1875" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/Regnb%C3%A5gsbro%20hel.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Färger" tags="" position="200,2000" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/rainbow-bridge.jpg&quot;&gt;
 
 Ni hjälps åt att ta placera alla kristallerna i ordningen som Solstråle lärt er. 
 
@@ -327,7 +351,7 @@ Ni tittar på varandra och ska precis ta ett steg på bron, då hör ni rastkloc
 Du nickar och ni tänker er tillbaka till gräsmattan på skolgården. Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka på gräsmattan igen. Dags att börja nästa lektion ropar Birgitta.
 
 
-[[Det svåra valet]]</tw-passagedata><tw-passagedata pid="16" name="Regnbågsbron" tags="" position="950,1850" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/ledsen%20Kim.png&quot;&gt;
+[[Det svåra valet]]</tw-passagedata><tw-passagedata pid="16" name="Regnbågsbron" tags="" position="950,2125" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/&quot;&gt;
 Ni landar på ett mjukt moln precis vid brons fot. 
 
 När ni kommer fram ser ni Kim som sitter själv och ser ledsen ut. 
@@ -352,7 +376,7 @@ Kim verkar bli lite gladare, ni hör hur Solstråle jobbar med bron längre bort
 Du nickar och vinkar hejdå till Solstråle sen börjar ni blunda......
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen.]]&lt;/div&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="17" name="Regnbågsbron." tags="" position="175,1750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/kristaller%20i%20moln.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="17" name="Regnbågsbron." tags="" position="175,1750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/cloudswithstones.jpg&quot;&gt;
 Ni landar vid foten av den trasiga bron.
 
 &quot;Nu måste vi skynda oss att laga bron så molnstaden kan räddas.&quot; säger Solstråle bestämt
@@ -369,22 +393,22 @@ De nästa två färgerna är svåra, som dom hjälper jag er med,
 först kommer färgen &#39;&#39;INDIGO&#39;&#39;, den färgen kan du se när du tittar på en bild av en blåbärspaj. Den mörkare färgen som är precis mellan blå och lila, det är indigo!
 Sista färgen är &#39;&#39;VIOLETT&#39;&#39;, du kan tänka dig när du blandar jordgubbssylt med blåbärssylt. Den fina färgen som blir när de blandas ihop, det är precis violett!&quot; 
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Färger]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Vad händer?" tags="" position="225,1150" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/pirater%20spelar%20kula.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Färger]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Vad händer?" tags="" position="125,1100" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/pirates.jpg&quot;&gt;
 //ljud piratsång?? inte hittat ännu/bild pirater som spelar kula//
 
 Ni lyssnar till ljudet, ni hör kulor som rullar och skrattande röster. Ni kikar fram från ert gömställe. 
 
-Ni ser pirater som spelar kula, lite udda för att vara pirater.
+Ni ser pirater som spelar tärning, lite udda för att vara pirater.
 
 &quot;Kolla&quot; utbrister Kim.
 
-Ni tittar noggrannare på piraternas kulor. Mitt bland piraterna kan ni se regnbågskristallerna. Piraterna verkar spela kula med kristallerna. 
+Ni tittar noggrannare på piraternas tärningar. Mitt bland piraterna kan ni se regnbågskristallerna. Piraterna verkar spela kula med kristallerna. 
 
 &quot;Oj,oj detta var inte bra, tänk om de går sönder?&quot; Kim är bekymrad. 
 
 &quot;Hur ska vi få tillbala kristallerna från piraterna?&quot; undrar Kim
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Ropa på Solstråle]][[Prata med piraterna]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Ropa på Solstråle" tags="" position="125,1325" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/solstr%C3%A5le%20landar.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Ropa på Solstråle]][[Prata med piraterna]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Ropa på Solstråle" tags="" position="125,1275" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/unicornship.jpg&quot;&gt;
 Ni bestämmer er för att ropa på Solstråle, ni behöver hjälp för att lösa problemet. 
 
 Solstråle kommer flygande och landar vid er, piraterna har inte upptäckt er ännu.
@@ -407,7 +431,7 @@ Kaptenen skrattar, &quot;Haha, tror ni att ni landkrabbor kan komma ombord på m
 
 Ni nickar och antar utmaningen.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Utmaningar]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Prata med piraterna" tags="" position="275,1325" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/h%C3%B6g%20med%20kl%C3%A4der.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Utmaningar]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Prata med piraterna" tags="" position="325,1300" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/h%C3%B6g%20med%20kl%C3%A4der.png&quot;&gt;
 Ni bestämmer er för att själva smyga fram till piraterna. Kim pekar mot ett mörkt förråd på piratskeppet. Där inne finns en stor kista fylld med gamla piratkläder.
 
 Kim och du rotar i en gammal kista fylld med piratkläder när plötsligt en liten mus med en trasig pirathatt kikar fram!
@@ -436,7 +460,7 @@ Ni hittar kläder som passar, nu ser ni ut som riktiga pirater.
 
 [[Lämna förrådet]]
 
-</tw-passagedata><tw-passagedata pid="21" name="Utmaningar" tags="" position="75,1450" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/kapten.png&quot;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Utmaningar" tags="" position="75,1425" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/captain.jpg&quot;&gt;
 Första utmaningen är en gåta, vilken färg är svaret?:
 
 Pirater älskar mig, och det bör du också.
@@ -474,7 +498,7 @@ Kanske, om du tänker på gåtan under alla dina äventyr och utforskningar, kom
 
 &quot;Haha, där fick jag er allt, nu får ni gå på plankan!&quot; pirat kaptenen pekar på en lång planka som går ut från skeppet. 
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Plankan]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="100,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/plankan.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Plankan]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="100,1575" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/planka.jpg&quot;&gt;
 Du och Kim tittar på varandra, vad ska ni göra nu?
 
 Ni hinner bara ta första skakiga steget ut på plankan när....
@@ -492,7 +516,7 @@ Just då kommer Solstråle flygandes, ni hoppar på ryggen och precis när ni sk
 
 &quot;Mot regnbågsbron!&quot; skriker ni högt när ni flyger iväg.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Regnbågsbron.]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Skattkista" tags="" position="1000,1725" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com//sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/skattkista.png&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Regnbågsbron.]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Skattkista" tags="" position="1200,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com//sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/tresure.jpg&quot;&gt;
 Solstråle börjar gräva med sina hovar, och precis som du sa här är en stor skattkista.
 
 Solstråle öppnar kistan. &quot;Det är regnbågskristallerna!!! Nu kan vi äntligen laga regnbågsbron!&quot;
@@ -500,17 +524,16 @@ Solstråle öppnar kistan. &quot;Det är regnbågskristallerna!!! Nu kan vi änt
 &quot;Hoppa upp på min rygg så flyger vi tillbaka&quot;
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Regnbågsbron]]&lt;/div&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="24" name="Start" tags="" position="650,200" size="100,100">
-
+</tw-passagedata><tw-passagedata pid="24" name="Start" tags="firstpage" position="650,125" size="100,100">
 &lt;div class=&quot;container&quot;&gt;
-&lt;div class=&quot;rubrik&quot;&gt;
-KIMS MYSTIFIKA UPPTÄCKTER&lt;/div&gt;
+
+&lt;div class=&quot;rubrik&quot;&gt;Kims mystifika upptäckter&lt;/div&gt;
 
 &lt;div class=&quot;rubrik2&quot;&gt;De saknade regnbågskristallerna&lt;/div&gt;
-
+&lt;div class=&quot;rubrik2&quot;&gt;Kapitel 3&lt;/div&gt;
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Skolgården" tags="" position="800,1775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/V%C3%A5r%20portal.png&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Skolgården" tags="" position="750,1700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/V%C3%A5r%20portal.png&quot;&gt;
 //Bild på Kim vår//
 
 Kim börjar gå mot klassrummet.
@@ -523,10 +546,10 @@ Nu är det snart sommarlov, du kan knappt vänta på alla äventyr som du ska f�
 
 På Återseende!
 
-Psst.....är du nyfiken på att se hur den andra berättelsen slutar? Hoppa tillbaka till kapitlet som heter [[Det svåra valet]] och välj den andra vägen och låt äventyret fortsätta.</tw-passagedata><tw-passagedata pid="26" name="Portalen." tags="" position="825,1925" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f95c430b485cc5f7f594b0b0957a4659a63aa2db/V%C3%A5r%20examensarbete/V%C3%A5r%20portal.png&quot;&gt;
+Psst.....är du nyfiken på att se hur den andra berättelsen slutar? Hoppa tillbaka till kapitlet som heter [[Det svåra valet]] och välj den andra vägen och låt äventyret fortsätta.</tw-passagedata><tw-passagedata pid="26" name="Portalen." tags="" position="600,1950" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/portal.jpg&quot;&gt;
 Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka på gräsmattan igen. Ni kommer tillbaka precis när klockan ringer....
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Skolgården]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ljud 1" tags="" position="500,1175" size="100,100">Ledsen ....</tw-passagedata><tw-passagedata pid="28" name="Ljud 2" tags="" position="625,1200" size="100,100">Ni valde rätt, detta ljudet var det snälla molnet. 
+&lt;div class=&quot;rubrik3&quot;&gt;[[Skolgården]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ljud 1" tags="" position="500,1200" size="100,100">Ledsen ....</tw-passagedata><tw-passagedata pid="28" name="Ljud 2" tags="" position="625,1200" size="100,100">Ni valde rätt, detta ljudet var det snälla molnet. 
 
 Hur tror ni att det snälla molnet ser ut? Kanske ni kan rita molnet när ni kommer tillbaka till klassrummet? 
 
@@ -549,9 +572,9 @@ Du och Kim tittar på det stora hålet framför er, ni tar ett försiktigt steg 
  Uppgift:
 
 Ge barnen en talserie med luckor, t.ex.:
-2, 4, __, 8, 10 (Svar: 6)
-5, __, 15, 20 (Svar: 10)
-När de fyller i rätt tal formas trappstegen, och de kan gå vidare i berättelsen.)??</tw-passagedata><tw-passagedata pid="29" name="Tilsammans" tags="" position="600,875" size="100,100">Ni bestämmer er för att det bästa är att samarbeta , då kommer ni säkert hitta krisatallerna fortare. 
+2, 4, __, 8, 10 Svar: 6
+5, __, 15, 20 Svar: 10
+När de fyller i rätt tal formas trappstegen, och de kan gå vidare i berättelsen.)??</tw-passagedata><tw-passagedata pid="29" name="Tilsammans" tags="" position="625,800" size="100,100">Ni bestämmer er för att det bästa är att samarbeta , då kommer ni säkert hitta krisatallerna fortare. 
 
 &quot;Var ska vi börja leta?&quot; frågar Kim
 
@@ -560,7 +583,7 @@ När de fyller i rätt tal formas trappstegen, och de kan gå vidare i berättel
 Kim tittar på dig och sträcker ut sin hand, &quot;Nej, det är viktigt att veta var alla är när man ska till ett ställe man inte känner till. Jag tycker man bäst vet var sin kompis är om man håller den i händerna. Du nickar och ni beger er av mot.....
 
 [[De sjungande molnen]]
-</tw-passagedata><tw-passagedata pid="30" name="De sjungande molnen" tags="" position="625,1075" size="100,100">Ni går genom de mjuka molnen. De känns som sockervadd under fötterna. Luften är sval och doftar regn. Enhörningen går först, manen glittrar i ljuset. Kim går bredvid mig, tyst. Han lyssnar, precis som jag.
+</tw-passagedata><tw-passagedata pid="30" name="De sjungande molnen" tags="" position="625,1025" size="100,100">Ni går genom de mjuka molnen. De känns som sockervadd under fötterna. Luften är sval och doftar regn. Enhörningen går först, manen glittrar i ljuset. Kim går bredvid mig, tyst. Han lyssnar, precis som jag.
 
 &quot;Hör ni?&quot; viskar enhörningen och stannar. &quot;Molnen sjunger.&quot; 
 
@@ -580,7 +603,7 @@ ljud 2
 
 ljud 3
 
-[[Ljud 1]] [[Ljud 2]] [[Ljud 3]]</tw-passagedata><tw-passagedata pid="31" name="Ljud 3" tags="" position="750,1200" size="100,100">konstigt...</tw-passagedata><tw-passagedata pid="32" name="Följ efter Kim" tags="" position="975,750" size="100,100">Du och enhörningen Solstråle rör er framåt, men en orolig känsla gnager i magen. Tänk om Kim hamnar i fara? Pirater kan vara luriga, och även om Kim är modig, är han ensam.
+[[Ljud 1]] [[Ljud 2]] [[Ljud 3]]</tw-passagedata><tw-passagedata pid="31" name="Ljud 3" tags="" position="750,1200" size="100,100">konstigt...</tw-passagedata><tw-passagedata pid="32" name="Följ efter Kim" tags="" position="1025,725" size="100,100">Du och enhörningen Solstråle rör er framåt, men en orolig känsla gnager i magen. Tänk om Kim hamnar i fara? Pirater kan vara luriga, och även om Kim är modig, är han ensam.
 
 Solstråle märker din tvekan och saktar in.
 
@@ -606,7 +629,7 @@ Virvelvinden rör sig åt sidan och försvinner ut i tomma intet.
 
 Du studerar vinden och märker att den kommer och går i ett mönster. Om ni tajmar det rätt kan ni smyga förbi utan att bli indragna.
 
-[[sick-sack]]</tw-passagedata><tw-passagedata pid="33" name="fortsättning" tags="" position="600,1350" size="100,100">När ni tagit er upp för trappan ser ni vad det var som glittrade ...en av regnbågskristallerna ligger på en kudde av moln. ni plockar upp den. 
+[[sick-sack]]</tw-passagedata><tw-passagedata pid="33" name="fortsättning" tags="" position="600,1375" size="100,100">När ni tagit er upp för trappan ser ni vad det var som glittrade ...en av regnbågskristallerna ligger på en kudde av moln. ni plockar upp den. 
 
 Du ser kristallen först, vilken färg har den? 
 
@@ -630,7 +653,7 @@ Ni tar några försiktiga steg mot dom lysande ögonen....
 
 [[Skuggflygarna]]
 
-</tw-passagedata><tw-passagedata pid="34" name="Skuggflygarna" tags="" position="575,1500" size="100,100">Ni hör ett fnissande och en massa siffror komma från det mörka molnen, plötsligt blir allt tyst. 
+</tw-passagedata><tw-passagedata pid="34" name="Skuggflygarna" tags="" position="575,1550" size="100,100">Ni hör ett fnissande och en massa siffror komma från det mörka molnen, plötsligt blir allt tyst. 
 
 från molnet hör ni : 
 
@@ -656,7 +679,7 @@ Du hinner inte ens nicka innan ni hör.....
 
 Denna gången blir allt tyst.....ingen kristall som kommer flygandes, ni hör inga fler siffror bland molnen. Vart tog skuggflygarna vägen?
 
-[[mörka molnet]]</tw-passagedata><tw-passagedata pid="35" name="mörka molnet" tags="" position="575,1625" size="100,100">Plötsligt börjar det mörka molnet försvinna. 
+[[mörka molnet]]</tw-passagedata><tw-passagedata pid="35" name="mörka molnet" tags="" position="550,1725" size="100,100">Plötsligt börjar det mörka molnet försvinna. 
 
 ni ser något som glimmar längre fram. 
 
@@ -682,7 +705,7 @@ Framför er dyker en stor, genomskinlig varelse upp – en väktare av moln och 
  
  [[Kristallerna]]
  
- </tw-passagedata><tw-passagedata pid="36" name="Kristallerna" tags="" position="525,1775" size="100,100">//Portalen bild//
+ </tw-passagedata><tw-passagedata pid="36" name="Kristallerna" tags="" position="425,2000" size="100,100">//Portalen bild//
 Ni ska precis hoppa upp på solstråles rygg och flyga tillbaka till molnstaden, men då hör ni skolklockan. 
 
 &quot;Typiskt, nu hinner vi inte hjälpa till att laga bron&quot; säger Kim dystert. 
@@ -696,7 +719,7 @@ Kim blev genast glad igen och ger kristallerna till solstråle som tackar er fö
  
 Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka på gräsmattan igen, precis i tid för att gå in till lektionen igen. Glada att veta att ni hjälpt till att rädda regnbågsbron och att ni ska få uppleva mer äventyr bland molnen.
 
-[[Det svåra valet]] </tw-passagedata><tw-passagedata pid="37" name="Lämna förrådet" tags="" position="250,1475" size="100,100">Ni går fram till piraterna som att ni tillhörde gänget. 
+[[Det svåra valet]] </tw-passagedata><tw-passagedata pid="37" name="Lämna förrådet" tags="" position="325,1450" size="100,100">Ni går fram till piraterna som att ni tillhörde gänget. 
 
 Piraterna tittar upp från sitt spel.&quot; Vilka är ni?&quot; frågar en av piraterna
 
@@ -737,7 +760,7 @@ Ni vill inte stanna kvar på skeppet så ni hoppar av precis när dom lättar an
 
 Solstråle kommer flygandes, ni hoppar upp på ryggen och med alla kristallerna i era häder är ni nu redo att rädda regnbågsbron
 
-[[Regnbågsbron.]] </tw-passagedata><tw-passagedata pid="39" name="sick-sack" tags="" position="1050,875" size="100,100">Ni tar er förbi virvelvindarna genom att gå i ett sick-sack-mönster, och när ni kommit en bra bit bort kan ni börja gå vanligt igen. Vinden mojnar bakom er, och ni kan äntligen andas ut.
+[[Regnbågsbron.]] </tw-passagedata><tw-passagedata pid="39" name="sick-sack" tags="" position="1175,875" size="100,100">Ni tar er förbi virvelvindarna genom att gå i ett sick-sack-mönster, och när ni kommit en bra bit bort kan ni börja gå vanligt igen. Vinden mojnar bakom er, och ni kan äntligen andas ut.
 
 Framför er ser ni Kim, fortfarande omedveten om att ni följer efter. Han rör sig försiktigt mot piratskeppet, som vilar tungt på molnen med sitt stora ankare. Seglen fladdrar svagt i vinden, och ni hör piraternas röster från däcket.
 
@@ -745,9 +768,9 @@ Ni ser Kim smyga ombord och gömma sig bakom några träfat. Men plötsligt stel
 
 &quot;Vi måste få piraten att titta åt vårt håll istället!&quot; viskar Solstråle.
 
-[[Kasta en sten mot ett annat håll för att få piraten att titta bort.]]
-[[Härma en fågel och ropa högt för att låtsas att något händer längre bort.]]
-[[Hoppa fram och ropa &quot;Buh!&quot;]] </tw-passagedata><tw-passagedata pid="40" name="Kasta en sten mot ett annat håll för att få piraten att titta bort." tags="" position="1175,1050" size="100,100">Du plockar upp en liten sten som du har i fickan och kastar den försiktigt mot framsidan av skeppet. KLONK! Stenen studsar och rullar iväg.
+[[Kasta en sten-&gt;Kasta en sten mot ett annat håll för att få piraten att titta bort.]]
+[[Härma en fågel-&gt;Härma en fågel och ropa högt för att låtsas att något händer längre bort.]]
+[[Skräm piraten-&gt;Hoppa fram och ropa &quot;Buh!&quot;]] </tw-passagedata><tw-passagedata pid="40" name="Kasta en sten mot ett annat håll för att få piraten att titta bort." tags="" position="1325,1050" size="100,100">Du plockar upp en liten sten som du har i fickan och kastar den försiktigt mot framsidan av skeppet. KLONK! Stenen studsar och rullar iväg.
 
 Piraten stannar upp. &quot;Va? Vad var det där?&quot; muttrar han och går för att undersöka ljudet.
 
@@ -764,7 +787,7 @@ Ni ser er omkring. Skeppet är stort och ser ut att vara fullt av dolda hörn. M
 
 När ni väl kommer fram ser ni att den har ett konstigt lås.
 
-[[Lås]]</tw-passagedata><tw-passagedata pid="41" name="Härma en fågel och ropa högt för att låtsas att något händer längre bort." tags="" position="1250,925" size="100,100">Du tar ett djupt andetag och härmar en fågel: &quot;SQUAAAWK! Hjälp! En skatt flyger iväg!&quot;
+[[Lås]]</tw-passagedata><tw-passagedata pid="41" name="Härma en fågel och ropa högt för att låtsas att något händer längre bort." tags="" position="1475,900" size="100,100">Du tar ett djupt andetag och härmar en fågel: &quot;SQUAAAWK! Hjälp! En skatt flyger iväg!&quot;
 
 Piraten rycker till och ser sig omkring. &quot;En skatt flyger iväg? Vänta... vad?&quot; Han tittar mot himlen, som om han faktiskt förväntar sig en flygande skatt.
 
@@ -792,7 +815,7 @@ Ni känner att ni är på rätt väg, men ni måste vara snabba. Ni måste snart
 
 Kan du ge en ledtråd till vart vi ska börja leta?
 
-[[Däck]]</tw-passagedata><tw-passagedata pid="42" name="Hoppa fram och ropa &quot;Buh!&quot;" tags="" position="1050,1025" size="100,100">Du hoppar fram och ropar &quot;BUH!&quot; i hopp om att skrämma piraten.
+[[Däck]]</tw-passagedata><tw-passagedata pid="42" name="Hoppa fram och ropa &quot;Buh!&quot;" tags="" position="1175,1025" size="100,100">Du hoppar fram och ropar &quot;BUH!&quot; i hopp om att skrämma piraten.
 
 Piraten hoppar till, men istället för att springa iväg stirrar han rakt på dig. &quot;Vad i hela... vem är du!?&quot;
 
@@ -802,7 +825,7 @@ Solstråle suckar och säger:
 &quot;Oj då... att hoppa fram var ingen bra idé. Pirater kanske är vidskepliga, men de är också bra på att fånga inkräktare. Nästa gång, försök att vara listig istället!&quot;
 
 (Försök igen)
-[[sick-sack]] ]]</tw-passagedata><tw-passagedata pid="43" name="Lås" tags="" position="1125,1225" size="100,100">(Uppgift för att öppna låset)
+[[sick-sack]] ]]</tw-passagedata><tw-passagedata pid="43" name="Lås" tags="" position="1400,1250" size="100,100">(Uppgift för att öppna låset)
 
 
 Ni smyger in i skattkammaren och ser den full av gamla kistor, guldmynt och andra skatter. Men när ni letar bland alla högar av guld och juveler, ser ni att de saknade regnbågskristallerna inte finns där.
@@ -829,11 +852,11 @@ Piratmusen nickar och säger med ett skratt: &quot;Precis! Men var försiktiga, 
 
 Ni tackar honom och smyger iväg mot kaptenens hytt.
 
-[[Kaptenens hytt]] </tw-passagedata><tw-passagedata pid="44" name="Däck" tags="" position="1300,1225" size="100,100">Ni står tysta ett ögonblick och tittar på Fjällvind, som nu flaxar med sina vingar och ser ut att fundera. Hon sträcker på halsen och säger:
+[[Kaptenens hytt]] </tw-passagedata><tw-passagedata pid="44" name="Däck" tags="" position="1600,1275" size="100,100">Ni står tysta ett ögonblick och tittar på Fjällvind, som nu flaxar med sina vingar och ser ut att fundera. Hon sträcker på halsen och säger:
 
 &quot; De finns högt upp, där vinden blåser starkt och man ser hela världen. Följ segen, och du kommer hitta dem där!&quot;
 
-(svar: utkik,mast)
+svar: utkik,mast
 dolt svar
 
 Ni ser på varandra, tänker på Fjällvinds ledtrådar och inser snabbt vad hon menar. &quot;Utkiken!&quot; säger du, och Solstråle nickar ivrigt.
@@ -851,7 +874,7 @@ Du nickar, och Solstråle sprider ut sina stora, glänsande vingar. Med ett kraf
 Medan Solstråle hämta kristallerna från utkiken, ser du Kim, som nu har märkt att ni är där. Han vinkar och ser lite skamsen ut, men ändå glad över att se er. &quot;Så ni följde efter mig! Jag var rädd att ni inte skulle komma,&quot; säger han, och ni hjälper honom att klättra ner till säkerhet.
 
 
-[[Vänskap]]</tw-passagedata><tw-passagedata pid="45" name="Vänskap" tags="" position="1250,1525" size="100,100">Ni smyger bort från piratskeppet, alla glada och lättade att ni lyckades hämta kristallerna utan att piraterna upptäckte er. Ni tar ett djupt andetag och känner att ni äntligen kan slappna av.
+[[Vänskap]]</tw-passagedata><tw-passagedata pid="45" name="Vänskap" tags="" position="1575,1700" size="100,100">Ni smyger bort från piratskeppet, alla glada och lättade att ni lyckades hämta kristallerna utan att piraterna upptäckte er. Ni tar ett djupt andetag och känner att ni äntligen kan slappna av.
 
 Men plötsligt stannar Kim upp. Ni ser på varandra, undrande över vad som hänt. Kim ser ner på marken, som om han funderar på något viktigt. Efter en stund tittar han upp på er med ett allvarligt uttryck.
 
@@ -863,7 +886,7 @@ Du och Solstråle ler och går fram till Kim. &quot;Det är okej, Kim. Vi först
 
 Ni kramar om Kim, och ni känner alla att det är okej nu. Vänskap handlar om att förstå varandras känslor och att be om ursäkt när det behövs. Ni är alla glada att ni löste problemen tillsammans och nu är ni ett steg närmare att laga regnbågsbron.
 
-[[Återvända]]</tw-passagedata><tw-passagedata pid="46" name="Återvända" tags="" position="1200,1675" size="100,100">//Portalen bilden//
+[[Återvända]]</tw-passagedata><tw-passagedata pid="46" name="Återvända" tags="" position="1450,1925" size="100,100">//Portalen bilden//
 Efter att ha löst alla mysterier och hittat alla regnbågskristallerna, känner ni alla hur trötta ni är. Kim sträcker på sig och suckar.
 
 &quot;Jag är så trött efter allt detta äventyr,&quot; säger han med ett leende. &quot;Jag tycker vi ska åka tillbaka till skolan nu, det känns som om vi har gjort vårt för idag.&quot;
@@ -878,7 +901,7 @@ Ni alla säger farväl till det magiska stället och börjar tänka på gräsmat
 
 &quot;Det här var nog det bästa äventyret hittills,&quot; säger han. &quot;Men vi kommer tillbaka, vi har ju en hel moln stad att utforska!&quot;
 
-Medan ni går in till klassrummet känner ni er glada över vad ni har lärt er, och ni ser fram emot nästa gång. Det har varit ett äventyr fyllt med mod, vänskap och nya upptäckter. Och ni vet att ni alltid kommer ha varandra att luta er mot.</tw-passagedata><tw-passagedata pid="47" name="Kaptenens hytt" tags="" position="1150,1375" size="100,100">Ni smyger fram till kaptenens hytt, där dörren är stängd men ett svagt ljud hörs inifrån. Ni tittar på varandra och vet att ni måste vara tysta. Försiktigt öppnar ni dörren på glänt och kollar in. Till er förvåning ser ni Kim stå där, med en förvirrad men lättad min.
+Medan ni går in till klassrummet känner ni er glada över vad ni har lärt er, och ni ser fram emot nästa gång. Det har varit ett äventyr fyllt med mod, vänskap och nya upptäckter. Och ni vet att ni alltid kommer ha varandra att luta er mot.</tw-passagedata><tw-passagedata pid="47" name="Kaptenens hytt" tags="" position="1450,1450" size="100,100">Ni smyger fram till kaptenens hytt, där dörren är stängd men ett svagt ljud hörs inifrån. Ni tittar på varandra och vet att ni måste vara tysta. Försiktigt öppnar ni dörren på glänt och kollar in. Till er förvåning ser ni Kim stå där, med en förvirrad men lättad min.
 
 &quot;Kim!&quot; viskar Solstråle, och Kim hoppar till när hen ser er. &quot;Vad gör du här?&quot;
 
