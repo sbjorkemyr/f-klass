@@ -19,7 +19,7 @@ tw-story {
   	padding-bottom: 30px;
 }
 .container {
-  	background-color: rgb(214, 179, 118, 0.9);
+  	background-color: rgba(235, 229, 194, 0.9);
   	width: 100%;
   	border-radius: 50px;
   	padding: 30px;
@@ -54,6 +54,7 @@ tw-story {
   	border-radius: 20px;
   	
 }
+
 video {
   border-style: solid;
   	border-width: thin;
@@ -373,9 +374,9 @@ Ekorren spärrar upp ögonen av förtjusning och svarar:
 – Det låter klokt! Klart vi hjälper dig. Då får vi ju också se hur en ekorre bor, det har jag alltid velat veta, svarar Kim.
 
 Sally ler finurligt och lutar huvudet åt sidan innan hon säger:
-– Men först måste ni klara min gåta! Vilket djur går sämst i djungeln?
-(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle to (prompt: &quot;Vilket djur går sämst i djungeln?&quot;, &quot;&quot;))(set: $lowercaseApe to (lowercase: $riddle))(if: (either: ($lowercaseApe) is &quot;gorilla&quot;,($lowercaseApe) is &quot;gorilla&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är gorilla(går-illa).]]}][]&lt;results|
-När ni svarat på gåtan sätter ekorren iväg i en väldig fart, samtidigt som hon ropar att ni ska följa efter. Ni måste springa fort för att hinna med ekorren som är väldigt snabb.
+– Men först vill jag att ni löser den här utmaningen. Kan ni lista ut vilken färg den sista blomman ska ha?
+🌸 🌼 🌸 🌼 🌸 ❓(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle to (prompt: &quot;Vilken färg har den sista blomman?&quot;, &quot;&quot;))(set: $lowercaseYellow to (lowercase: $riddle))(if: (either: ($lowercaseYellow) is &quot;gul&quot;,($lowercaseYellow) is &quot;gul&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är gul.]]}][]&lt;results|
+När ni svarat på frågan sätter ekorren iväg i en väldig fart, samtidigt som hon ropar att ni ska följa efter. Ni måste springa fort för att hinna med ekorren som är väldigt snabb.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ekorrens hem]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Vad är i grottan?" tags="" position="650,1650" size="100,100">(set: $garbage to it + 2)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/caveanimal.jpg&quot;&gt;
 
@@ -411,8 +412,8 @@ Sally sträcker på sig och svarar:
 – Den tar vi hand om. Du är en riktigt liten samlare, säger Kim.
 
 Sally fnissar och svarar:
-– Det är så jag håller mig varm! Ingen vill frysa när de sover på vintern. Brr! Innan ni går vidare har jag en till gåta åt er. Det är något som tillhör dig, men som dina vänner använder mer än du. Vad är det?
-(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle2 to (prompt: &quot;Vad är det?&quot;, &quot;&quot;))(set: $lowercaseName to (lowercase: $riddle2))(if: (either: ($lowercaseName) is &quot;namnet&quot;, ))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är NAMNET.]]}][]&lt;results|
+– Det är så jag håller mig varm! Ingen vill frysa när de sover på vintern. Brr! Innan ni går vidare har jag en till utmaning åt er.  Kan ni lista ut vilken färg det sista hjärtat har?
+❤️ 💛 💙 ❤️ 💛 💙 ❤️ 💛 ❓(link-repeat: &quot;Gissa!&quot;)[{(set: $riddle2 to (prompt: &quot;Vilken färg har det sista hjärtat?&quot;, &quot;&quot;))(set: $lowercaseBlue to (lowercase: $riddle2))(if: (either: ($lowercaseBlue) is &quot;blå&quot;,($lowercaseBlue) is &quot;blå&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är blå.]]}][]&lt;results|
 Då hör ni att skolklockan ringer, det är dags att åka tillbaka till skolan. Ni säger hejdå till ekorren, som vinkar glatt med svansen.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ta portalen tillbaka till skolan-&gt;Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="775,1525" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/cave.jpg&quot;&gt;
