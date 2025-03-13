@@ -171,23 +171,18 @@ Genom de mörka molnen kommer ett stort priatskepp flygandes.  Ni tittar upp på
 
 Ni hittar en repstege som ni kan använda för att ta er upp på piratskeppet. Kim, som är modigast klättrar upp först och kusten är klar innan du börjar klättra, dina knän skakar men du tar mod till dig och börjar klättra. Väl uppe på däck, springer ni snabbt och gömmer bakom några trätunnor. Ni kikar fram för att kolla ifall några pirater syns till. Allt verkar lugnt, men plötsligt hör ni.....
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vad händer?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Mörka moln" tags="" position="250,700" size="100,100">(set: $skriv to (prompt: &quot;Var ska ni gömma er för ovädret?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/darkclouds.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad händer?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Mörka moln" tags="" position="250,700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/darkclouds.jpg&quot;&gt;
 
-Helt plötsligt hör ni ett dovt muller – det måste vara åska.
-
-– Åh nej, ett oväder är på väg! Var ska vi ta skydd? säger Kim oroligt.
-
-Du ser dig snabbt omkring och får syn på $skriv. Du pekar mot det och Kim nickar innan ni båda skyndar dit. Här kan ni vara i säkerhet från ovädret. Utanför smattrar regnet mot marken, och vinden viner genom träden.
-
-– $namn, har du tänkt på hur häftigt vattnets kretslopp är? frågar Kim ivrigt. Helt plötsligt hör ni ett dovt muller – det måste vara åska.
+Helt plötsligt hör ni ett dovt muller, och stora mörka moln närmar sig. Det måste vara åska! Snart kommer det att börja regna.
 
 – Åh nej, ett oväder är på väg! Var ska vi ta skydd? säger Kim oroligt.
+(link-repeat: &quot;Svara Kim&quot;)[(set: $skriva to (prompt: &quot;Var ska ni gömma er för ovädret?&quot;, &quot;&quot;))
+(replace: ?results)[– $skriva, svarar du.]](set: $skriva to &quot;&quot;)|results&gt;[]
 
-Du ser dig snabbt omkring och får syn på $skriv. Du pekar mot ditåt och Kim nickar innan ni båda skyndar dit. Här kan ni vara i säkerhet från ovädret. Utanför smattrar regnet mot marken, och vinden viner genom träden.
+Du pekar i riktningen där ni kan ta skydd, och Kim nickar innan ni båda skyndar er dit. Här är ni i säkerhet från ovädret. Utanför faller regnet i stora droppar.
 
-– $namn, har du tänkt på hur häftigt vattnets kretslopp är? frågar Kim ivrigt.
+– $namn, har du tänkt på hur häftigt vattnets kretslopp är? frågar Kim, men du hinner inte svara eftersom Kim fortsätter berätta entusiastiskt.
 
-Kim fortsätter entusiastiskt:
 – Vatten finns överallt omkring oss, i sjöar, floder och hav. Allt börjar när solen värmer upp vattnet. Då förvandlas det till ånga som stiger upp i luften. Där samlas ångan och bildar moln, som svävar och driver med vinden. När molnen blir riktigt tunga, släpper de ifrån sig vattnet igen, ibland som regn, ibland som snö eller hagel.
 
 Kim gör en gest mot regnet.
