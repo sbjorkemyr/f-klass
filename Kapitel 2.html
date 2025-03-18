@@ -88,7 +88,7 @@ Du blir överlycklig av frågan och nickar glatt. Ett nytt äventyr väntar, och
 
 Du känner dig så ivrig och glad över tanken på det kommande äventyret att du har svårt att sitta stilla och koncentrera dig. Eftersom det närmar sig julen pratar din lärare, Birgitta, om ett roligt pyssel som ni ska göra nästa vecka. Efter en stund visar Birgitta en bok med en tomte på framsidan och berättar att hon kommer att läsa ur den lite varje dag ända fram till jullovet. Hon börjar läsa för er.
 
-Efter att ni har lyssnat uppmärksamt på boken en stund, meddelar Birgitta att det är dags för rast. Du och Kim skyndar er för att komma först ut till hallen där ni ska klä på er. Det är väldigt kallt ute, så du tar på dig termobyxor, jacka, halsduk, mössa, de varma kängorna och till sist vantarna, precis som pappa rådde dig att göra på morgonen. Nu är ni redo för äventyr.
+Efter att ni har lyssnat uppmärksamt på boken en stund, meddelar Birgitta att det är dags för rast. Du och Kim skyndar er för att komma först ut till hallen där ni ska klä på er. Det är väldigt kallt ute, så du tar på dig termobyxor, jacka, halsduk, mössa, de varma kängorna och till sist vantarna, precis som pappa sa åt dig att göra på morgonen. Nu är ni redo för äventyr.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården-&gt;Skolgården]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Skolgården" tags="" position="750,550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/a7df3bfdc14a3bd1287f14b50550a3fdec7b7b1e/winter/kidsinsnow.jpg&quot;&gt;
 
@@ -213,7 +213,7 @@ Ni gör som nissen säger, och renarna tar glatt några steg framåt när de loc
 
 – Ja, du har helt rätt. Men hur ska jag kunna lämna tillbaka den nu? Alla saker ligger utspridda, och renarna är trötta, säger nissen och ser bekymrad ut.
 
-– Vi hjälper dig! säger du och Kim.
+– Vi hjälper dig! säger Kim.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Hjälp tomtenissen-&gt;Uppstädning]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Uppstädning" tags="" position="800,1575" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/371950ee64c14f504343e3c693f8cb83c0461275/winter/findthings.jpg&quot;&gt;
 
@@ -305,7 +305,7 @@ Ni bestämmer er för att kolla vad som händer på leksaksavdelnigen. När i ko
 
 Kim säger: 
 – $namn, ser du leksakshyllan där, kan du räkna hur många rosa nallar som finns där?
-(link-repeat: &quot;Gissa!&quot;)[{(set: $nalle to (prompt: &quot;Hur många rosa nallar ser du på bilden?&quot;, &quot;&quot;))(if: $nalle is &quot;8&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 8.]]}][]&lt;results|
+(link-repeat: &quot;Berätta&quot;)[{(set: $nalle to (prompt: &quot;Hur många rosa nallar ser du på bilden?&quot;, &quot;&quot;))(if: $nalle is &quot;8&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 8.]]}][]&lt;results|
 Efter att ha titta ett tag på de arbetsamma nissarna bestämmer ni er för att ni inte vill störa. Men i direkt anslutning till leksaksavdelningen ser ni ett annat rum som ni bestämmer er för att undersöka.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Undersök rummet-&gt;Gymmet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Godisavdelningen" tags="" position="1200,1175" size="100,100">(set: $godis to (prompt: &quot;Vilket är ditt favoritgodis?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/a55421ec3bca54ed3ef7b932dec2941c82c56033/winter/candy.jpg&quot;&gt;
@@ -339,7 +339,7 @@ Ni kommer fram till en stor röd dörr. Nissen letar stressat efter rätt nyckel
 
 Efter en spännande luftfärd landar släden slutligen intill stallet, som ligger i utkanten av byn. Ni hjälper tomtenissen att leda in renarna till sin inhängnad, där de får mat och vatten. Sedan hjälper ni till att dra in släden under taket så att den inte täcks av snö.
 
-– Nu måste jag gå och ringa tomten och berätta vad som hänt. Han och tomtemor är bortresta. Tack för all er hjälp, och för att ni lärde mig att man måste fråga om lov. Det ska jag göra nästa gång!&quot; säger nissen och vinkar hejdå när ni fortsätter vidare.
+– Nu måste jag gå och ringa tomten och berätta vad som hänt. Han och tomtemor är bortresta. Tack för all er hjälp, och för att ni lärde mig att man måste fråga om lov. Det ska jag göra nästa gång! säger nissen och vinkar hejdå när ni fortsätter vidare.
 
 Plötsligt hör ni en vänlig röst bakom er.
 – Vänta lite, barn. Jag såg vad ni gjorde.
@@ -378,7 +378,7 @@ Ni riktar era blickar mot bokhyllan och suckar, den är full med böcker. Det ko
 
 Kim vänder sig mot dig och frågar:
 – $namn, minns du vilken färg boken hade?
-(link-repeat: &quot;Gissa!&quot;)[{(set: $bok to (prompt: &quot;Vilken färg är boken ni letar?&quot;, &quot;&quot;))(set: $lowercaseBok to (lowercase: $bok))(if: (either: ($lowercaseBok) is &quot;grön&quot;, ($lowercaseBok) is &quot;grön&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är grön.]]}][]&lt;results|
+(link-repeat: &quot;Berätta&quot;)[{(set: $bok to (prompt: &quot;Vilken färg är boken ni letar?&quot;, &quot;&quot;))(set: $lowercaseBok to (lowercase: $bok))(if: (either: ($lowercaseBok) is &quot;grön&quot;, ($lowercaseBok) is &quot;grön&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är grön.]]}][]&lt;results|
 Sökandet efter boken fortsätter och ni drar slumpmässigt ut böcker som har rätt färg. Det känns nästan omöjligt att hitta rätt bok bland alla dessa böcker. Efter att ni har letat en lång stund kikar Kim in bakom bokhyllan, och där fastkilad mot väggen är den.
 
 – Där är den! ropar Kim så högt att du hoppar rakt upp av rädsla. Kim pekar bakom hyllan. Ni hämtar boken och lämnar över den till nissen.
@@ -428,8 +428,7 @@ Men så frågar Kim:
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Varför tog elen slut? -&gt;Nissen Knas förklarar elbrist]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Nissen Knas förklarar elbrist" tags="" position="1000,1825" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/a55421ec3bca54ed3ef7b932dec2941c82c56033/winter/nisseknas.jpg&quot;&gt;
 
-In kliver en nisse med rufsigt hår och stora glasögon. Han ler stort och ställer sig på en hög med paket för att synas bättre.
-
+In kliver en nisse med rufsigt hår och stora glasögon. Han ler stort och ställer sig på en hög med paket för att synas bättre:
 – Jag är Nisse Knas! Uppfinnare, vetenskapsnisse och expert på alla knasiga problem. säger han stolt. Och just nu har vi ett elproblem!
 
 Han pekar på Stora Julbatteriet.
@@ -462,7 +461,7 @@ Ni tackar Nissen Knas för den bra lärdomen och funderar på var ni ska gå hä
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;snöhögen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Rädda julklapparna innan de flyter bort!" tags="" position="275,1750" size="100,100">(if: $uppgift &lt; 2)[(set: $uppgift to it + 1)]&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/9b7e2915d563777bab6dc57c49e0fc86dedcf2ba/winter/package.jpg&quot;&gt;
 
 – Paket överallt! ropar Kim och pekar ivrigt. Vi måste skynda oss innan de försvinner i snön! $namn, hur många paket ser du?  ropar Kim.
-(link-repeat: &quot;Gissa!&quot;)[{(set: $paket to (prompt: &quot;Hur många paket ser du på bilden?&quot;, &quot;&quot;))(if: $paket is &quot;9&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 9.]]}][]&lt;results|
+(link-repeat: &quot;Berätta&quot;)[{(set: $paket to (prompt: &quot;Hur många paket ser du på bilden?&quot;, &quot;&quot;))(if: $paket is &quot;9&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 9.]]}][]&lt;results|
 Ni springer fram. Ett paket gömmer sig bakom en stubbe. Ett annat är halvt begravt i den glittrande snön. Plötsligt börjar ett rött paket långsamt glida ner mot den frusna bäcken. Ni springer, hoppar över en rot och fångar det i sista sekunden. Kim halkar, men sträcker sig i fallet och får tag i ett randigt paket, precis innan det rullar iväg.
 
 – Bra teamwork! Uppgiften slutförd! ropar Kim och ger dig en high five.
@@ -494,11 +493,11 @@ Uggelbert sträcker på sig och fladdrar med vingarna.
 – Är ni redo att lösa mina julrebusar? frågar han med ett mystiskt leende.
 (link-repeat: &quot;1&quot;)[{(set: $kotte to (prompt: &quot;Vad är svaret på rebus 1?&quot;, &quot;&quot;))(set: $lowercaseKotte to (lowercase: $kotte))(if: (either: ($lowercaseKotte) is &quot;grankotte&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är grankotte.]]}][]&lt;results|(link-repeat: &quot;2&quot;)[{(set: $sko to (prompt: &quot;Vad är svaret på rebus 2?&quot;, &quot;&quot;))(set: $lowercaseSko to (lowercase: $sko))(if: (either: ($lowercaseSko) is &quot;snösko&quot;))[(replace: ?results2)[Bra jobbat!]](else:)[(replace: ?results2)[Svaret är snösko.]]}][]&lt;results2|(link-repeat: &quot;3&quot;)[{(set: $ren to (prompt: &quot;Vad är svaret på rebus 3?&quot;, &quot;&quot;))(set: $lowercaseRen to (lowercase: $ren))(if: (either: ($lowercaseRen) is &quot;rudolf&quot;))[(replace: ?results3)[Bra jobbat!]](else:)[(replace: ?results3)[Svaret är Rudolf.]]}][]&lt;results3|
 Ugglan blinkar nöjt med sina visdomsögon och nickar sakta. 
-– Ni har löst min gåta, och nu är ni redo att fortsätta.
+– Ni har löst min uppgift, och nu är ni redo att fortsätta.
 
-Med en mystisk fladd av sina vingar rör sig Uggelbert åt sidan och avslöjar en hemlig stig som försvinner in i den snötäckta skogen. Stigen är smal, täckt av snöflingor som glittrar som små stjärnor.
+Med ett mystisk fladdrande med sina vingar rör sig Uggelbert åt sidan och avslöjar en hemlig stig som försvinner in i den snötäckta skogen. Stigen är smal, täckt av snöflingor som glittrar som små stjärnor.
 
-– Följ den här vägen, och ni kommer snart till det ni söker. Men kom ihåg, den som går den här vägen måste vara modig, klok och redo för allt som kommer, säger Ugglebert.
+– Följ den här vägen, ni kommer snart till det ni söker. Men kom ihåg, den som går den här vägen måste vara modig, klok och redo för allt som kommer, säger Ugglebert.
 
 Kim och du delar en snabb blick. Ni tar ett djupt andetag och börjar gå ner för stigen. Efter en stund hör ni plötsligt ett högt brak.
 
