@@ -43,7 +43,7 @@ tw-story {
   text-align: center;
 }
 .rubrik4 {
-  font-size: 21px;
+  font-size: 22px;
   line-height: 1.3;
 }
 
@@ -61,14 +61,13 @@ video {
 border-radius: 20px;
 }
 button {
-   	padding: 5px 15px 5px 15px;
+   	padding: 3px 10px 3px 10px;
     margin: 10px;
 	background-color: #EDF9FD;
-	border: solid 2px #2E35DF;
-  	border-radius: 30px;
+	border: solid;
+  	border-radius: 15px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
 	font-size: 20px;
-  	color: #2E35DF;
   	font-weight: bold;
     font-family: "Nunito", Arial;
 }
@@ -97,9 +96,7 @@ tw-icon[alt] {
 Det är rast och du följer med Kim ut och sätter er på den stora gräsmattan, där sitter redan flera andra barn och njuter av det vackra vädret. Ni hittar en plats i solen och börjar mumsa på den saftiga melonen som ni fick på fruktstunden. När ni har ätit klart lägger ni er ner i gräset och låter blicken vandra över himlen, där molnen sakta seglar förbi.
 
 – Kolla på det där molnet! Jag tycker att det ser ut som en val. $namn, vad ser du i molnen? frågar Kim och pekar upp mot skyn.
-(link-repeat: &quot;Berätta!&quot;)[(set: $cloud to (prompt: &quot;Vad ser du i molnen?&quot;, &quot;&quot;))(replace: ?results)[$cloud]](set: $cloud to &quot;&quot;)|results&gt;[]
-
-Kim ler och vänder sig mot dig och säger.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[(set: $cloud to (prompt: &quot;Vad ser du i molnen?&quot;, &quot;&quot;))(replace: ?results)[**– $cloud**]](set: $cloud to &quot;&quot;)|results&gt;[]&lt;/div&gt;Kim ler och vänder sig mot dig och säger.
 – Visst hade det varit häftigt om det fanns ett slott bland molnen? Ska vi resa dit i portalen nu?
 
 Tankarna börjar genast snurra i ditt huvud. Vem skulle kunna bo i ett slott bland molnen? Vilka magiska varelser skulle ni kunna möta där? Du nickar ivrigt, självklart vill du åka dit. Kim beskriver platsen ni ska åka till. Det är mycket moln, ni står på det mjukaste molnet som finns. Framför er ser ni ett slott. Kim ber dig blunda och tänka på slottet bland molnen. Den virvlande känslan infinner sig och när du öppnar ögonen igen ser du...
@@ -122,10 +119,10 @@ Ni tittar er förskräckta om för att ta reda på vem rösten tillhör. Framfö
 
 -Vad har hänt med regnbågsbron? frågar Kim.
 
--De usla molnpiraterna har stulit regnbågskristallerna, utan kristallernas färger fungerar inte bron. Många har försökt, men ingen har lyckats hitta kristallerna. Antingen har piraterna kvar kristallerna på sitt skepp eller så har de redan hunnit gömma dom på olika platser, säger Solstråle.
+– De usla molnpiraterna har stulit regnbågskristallerna, utan regnbågens färger fungerar inte bron. Många har försökt, men ingen har lyckats hitta kristallerna. Antingen har piraterna kvar kristallerna på sitt skepp, eller så har de redan hunnit gömma dem på olika ställen. Jag vet några av deras gömställen, säger Solstråle med en blinkning och fortätter sedan. Men piraterna gillar att göra saker knepiga. För att ta er dit behöver ni lösa deras kluriga gåtor och utmaningar. Gör ni det, kan ni tjäna guldmynt längs vägen! De kan bli riktigt användbara, kanske till och med muta en pirat eller två om vi har tur.
 
 -Men hur många kristaller behövs för att laga bron? Vet du hu många färger regnbågen har $namn? frågar Kim.
-(link-repeat: &quot;Gissa!&quot;)[{(set: $color to (prompt: &quot;Hur många färger har regnbågen?&quot;, &quot;&quot;))(if: $color is &quot;7&quot;)[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är 7.]]}][]&lt;results|&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Bra gissat. En regnbåge har 7 färger. Färgerna som ingår i regnbågen är röd, orange, gul, grön, blå, indigo och violett. Ni behöver en kristall av varje färg. Jag vet några av deras gömställen, vill ni följa med mig och leta efter kristallerna på piraternas gömställen eller ta er på egen hand till piratskeppet?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa&quot;)[{(set: $color to (prompt: &quot;Hur många färger har regnbågen?&quot;, &quot;&quot;))(if: $color is &quot;7&quot;)[(set: $kristall to it + 1)(replace: ?results)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?results)[Försök igen, eller forsätt vidare..]]}][]&lt;results|&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Bra gissat. En regnbåge har 7 färger. Färgerna som ingår i regnbågen är röd, orange, gul, grön, blå, indigo och violett. Ni behöver en kristall av varje färg. Jag vet några av deras gömställen, vill ni följa med mig och leta efter kristallerna på piraternas gömställen eller ta er på egen hand till piratskeppet?
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Det svåra valet]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="3" name="Det svåra valet" tags="" position="650,550" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/unicorn.jpg&quot;&gt;
 
@@ -176,10 +173,7 @@ Ni hittar en repstege som ni kan använda för att ta er upp på piratskeppet. K
 Helt plötsligt hör ni ett dovt muller, och stora mörka moln närmar sig. Det måste vara åska! Snart kommer det att börja regna.
 
 – Åh nej, ett oväder är på väg! Var ska vi ta skydd? säger Kim oroligt.
-(link-repeat: &quot;Svara Kim&quot;)[(set: $skriva to (prompt: &quot;Var ska ni gömma er för ovädret?&quot;, &quot;&quot;))
-(replace: ?results)[– $skriva, svarar du.]](set: $skriva to &quot;&quot;)|results&gt;[]
-
-Du pekar i riktningen där ni kan ta skydd, och Kim nickar innan ni båda skyndar er dit. Här är ni i säkerhet från ovädret. Utanför faller regnet i stora droppar.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara Kim&quot;)[(set: $skriva to (prompt: &quot;Var ska ni gömma er för ovädret?&quot;, &quot;&quot;))(replace: ?results)[– $skriva, svarar du.]](set: $skriva to &quot;&quot;)|results&gt;[]&lt;/div&gt;Du pekar i riktningen där ni kan ta skydd, och Kim nickar innan ni båda skyndar er dit. Här är ni i säkerhet från ovädret. Utanför faller regnet i stora droppar.
 
 – $namn, har du tänkt på hur häftigt vattnets kretslopp är? frågar Kim, men du hinner inte svara eftersom Kim fortsätter berätta entusiastiskt.
 
@@ -372,12 +366,14 @@ Ni landar vid foten av den trasiga bron och tittar på den trasiga och grå bron
 Ni tittar på kristallerna. 
 – Men vilken ordning ska dom sitta? frågar Kim.
 
-– Jag ska hjälpa er, säger Solstråle. Överst är det kärlekens färg som börjar på &#39;&#39;R&#39;&#39;. 
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor1 to (lowercase: $color1))(if: $lowercaseColor1 is &quot;röd&quot;)[(replace: ?result1)[**– Rätt svar!**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– Efter det kommer färgen&#39;&#39; O&#39;&#39; som en apelsin har.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor2 to (lowercase: $color2))(if: $lowercaseColor2 is &quot;orange&quot;)[(replace: ?result2)[**– Rätt svar!**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Nästa färg kan alla, det är ju solens färg &#39;&#39;G&#39;&#39;. 
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color3 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor3 to (lowercase: $color3))(if: $lowercaseColor3 is &quot;gul&quot;)[(replace: ?result3)[**– Rätt svar!**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Sen kommer gräsets färg, den färgen börjar också på &#39;&#39;G&#39;&#39;.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color4 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor4 to (lowercase: $color4))(if: $lowercaseColor4 is &quot;grön&quot;)[(replace: ?result4)[**– Rätt svar!**]](else:)[(replace: ?result4)[Försök igen!]]]|result4&gt;[]&lt;/div&gt;– Havet har samma färg som nästa i ordningen, &#39;&#39;B&#39;&#39;.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color5 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor5 to (lowercase: $color5))(if: $lowercaseColor5 is &quot;blå&quot;)[(replace: ?result5)[**– Rätt svar!**]](else:)[(replace: ?result5)[Försök igen!]]]|result5&gt;[]&lt;/div&gt;
+– Jag ska hjälpa er, säger Solstråle. 
+
+– Överst är det kärlekens färg som börjar på &#39;&#39;R&#39;&#39;. 
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor1 to (lowercase: $color1))(if: $lowercaseColor1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– Efter det kommer färgen som börjar på bokstaven&#39;&#39; O&#39;&#39; och har samma färg som en apelsin.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor2 to (lowercase: $color2))(if: $lowercaseColor2 is &quot;orange&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Nästa färg kan alla, det är ju solens färg &#39;&#39;G&#39;&#39;. 
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color3 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor3 to (lowercase: $color3))(if: $lowercaseColor3 is &quot;gul&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Sen kommer gräsets färg, den färgen börjar också på &#39;&#39;G&#39;&#39;.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color4 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor4 to (lowercase: $color4))(if: $lowercaseColor4 is &quot;grön&quot;)[(set: $kristall to it + 1)(replace: ?result4)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result4)[Försök igen!]]]|result4&gt;[]&lt;/div&gt;– Havet har samma färg som nästa i ordningen, &#39;&#39;B&#39;&#39;.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color5 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor5 to (lowercase: $color5))(if: $lowercaseColor5 is &quot;blå&quot;)[(replace: ?result5)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result5)[Försök igen!]]]|result5&gt;[]&lt;/div&gt;
 – De två färgerna som är kvar är svåra, så de hjälper jag er med. Först kommer färgen &#39;&#39;INDIGO&#39;&#39;, den färgen kan du se när du tittar på en blåbärspaj. Den mörkare färgen som är precis mellan blå och lila, det är indigo! Sista färgen är &#39;&#39;VIOLETT&#39;&#39;. Tänk er att ni blandar jordgubbssylt med blåbärssylt. Den fina färgen som blir när de blandas ihop, det är violett! säger Solståle. 
 
 Ni hjälps åt att ta placera alla kristallerna i ordningen som Solstråle lärt er.
@@ -391,7 +387,7 @@ Ni hör ljudet av flera personer som skrattar högt. Försiktigt kikar ni fram f
 Nu har ni två val: Ropar ni på Solstråle, eller går ni fram och försöker prata med piraterna själva?
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ropa på Solstråle]][[Prata med piraterna]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/fcfc66a9f2c55248f0294d1905e29581172bb585/spring/laughter1-98297.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="19" name="Ropa på Solstråle" tags="" position="50,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/unicornship.jpg&quot;&gt;
+&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/fcfc66a9f2c55248f0294d1905e29581172bb585/spring/laughter1-98297.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="19" name="Ropa på Solstråle" tags="" position="125,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/unicornship.jpg&quot;&gt;
 
 Ni bestämmer er för att ropa på Solstråle, som snabbt kommer flygande och landar vid er sida. Piraterna har inte upptäckt er ännu.
 
@@ -408,51 +404,50 @@ Ni utbyter en osäker blick men nickar sedan till kapten för att visa att ni an
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Utmaningar]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Prata med piraterna" tags="" position="250,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f65103cf841e6ba346ce59e5db0ca036f1a2aadd/spring/pirate-mouse.jpg&quot;&gt;
 
-Ni bestämmer er för att själva smyga fram till piraterna. Kim pekar mot ett mörkt förråd på piratskeppet. Där inne finns en stor kista fylld med gamla piratkläder.
+Ni bestämmer er för att smyga fram till piraterna själva. Kim pekar mot ett mörkt förråd på piratskeppet. Där inne hittar ni en stor kista fylld med gamla piratkläder. Precis när Kim börjar leta kläder i kistan hör ni en låg harkling.
 
-Kim och du rotar i en gammal kista fylld med piratkläder när plötsligt en liten mus med en trasig pirathatt kikar fram!
+En liten mus med en trasig pirathatt kikar fram och säger:
+– Oj, oj, vad har vi här? Två nya pirater som inte vet hur man klär sig ordentligt?
 
-Piratmusen: &quot;Oj, oj, vad har vi här? Två nya pirater som inte vet hur man klär sig ordentligt?&quot;
+– Vi försöker bara hitta kläder för att smälta in. Men de här är ju gamla och slitna, säger Kim.
 
-Kim: &quot;Vi försöker bara hitta kläder för att smälta in! Men de här kläderna är ju gamla och slitna…&quot;
+Musen fnissar och klättrar upp på kanten av kistan.
+– Äkta pirater slänger aldrig sina kläder i onödan! Vi lappar, lagar och använder dem igen. Det är smartare!
 
-Piratmusen (fnissar): &quot;Och vad är det för fel på det? Äkta pirater slänger aldrig sina kläder i onödan! Vi lappar, lagar och använder dem igen – det är smartare!&quot;
+– Varför då? undrar Kim.
 
- &quot;Men varför då?&quot; undrar Kim
+– För att det sparar på jordens resurser! Nya kläder kräver massor av vatten, bomull och färger. Om alla bara slängde sina kläder skulle hav och land bli fulla av skräp!
 
- Piratmusen (klättrar upp på en kistkant): &quot;För att det sparar på jordens resurser! Nya kläder kräver massor av vatten, bomull och färger. Om alla bara slängde sina kläder skulle hav och land bli fulla av skräp!&quot;
+– Oj, det låter ju inte bra. Så om vi använder gamla kläder hjälper vi jorden?
 
- &quot;Oj, det låter ju inte så bra… Så om vi använder gamla kläder hjälper vi jorden?&quot; frågar Kim bekymmrat
+– Exakt! Kolla här! säger musen och visar en liten tröja med en lapp sydd över ett hål. Den här lagade jag själv. Nu är den som ny!
 
-Piratmusen: &quot;Exakt! Och du, kolla här!&quot; (Drar fram en liten tröja med en lapp sydd över ett hål.) &quot;Den här lagade jag själv! Nu är den som ny, fast utan att slösa!&quot;
+Kim ler.
+– Då tar vi de här piratkläderna och blir miljösmarta pirater!
 
-Kim (ler): &quot;Då tar vi de här piratkläderna och blir miljösmarta pirater!&quot;
+Musen nickar nöjt.
+– Riktiga pirater tar hand om sina saker – och om jorden! Men säg mig, kan ni komma på något annat vi kan göra för att hjälpa jorden?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[(set: $clothes to (prompt: &quot;Hur kan vi spara på jordens resurser?&quot;, &quot;&quot;))(replace: ?results)[$clothes]](set: $clothes to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Mycket spännande och intressant svar! utropar piratmusen. För att spara på jordens resurser kan man till exempel laga saker istället för att slänga dem, precis som piratkläderna! En trasig tröja eller en leksak kan få nytt liv istället för att bytas ut. Man kan också återanvända och dela med sig, kanske byta kläder och leksaker med vänner eller syskon istället för att köpa nytt. Att spara på vatten och el är också viktigt – man kan stänga av kranen när man borstar tänderna eller släcka lampor i tomma rum. Och glöm inte att plocka upp skräp! Riktiga pirater håller naturen ren, säger musen och ler finurligt.
 
-Piratmusen: &quot;Ja, precis! Riktiga pirater tar hand om sina saker – och om jorden!&quot;
+– Tack för mig, nu ska jag kila vidare! säger han och vinkar innan han försvinner in i skuggorna
 
-Medan de klär sig, hoppar piratmusen upp på en hylla och vinkar åt dem innan han försvinner in i skuggorna.
+Under tiden som musen har pratat har ni klätt på er piratkläder. Nu ser ni ut som riktiga pirater. Dags att lura pirater.
 
-Ni hittar kläder som passar, nu ser ni ut som riktiga pirater.
-
-[[Lämna förrådet]]
-
-</tw-passagedata><tw-passagedata pid="21" name="Utmaningar" tags="" position="25,1425" size="100,100">(enchant: &quot;B&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;Å&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;L&quot;, (text-style: &quot;sway&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/captain.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Lämna förrådet]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="21" name="Utmaningar" tags="" position="100,1425" size="100,100">(enchant: &quot;B&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;Å&quot;, (text-style: &quot;sway&quot;))(enchant: &quot;L&quot;, (text-style: &quot;sway&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/captain.jpg&quot;&gt;
 
 Kapten harklar sig och spänner ögonen i er innan han säger:
 – Första utmaningen är en gåta, vilken färg är svaret?
 Pirater älskar mig, och det borde du med.
 Jag är färgen på äpplen och rosor.
 Så säg mig, kamrat, vilken färg är jag?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 1&quot;)[(set: $svar1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar1 to (lowercase: $svar1))(if: $lowercaseSvar1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**– Rätt svar! Ni får en röd kristall.**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– För er andra utmaning behöver ni läsa denna texten noga. Svaret på vilken färg nästa kristalL har döljer sig i Bokstäverna som rör pÅ sig. Vilken färg har nästa kristall?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 2&quot;)[(set: $svar2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar2 to (lowercase: $svar2))(if: $lowercaseSvar2 is &quot;blå&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**– Rätt svar! Ni får en blå kristall.**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Den tredje utmaningen är en mattefråga. På mitt skepp finns det 3 kanoner på ena sidan och 2 kanoner på den andra sidan. Hur många kanoner finns det sammanlagt på skeppet?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 3&quot;)[(set: $svar3 to (prompt: &quot;Hur många kanoner?&quot;, &quot;&quot;))(if: $svar3 is &quot;5&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**– Rätt svar! Ni får en orange kristall.**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;
-– Är ni inte trötta på mina utmaningar nu? skrattar Kaptenen.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 1&quot;)[(set: $svar1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar1 to (lowercase: $svar1))(if: $lowercaseSvar1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Ni får en röd kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– För er andra utmaning behöver ni läsa denna texten noga. Svaret på vilken färg nästa kristalL har döljer sig i Bokstäverna som rör pÅ sig. Vilken färg har nästa kristall?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 2&quot;)[(set: $svar2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar2 to (lowercase: $svar2))(if: $lowercaseSvar2 is &quot;blå&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar! Ni får en blå kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Den tredje utmaningen är en mattefråga. På mitt skepp finns det 3 kanoner på ena sidan och 2 kanoner på den andra sidan. Hur många kanoner finns det sammanlagt på skeppet?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 3&quot;)[(set: $svar3 to (prompt: &quot;Hur många kanoner?&quot;, &quot;&quot;))(if: $svar3 is &quot;5&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar! Ni får en orange kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Är ni inte trötta på mina utmaningar nu? skrattar Kaptenen.
 
 – NEJ, vi måste få tillbaka kristallerna så ge oss nästa utmaning! säger Kim bestämt.
 
-– Okej, då kommer fjärde utmaningen, som är svårast av dem alla. Hur många dolda glittrande stjärnor finns det på den mörkaste natten?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 4&quot;)[(set: $svar4 to (prompt: &quot;Hur många stjärnor finns det?&quot;, &quot;&quot;))(replace: ?results)[**– På den här gåtan finns inget rätt svar...**]](set: $svar4 to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[...men kanske, om ni tänker på gåtan under alla era äventyr och utforskningar, kommer ni kanske en dag att komma fram till en insikt som ingen pirat tidigare har haft. Men fram till dess är gåtans svar lika svårt att hitta som en skatt på botten av havet. Haha.. där fick jag er allt, nu får ni gå på plankan! skrattar kaptenen och pekar på en lång planka som går ut från skeppet. 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Plankan]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="25,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/planka.jpg&quot;&gt;
+– Okej, då kommer fjärde utmaningen, som är svårast av dem alla. Hur många dolda glittrande stjärnor finns det på den mörkaste natten?&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 4&quot;)[(set: $svar4 to (prompt: &quot;Hur många stjärnor finns det?&quot;, &quot;&quot;))(replace: ?results)[**– På den här gåtan finns inget rätt svar...**]](set: $svar4 to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[...men kanske, om ni tänker på gåtan under alla era äventyr och utforskningar, kommer ni kanske en dag att komma fram till en insikt som ingen pirat tidigare har haft. Men fram till dess är gåtans svar lika svårt att hitta som en skatt på botten av havet. Haha.. där fick jag er allt, nu får ni gå på plankan! skrattar kaptenen och pekar på en lång planka som går ut från skeppet. 
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå på plankan-&gt;Plankan]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="100,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/planka.jpg&quot;&gt;
 
 Du och Kim tittar osäkert på varandra innan ni sakta börja gå mot plankan. Under tiden som kaptenen är koncentrade på er smyger Solstråle iväg. Ni hinner bara ta ett första skakiga steget ut på plankan innan en pirat kommer springandes:
 
@@ -468,7 +463,7 @@ Då kommer Solstråle flygandes under plankan, ni hoppar ner på ryggen och flyg
 
 – Mot regnbågsbron! skriker ni högt när ni flyger iväg.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Regnbågsbron.]]&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Mot regnbågsbron-&gt;Regnbågsbron.]]&lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="23" name="Skattkista" tags="" position="975,1750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com//sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/tresure.jpg&quot;&gt;
 Solstråle börjar gräva med sina hovar, och precis som du sa här är en stor skattkista.
 
@@ -489,24 +484,17 @@ Solstråle öppnar kistan. &quot;Det är regnbågskristallerna!!! Nu kan vi änt
 &lt;div class=&quot;rubrik2&quot;&gt;Kapitel 3&lt;/div&gt;
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Portalen" tags="" position="500,2150" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/portal.jpg&quot;&gt;
-Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka på gräsmattan igen. Ni kommer tillbaka precis när klockan ringer....
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Portalen" tags="" position="450,2150" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/portal.jpg&quot;&gt;
 
-Medan ni går in till klassrummet känner ni er glada över vad ni har lärt er, och ni ser fram emot nästa gång. Det har varit ett äventyr fyllt med mod, vänskap och nya upptäckter. Och ni vet att ni alltid kommer ha varandra att luta er mot.
-
+Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka på gräsmattan igen. Medan ni går in till klassrummet känner ni er glada över vad ni har lärt er, och ni ser fram emot nästa gång. Det har varit ett äventyr fyllt med mod, vänskap och nya upptäckter. Och ni vet att ni alltid kommer ha varandra att luta er mot. Under ert äventyr har ni samlat ihop **(print:$kristall)** piratmynt för alla utmaningar ni har klarat.
 
 På återseende!(enchant: &quot;På återseende!&quot;, (text-style: &quot;sway&quot;))
 
+&lt;div class=&quot;rubrik4&quot;&gt;– Psst... om du är nyfiken på de andra valen i denna berättelse kan du gå tillbaka och välja en annan väg för att göra nya spännande möten...&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i portalen igen-&gt;Det svåra valet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Ljud 1" tags="" position="525,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/47fb7426be57b7a467afa26a3159008117b8452d/spring/sad-cloud.jpg&quot;&gt;
 
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... om du är nyfiken på de andra valen i denna berättelse kan du gå tillbaka och välja en annan väg för att göra nya spännande möten...&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i portalen igen-&gt;Det svåra valet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Ljud 1" tags="" position="500,1200" size="100,100">
-
-
-
-
-
-&lt;div class=&quot;container&quot;&gt;
 – Nej det här var inte rätt, det går inte att gå åt det här hållet. Härifrån kommer det ledsna ljudet.
-&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;De sjungande molnen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ljud 2" tags="" position="625,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/stairs.jpg&quot;&gt;
+
+&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;De sjungande molnen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="Ljud 2" tags="" position="650,1200" size="100,100">(set: $kristall to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/stairs.jpg&quot;&gt;
 
 Ni valde rätt, detta ljudet var det snälla molnet. 
 
@@ -533,42 +521,43 @@ Du och Kim tittar på det stora hålet framför er, ni tar ett försiktigt steg 
 Ge barnen en talserie med luckor, t.ex.:
 2, 4, __, 8, 10 Svar: 6
 5, __, 15, 20 Svar: 10
-När de fyller i rätt tal formas trappstegen, och de kan gå vidare i berättelsen.)??</tw-passagedata><tw-passagedata pid="28" name="Tillsammans" tags="" position="675,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/623a3b33207b47af90591d4ee550d215e746664d/spring/hand.jpg&quot;&gt;
+När de fyller i rätt tal formas trappstegen, och de kan gå vidare i berättelsen.)??</tw-passagedata><tw-passagedata pid="28" name="Tillsammans" tags="" position="700,800" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/623a3b33207b47af90591d4ee550d215e746664d/spring/hand.jpg&quot;&gt;
 
+Ni bestämmer er båda två för att följa med Solstråle och sammarbeta för att hitta regnbågskristallerna fortare.
 
-Ni bestämmer er för att det bästa är att samarbeta , då kommer ni säkert hitta krisatallerna fortare. 
+– Var ska vi börja leta? frågar Kim.
 
-&quot;Var ska vi börja leta?&quot; frågar Kim
+– Jag vet ett ställe vi kan besöka först. Men jag har aldrig varit där själv, så vi måste vara försiktiga och ha koll på varandra så ingen tappas bort, säger Solstråle.
 
-&quot;Jag vet ett ställe vi kan besöka först. Men jag har aldrig varit där själv, så vi måste vara försiktiga och ha koll på varandra så ingen tappas bort&quot;. säger Solstråle
+Kim tittar på dig och sträcker ut sin hand.
+– Ta min hand $namn så vi inte tappar bort varandra.  
 
-Kim tittar på dig och sträcker ut sin hand, &quot;Nej, det är viktigt att veta var alla är när man ska till ett ställe man inte känner till. Jag tycker man bäst vet var sin kompis är om man håller den i händerna. Du nickar och ni beger er av mot.....
+Du nickar och ta Kims utsträckta hand. Ni går tillsammans genom de mjuka molnen. De känns som sockervadd under fötterna. Luften är sval och det doftar regn. Enhörningen går först, manen glittrar i ljuset. Kim går bredvid mig, tyst. Ni lyssnar efter ljud.
 
-[[De sjungande molnen]]
-</tw-passagedata><tw-passagedata pid="29" name="De sjungande molnen" tags="" position="625,975" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/unicorn-away.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Följ efter Solstråle -&gt;De sjungande molnen]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="De sjungande molnen" tags="" position="625,975" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/unicorn-away.jpg&quot;&gt;
 
-Ni går genom de mjuka molnen. De känns som sockervadd under fötterna. Luften är sval och doftar regn. Enhörningen går först, manen glittrar i ljuset. Kim går bredvid mig, tyst. Han lyssnar, precis som jag.
+Plötsligt stannar Solstråle och säger:
+– Hör ni? Molnens känslor.
 
-&quot;Hör ni?&quot; viskar enhörningen och stannar. &quot;Molnen sjunger.&quot; 
+Ni lyssnar noga. Först hörs bara vinden, men efter en stund kan du ett enda virrvarr av olika ljud. Höga, ljusa som en fågelsång, sedan djupa och långsamma. Det låter nästan som om molnen pratar med varandra.
 
-Jag spetsar öronen. Först hör jag bara vinden, men sedan... toner! Höga, ljusa som en fågelsång, sedan djupa och långsamma som en trumma. Det låter nästan som om molnen pratar med varandra.
+– Tror du att kristallerna är här? frågar Kim. 
 
-&quot;Tror du att kristallerna är här?&quot; frågar Kim. Solstråle nickar och pekar framåt.
+Solstråle nickar och visar med hoven framåt. Något glittrar längre bort. Men när ni tar ett steg fram ändras ljudet, det blir skrikigt, nästan som om molnen varnar er. Enhörningen stampar i marken, och ljudet ändras igen. Nu är det mjukt och snällt. Ska vi gå? Eller vänta, kan det vara en fälla?
 
-Något glittrar längre bort. Men när jag tar ett steg närmare ändras melodin. Den blir skrikig, nästan som om molnen varnar oss. Enhörningen stampar i marken, och ljudet ändras igen. Nu är det mjukt, snällt. Ska vi gå? Eller väntar en fälla?
-
-Vi tittar på varandra. Vi måste lyssna noga. Om vi förstår sången, kanske vi hittar kristallerna!
-
-Men vilken väg är den rätta, vilken tror du?
-
+Solstråle lugnar er och säger:
+– Följer vi bara det glada ljudet så kommer vi hitta rätt. Men vi måste lyssna noga. Det glada ljudet kommer leda oss till regnbågskristallerna.
 &lt;audio id=&quot;mymusic1&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/58f4e6237abb7f802a73e627af0b6af742e10b95/spring/Veragr%C3%A5ter-%5BAudioTrimmer.com%5D.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;&lt;button onclick=&quot;document.getElementById(&#39;mymusic1&#39;).play()&quot;&gt;Spela ljud 1&lt;/button&gt;&lt;audio id=&quot;mymusic2&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/58f4e6237abb7f802a73e627af0b6af742e10b95/spring/Veraskrattar-%5BAudioTrimmer.com%5D.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;&lt;button onclick=&quot;document.getElementById(&#39;mymusic2&#39;).play()&quot;&gt;Spela ljud 2&lt;/button&gt;&lt;audio id=&quot;mymusic3&quot; src=&quot; https://raw.githubusercontent.com/sbjorkemyr/f-klass/58f4e6237abb7f802a73e627af0b6af742e10b95/spring/Sallymorrar-%5BAudioTrimmer.com%5D.mp3&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;&lt;button onclick=&quot;document.getElementById(&#39;mymusic3&#39;).play()&quot;&gt;Spela ljud 3&lt;/button&gt;
+ – Vilken av ljuden är det rätta? frågar Solstråle.
+ 
+&lt;div class=&quot;rubrik3&quot;&gt;[[Ljud 1]] [[Ljud 2]] [[Ljud 3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Ljud 3" tags="" position="775,1200" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/47fb7426be57b7a467afa26a3159008117b8452d/spring/mad-cloud.jpg&quot;&gt;
+
+En text här.
+
+&lt;div class=&quot;rubrik3&quot;&gt;[[Försök igen-&gt;De sjungande molnen]]&lt;/div&gt;&lt;/div&gt;
 
 
-
-
-
-
-[[Ljud 1]] [[Ljud 2]] [[Ljud 3]]</tw-passagedata><tw-passagedata pid="30" name="Ljud 3" tags="" position="750,1175" size="100,100">konstigt...</tw-passagedata><tw-passagedata pid="31" name="Följ efter Kim" tags="" position="1050,600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/storm.jpg&quot;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="Följ efter Kim" tags="" position="1050,600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/storm.jpg&quot;&gt;
 
 Du och enhörningen Solstråle rör er framåt, men en orolig känsla gnager i magen. Tänk om Kim hamnar i fara? Pirater kan vara luriga, och även om Kim är modig, är han ensam.
 
@@ -596,7 +585,7 @@ Virvelvinden rör sig åt sidan och försvinner ut i tomma intet.
 
 Du studerar vinden och märker att den kommer och går i ett mönster. Om ni tajmar det rätt kan ni smyga förbi utan att bli indragna.
 
-[[sick-sack]]</tw-passagedata><tw-passagedata pid="32" name="fortsättning" tags="" position="600,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/pillow.jpg&quot;&gt;
+[[sick-sack]]</tw-passagedata><tw-passagedata pid="32" name="fortsättning" tags="" position="650,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2a13de0497cee596f5586fedf43b0b389bfb73d8/spring/pillow.jpg&quot;&gt;
 
 När ni tagit er upp för trappan ser ni vad det var som glittrade ...en av regnbågskristallerna ligger på en kudde av moln. ni plockar upp den. 
 
@@ -706,48 +695,39 @@ Den virvlande känslan infinner sig och när ni öppnar ögonen är ni tillbaka 
 
 [[Portalen]] </tw-passagedata><tw-passagedata pid="36" name="Lämna förrådet" tags="" position="300,1425" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f87b52a4351e258059ecbf437a48c8dcd913bd1a/spring/pirates2.jpg&quot;&gt;
 
-Ni går fram till piraterna som att ni tillhörde gänget. 
+Ni går fram till piraterna bestämda steg och låtsas som om ni tillhör gänget. Piraterna tittar upp från sitt spel.
 
-Piraterna tittar upp från sitt spel.&quot; Vilka är ni?&quot; frågar en av piraterna
+– Vilka är ni? frågar en av piraterna.
 
-&quot;Ehhh, vi är nya pirater som precis kommit ombord&quot; säger Kim lite skakigt. Piraten ni pratar med rycker på axlarna och fokuserar på spelet igen. Men när ni tittar på kaptenen så stirrar han på er, han förstår att ni inte hör hemma på hans skepp
+– Eeeh... vi är nya pirater som precis kommit ombord, säger Kim lite skakigt. 
 
-Kaptenen skrattar, &quot;Haha, tror ni att ni landkrabbor kan komma ombord på mitt skepp och lura mig? Där tror ni fel, jag har alltid koll på alla pirater som är ombord på mitt skepp. Men snygga förklädnader&quot;, säger kaptenen med ett leende. 
+Piraten ni pratar med rycker på axlarna och fokuserar på spelet igen. Men när ni tittar på kaptenen så stirrar han på er, han förstår att ni inte hör hemma på hans skepp.
 
-&quot;Ni är ute efter regnbågskristallerna!? Ska vi ge tillbaka dom?&quot; frågar kaptenen de andra piraterna.
+– Haha.. tror ni landkrabbor att ni kan komma ombord på mitt skepp och lura mig? Där tror ni fel, jag har alltid koll på alla pirater som är ombord på mitt skepp. Men bra försök med förklädnader, säger kaptenen med ett leende. 
 
-De andra skrattar och skakar på huvudet.
+– Ni är ute efter regnbågskristallerna?! Ska vi ge tillbaka dom? frågar kaptenen de andra piraterna. De andra skrattar och skakar på huvudena.
 
-&quot;Vill ni ha tillbaka kristallerna måste ni tjäna dom, vi har gömt några kristaller här på skeppet, hitta dom och dem är era&quot; skrattar Kaptenen.
+– Vill ni ha tillbaka kristallerna måste ni tjäna dom, vi har gömt några kristaller här på skeppet. Om ni lyckas hitta kristallerna är de era, skrattar Kaptenen. 
 
 Ni nickar och antar utmaningen.
 
-[[Leta Kristaller]]
-</tw-passagedata><tw-passagedata pid="37" name="Leta Kristaller" tags="" position="300,1675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/hidden-stone.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&gt;[[Leta Kristaller]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Leta Kristaller" tags="" position="300,1675" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/hidden-stone.jpg&quot;&gt;
 
-//Hur många kristaller hittar du?//
+Du och Kim börjar leta överallt för att hitta regnbågskristallerna. Piraterna tittar roat på och kaptenen ropar:
+– Hur många kristaller hittar ni?
+&lt;div class&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[{(set: $number to (prompt: &quot;Hur många kristaller ser du?&quot;, &quot;&quot;))(set: $lowercaseNumber to (lowercase: $number))(if: (either: ($lowercaseNumber) is &quot;7&quot;))[(set: $kristall to it + 1)(replace: ?results)[Rätt svar! Guldmynt: (print:$kristall).]](else:)[(replace: ?results)[Försök igen eller fortsätt vidare..]]}][]&lt;results|&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[Äntlingen hittar ni allt 7 kristaller och tittar glatt mot varandra och Kim säger:
+– Det var en svår utmaning att hitta alla, men vi löste det tillsammans.
 
-dold. text kommer fram när dom svarat
+Kaptenen ser inte glad ut att ni lyckades hitta alla regnbågskristaller. 
+– Haha.. om ni tror ni ska få lämna mitt skepp med kristallerna så tror ni fel. 
 
-&quot;Men! detta är inte alla kristallerna....ni har lurat oss! säger Kim argt till piraterna 
+– Men du lovad att vi skulle få kristallerna om vi lyckades hitta dem och nu har vi gjort det. Man ska hålla vad man lovar, du måste låta oss lämna skeppet, ropar Kim. 
 
-&quot;Vi sa aldrig att vi gömt alla kristallerna, ni måste klara alla utmaningarna innan ni kan få tillbaka er skatt&quot;. säger en av piraterna
+– Ja, ni kan få lämna mitt skepp via plankan. Men kristallerna stannar här, säger han bestämt och tar ett steg emot er. 
 
-Kim suckar: &quot;Vad mer måste vi göra?&quot;
+Nu ropar ni så högt ni kan på Solstråle som genast kommer flygandes, ni hoppar upp på ryggen och med alla kristallerna i era händer är ni nu redo att rädda regnbågsbron.
 
-utmaningar........
-
-
-
-Sura miner på alla piraterna...dom trodde dom kunde lura er. 
-
-Ni vill inte stanna kvar på skeppet så ni hoppar av precis när dom lättar ankar och far vidare bland molnen.
-
-
-
-Solstråle kommer flygandes, ni hoppar upp på ryggen och med alla kristallerna i era häder är ni nu redo att rädda regnbågsbron
-
-[[Regnbågsbron.]] </tw-passagedata><tw-passagedata pid="38" name="sick-sack" tags="" position="1175,775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/df32d50c5776dbe278c3f592b736ceeaf1809493/spring/kim-ship.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Mot regnbågsbron-&gt;Regnbågsbron.]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="38" name="sick-sack" tags="" position="1175,775" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/df32d50c5776dbe278c3f592b736ceeaf1809493/spring/kim-ship.jpg&quot;&gt;
 
 Ni tar er förbi virvelvindarna genom att gå i ett sick-sack-mönster, och när ni kommit en bra bit bort kan ni börja gå vanligt igen. Vinden mojnar bakom er, och ni kan äntligen andas ut.
 
