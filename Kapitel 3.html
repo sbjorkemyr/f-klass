@@ -178,30 +178,26 @@ Kim gör en gest mot regnet.
 
 Du ler och känner dig glad över att ha en vän som kan så mycket. Men plötsligt blir det tyst. Mullret avtar, och ni tittar försiktigt fram från ert gömställe. Framför er ser ni...
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vad ser ni?-&gt;Piratskeppet]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/fcfc66a9f2c55248f0294d1905e29581172bb585/spring/thunder.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="8" name="Den blå lagunen" tags="" position="900,700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad ser ni?-&gt;Piratskeppet]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/fcfc66a9f2c55248f0294d1905e29581172bb585/spring/thunder.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="8" name="Den blå lagunen" tags="" position="900,700" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/2ff9213b8b4e1c0adb0c0d01013603576d379ab0/spring/lagun.jpg&quot;&gt;
 
-Du hoppar upp på enhörningens rygg, ni flyger iväg i snabb fart. 
+Du väljer att hoppa upp på enhörningens rygg och sedan flyger ni iväg i en snabb fart. Solstråle säger sedan:
+– Vi ska börja leta på piraternas favorit badplats, där har de lämnat saker förut.
 
-&quot;Vi ska börja leta på piraternas favorit badplats, där har dom lämnat saker förut.&quot; säger enhörningen
+Du nickar och håller hårt i manen för att inte ramla av. Bakom ett stort moln ser du plötsligt en stor sjö mitt bland molnen, enhörningen saktar ner för att kunna landa. Nedanför er ser du kristallklart vatten, palmer och sand. Kan du skriva 3 saker som du kan hitta på en öde strand?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[(set: $tell to (prompt: &quot;Tre saker du kan hitta på en öde strand?&quot;, &quot;&quot;))(replace: ?results)[**$tell**]](set: $tell to &quot;&quot;)|results&gt;[]&lt;/div&gt;Men vart ska ni börja leta?! Solstråle som har varit här tidigare visar dig omkring.
 
-Du nickar och håller hårt i manen för att inte ramla av. Bakom ett stort moln ser du plötsligt en stor sjö mitt bland molnen, enhörningen saktar ner för att kunna landa.
+– Kolla där, utbrister Solstråle. 
 
-Du ser kristallklart vatten,palmer och sand. Kan du skriva 3 saker som du kan hitta på en öde strand? (frisvar 3 saker)
+Långt ut i vattnet guppar en flaska, det är något i flaskan. Men hur ska ni få tag på den? Även att du går på simskola varje helg så är du inte redo att ge dig ut och simma utan varken armpuffarna eller någon vuxen i närheten. Du ser något som blänker till under ytan, det ser ut som en stor sjöstjärna.
 
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det för något?-&gt;Sjöstjärna?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Sjöstjärna?" tags="" position="900,900" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/octopus.jpg&quot;&gt;
 
-Vart ska ni börja leta!? Enhörningen som har varit här tidigare visar dig omkring. &quot;Kolla där&quot; utbrister enhörningen. Långt ut i vattnet guppar en flaska, det är något i flaskan. Men hur ska ni få tag på den!?
+Men så ser du att varelsen i vattnet är inte en sjöstjärna, utan en.. ja vad är det för ett djur?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $octo to (prompt: &quot;Vilket djur?&quot;, &quot;&quot;))(set: $lowercaseOcto to (lowercase: $octo))(if: $lowercaseOcto is &quot;bläckfisk&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;Den har åtta armar som skiftar i alla regnbågens färger och ett stort leende på sina läppar när han kommer fram mot er.
 
-Även att du går på simskola varje helg så är du inte redo att ge dig ut och simma utan varken armpuffarna eller någon vuxen i närheten. Du ser något som blänker till under ytan, det ser ut som en stor sjöstjärna....
+– Hej där jag heter Olle! Vad gör ni här?
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Sjöstjärna?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Sjöstjärna?" tags="" position="900,900" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/octopus.jpg&quot;&gt;
-
-Nej, det var ju en. (vad heter djuret på bilden?) 
-
-Den har åtta armar som skiftar i alla regnbågens färger. Han har ett stort leende på sitt ansikte när han kom fram till er.
-
-&quot;Hej där jag heter Olle! Vad gör ni här?&quot; 
-
-&quot;Hej, jag heter (namn) och detta är Solstråle&quot;, du pekar på enhörningen.
+– Hej, jag heter Solstråle och det där är $namn, säger enhörningen och pekar på dig..
 Vi är på jakt efter regnbågskristallerna som piraterna gömt. Vet du vart dom kan vara?
 
 &quot;Hmm, några kristaller har jag inte stött på, jag älskar nämligen att utforska havet så jag är sällan på samma ställe. Jag kan simma i alla riktningar och jag har massor av armar att klättra och utforska med så mitt liv är ett äventyr. Men jag såg något guppa förbi en bit ut när jag var påväg till er!&quot; säger Olle
@@ -826,7 +822,12 @@ Ni går tyst fram till sängen och böjer er ner. Där, gömda under ett stort t
 
 Nu gäller det att snabbt komma ut härifrån. Ni smyger försiktigt ut från hytten och tar er bort från piratskeppet, utan att piraterna märker något. Det känns som en stor lättnad att ha lyckats.
 
-[[Vänskap]] </tw-passagedata></tw-storydata>
+[[Vänskap]] </tw-passagedata><tw-passagedata pid="46" name="Tärning" tags="" position="275,450" size="100,100">(set: $roll to &quot;&quot;)
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Klicka! 🎲&quot;)[(set: $roll to (random: 1,6))(replace: ?result)[$roll]]
+**Tärningen visar:  |result&gt;[$roll]**&lt;/div&gt;
+
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
