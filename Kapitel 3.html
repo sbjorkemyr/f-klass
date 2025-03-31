@@ -43,8 +43,8 @@ tw-story {
   text-align: center;
 }
 .rubrik4 {
-  font-size: 22px;
-  line-height: 1.3;
+  font-size: 21px;
+   line-height: 1.3;
 }
 
 .pic {
@@ -61,15 +61,16 @@ video {
 border-radius: 20px;
 }
 button {
-   	padding: 3px 10px 3px 10px;
-    margin: 10px;
+   	padding: 3px 13px 3px 13px;
+    margin: 20px 50px 20px 0px;
 	background-color: #EDF9FD;
-	border: solid;
-  	border-radius: 15px;
+	border: solid 2px #2E35DF;
+  	border-radius: 30px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
-	font-size: 20px;
+	font-size: 21px;
   	font-weight: bold;
     font-family: "Nunito", Arial;
+  	color: #2E35DF;
 }
  tw-story[tags~="firstpage"] {
    background-image:url("https://raw.githubusercontent.com/sbjorkemyr/f-klass/6743fb2030dfe0c43aaf02e65551474b8aecb83d/spring/background.jpg"); background-repeat: no-repeat;
@@ -79,8 +80,8 @@ button {
 
 tw-link {
 	display: inline-block;
-	padding: 5px 15px 5px 15px;
-    margin: 10px;
+	padding: 3px 13px 3px 13px;
+    margin: 15px 30px 15px 20px;
 	background-color: #EDF9FD;
 	border: solid 2px #2E35DF;
   	border-radius: 30px;
@@ -91,7 +92,7 @@ tw-link {
 tw-icon[alt] { 
   opacity: 1.0;
 
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Välkommen in" tags="" position="600,275" size="100,100">(set: $namn to (prompt: &quot;Vad heter du?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/kidsongras.jpg&quot;&gt;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Välkommen in" tags="" position="675,250" size="100,100">(set: $namn to (prompt: &quot;Vad heter du?&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/kidsongras.jpg&quot;&gt;
 
 Det är rast och du följer med Kim ut och sätter er på den stora gräsmattan, där sitter redan flera andra barn och njuter av det vackra vädret. Ni hittar en plats i solen och börjar mumsa på den saftiga melonen som ni fick på fruktstunden. När ni har ätit klart lägger ni er ner i gräset och låter blicken vandra över himlen, där molnen sakta seglar förbi.
 
@@ -105,7 +106,7 @@ Tankarna börjar genast snurra i ditt huvud. Vem skulle kunna bo i ett slott bla
 &lt;div class=&quot;rubrik4&quot;&gt;– Psst... här finns en genväg till portalen. Om du redan läst men vill undersöka andra vägar...
 [[Genväg-&gt;Det svåra valet]]&lt;/div&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="2" name="Slottet" tags="" position="600,400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/castle.jpg&quot;&gt;
+</tw-passagedata><tw-passagedata pid="2" name="Slottet" tags="" position="700,400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/castle.jpg&quot;&gt;
 
 ...ser du ett stort slott på en flytande ö mitt bland molnen. Men ni hamnade inte så nära som ni trodde, denna gången när ni kom ut ur portalen hamnade ni på ett litet fluffigt moln. Ni tittar er omkring, hur ska ni ta er bort till slottet? Det finns ingenting att gå på. Men så ser du något som liknar brofästen som går från ön till ett moln bredvid ert.
 
@@ -193,7 +194,7 @@ Långt ut i vattnet guppar en flaska, det är något i flaskan. Men hur ska ni f
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det för något?-&gt;Sjöstjärna?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Sjöstjärna?" tags="" position="900,900" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/octopus.jpg&quot;&gt;
 
 Men så ser du att varelsen i vattnet är inte en sjöstjärna, utan en.. ja vad är det för ett djur?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $octo to (prompt: &quot;Vilket djur?&quot;, &quot;&quot;))(set: $lowercaseOcto to (lowercase: $octo))(if: $lowercaseOcto is &quot;bläckfisk&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;Den har åtta armar som skiftar i alla regnbågens färger och ett stort leende på sina läppar när han kommer fram mot er.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $octo to (prompt: &quot;Vilket djur?&quot;, &quot;&quot;))(set: $lowercaseOcto to (lowercase: $octo))(if: $lowercaseOcto is &quot;bläckfisk&quot;)[(set: $kristall to it + 1)(replace: ?result)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result)[Försök igen!]]]|result&gt;[]&lt;/div&gt;Den har åtta armar som skiftar i alla regnbågens färger och ett stort leende på sina läppar när han kommer fram mot er.
 
 – Hej där jag heter Olle! Vad gör ni här?
 
@@ -212,47 +213,40 @@ Vi är på jakt efter regnbågskristallerna som piraterna gömt. Vet du vart dom
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Hämta flaskan-&gt;Flaskpost]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Flaskpost" tags="" position="900,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/bottle.jpg&quot;&gt;
 
-Olle lyckas få tag på flaskan utan bekymmer, han simmar tillbaka med den. Han är lika nyfiken som ni på vad som kan finnas inuti. 
+Olle lyckas få tag på flaskan utan bekymmer och simmar tillbaka med den till er. Han är lika nyfiken som ni på vad som kan finnas inuti. Du och Solståle hoppas att det är en ledtråd till vart piraterna gömt regnbågskristallerna. Korken ploppar ur flaskan och en skattkarta ramlar ur. På kartan kan ni se en bild av stranden som ni befinner er på och en specifik plats är utmärtkt med ett stort rött kryss. 
 
-Du och Solståle hoppas att det är en ledtråd till vart piraterna gömt regnbågskristallerna. 
+– Kolla där, tror du att krysset visar var piraterna gömt en skatt? undrar Solstråle
 
-Trä korken ploppar ur flaskan och en skattkarta ramlar ur. Det är en bild på stranden där ni befinner er, specifika platser är utmärkta och ett stort rött kryss visar var något kan finnas gömt. 
-
-&quot;Kolla tror du att krysset visar var piraterna gömt en skatt?&quot; undrar Solstråle
-
-Du tittar på kartan och nickar, men för att komma till krysset måste ni gå förbi två punkter på kartan. Ni tackar Olle och vinkar innan ni börjar gå mot första punkten: det ser ut som en stor sten.
-
-När ni kommer fram ser ni att på den stora sten står det:
-Jag står så högt med blad i krans
+Du tittar på kartan och nickar, men för att komma till krysset måste ni gå förbi två punkter på kartan. Ni tackar Olle och vinkar innan ni börjar gå mot första punkten, det ser ut som en stor sten. När ni kommer fram till den stora stenen ser ni på den att det står:
+**Jag står så högt med blad i krans
 Att vifta med mina långa blad är som en dans,
 Med kokosnötter i klungan min,
 Jag svajar i vinden, stark och fin.
+Vad är jag?**
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $palm to (prompt: &quot;Vad är jag?&quot;, &quot;&quot;))(set: $lowercasePalm to (lowercase: $palm))(if: $lowercasePalm is &quot;palm&quot;)[(set: $kristall to it + 1)(replace: ?result)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result)[Försök igen!]]]|result&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Aha, nu vet jag var vi ska gå, säger Solstråle och visar med nosen på kartan där ni kan se tre palmer i en klunga. Svaret på frågan var palm. Ni börjar gå mot palmerna som står lite längre bort på standen. 
 
-Vad är jag? (svar Palm)
+– Se upp för fallande kokosnötter! hör ni från en av palmernas krona. Ni tittar upp och hinner precis hoppa undan innan en kokosnöt landar framför er.
 
-Aha nu förstår du vart ni ska gå näst...
+– Ha ha ha ha ha, skrattar någon åt er uppifrån palmens krona.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Nästa punkt]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Nästa punkt" tags="" position="925,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/parot.jpg&quot;&gt;
+– Hallå där! Det där var faktiskt inte snällt! säger Solstråle och är mycket irriterad. Vem är du?
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vem där?-&gt;Nästa punkt]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="11" name="Nästa punkt" tags="" position="925,1250" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/parot.jpg&quot;&gt;
 
-På kartan ser ni tre palmer, ni börjar gå dit. Palmerna står lite längre bort på standen. 
+Ni ser något färgglatt fladdra ner genom luften och landa på en gren lite längre bort. Det är en papegoja med praktfulla fjädrar som nyfiket tittar på er.
 
-&quot;Kraaaaa, akta er för fallande kokosnötter&quot; hör ni från en av palmernas krona.
+– Hej! Jag är papegojan Herta, en grönvingad ara. Jag älskar att äta frukt, frön och nötter. Förutom att flyga snabbt och sitta högt upp i träden är jag också en mästare på att härma! Och vet ni vad? Jag är faktiskt ganska gammal för att vara en fågel – hela 38 år! Vi aror kan bli upp till 50 år gamla.
 
-Ni tittar upp , precis när en kokosnöt kommer flygande mot er. Ni hoppar undan!
+Herta lägger huvudet på sned och fortsätter:
+– Jag har fått ett uppdrag av piraterna. De har gömt en skatt här i närheten och jag ska kasta kokosnötter på alla som kommer för nära!
 
-&quot;kraa,kra,kraa&quot;, papegjoan skrattar åt er.
+– Men det är ju inte snällt! Man kan ju skada sig, protesterar Solstråle. Varför vill piraterna hålla folk borta härifrån?
 
-&quot;Hallå där det där var faktiskt inte snällt!&quot; Solstråle är irriterad på papegojan. 
+Herta suckar och fluffar upp sina fjädrar, innan hon säger:
+– De är rädda att någon ska hitta skatten. Men jag är ingen elak papegoja. Kanske, om ni klarar två utmaningar, kan jag låta er gå vidare?
 
-&quot;Men jag skojar bara, piraterna sa att jag skulle kasta kokosnötter på de som kom nära.&quot; säger papegojan.
+– Ja! Ge oss utmaningarna, vi är redo! utbrister Solstråle bestämt.
 
-&quot;Men det är inte snällt, man kan skada sig. Varför ville piraterna att man skulle hålla sig borta härifrån?&quot; Solstråle tittar frågvist på papegojan.
-
-&quot;Dom har gömt en skatt i närheten och jag fick bli väktare av skatten. Men jag är ingen dum papegoja jag vill vara snäll, kanske ni kan svara på två utmaning så kan jag låta er gå vidare?&quot;
-
-&quot; Ja ge oss utmaningarna, vi är redo!&quot; säger Solstråle bestämt.
-
- &lt;div class=&quot;rubrik3&quot;&gt;[[Hitta saker]]&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;rubrik3&quot;&gt;[[Första utmaningen-&gt;Hitta saker]]&lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="12" name="Rebus" tags="" position="925,1500" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/rebus.jpg&quot;&gt;
 
 &quot;Jag har bildat ett ord i sanden, kan ni gissa vad jag vill säga? &quot;
@@ -264,7 +258,13 @@ Ni tittar upp , precis när en kokosnöt kommer flygande mot er. Ni hoppar undan
 
 &quot;Bra jobbat ni klarade min utmaning, ni har visat er värdiga att gå vidare. Kraaa, lycka till!&quot; sa papegojan medans han flög iväg.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Röda krysset]] &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Hitta saker" tags="" position="925,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/sand-castle.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Röda krysset]] &lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Hitta saker" tags="" position="925,1375" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/baded474e25fd503af5c28df85df38365372ec3d/spring/beach.jpg&quot;&gt;
+
+– Första utmaningen blir att skriva vilka sandleksaker ni kan se vid sandslottet? frågar Herta.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Nummer 1&quot;)[(set: $sak1 to (prompt: &quot;Vilken sak på 5 bokstäver är nummer 1?&quot;, &quot;&quot;))(set: $lowercaseSak1 to (lowercase: $sak1))(if: $lowercaseSak1 is &quot;spade&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar!**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[](link-repeat: &quot;Nummer 2&quot;)[(set: $sak2 to (prompt: &quot;Vilken sak på 7 bokstäver är nummer 2?&quot;, &quot;&quot;))(set: $lowercaseSak2 to (lowercase: $sak2))(if: $lowercaseSak2 is &quot;handduk&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar!**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Nummer 3&quot;)[(set: $sak3 to (prompt: &quot;Vilken sak på 4 bokstäver är nummer 3?&quot;, &quot;&quot;))(set: $lowercaseSak3 to (lowercase: $sak3))(if: $lowercaseSak3 is &quot;hink&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar!**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[](link-repeat: &quot;Nummer 4&quot;)[(set: $sak4 to (prompt: &quot;Vilken sak på 7 bokstäver är nummer 4?&quot;, &quot;&quot;))(set: $lowercaseSak4 to (lowercase: $sak4))(if: $lowercaseSak4 is &quot;badboll&quot;)[(set: $kristall to it + 1)(replace: ?result4)[**Rätt svar!**]](else:)[(replace: ?result4)[Försök igen!]]]|result4&gt;[]&lt;/div&gt;
+
+
+
 
 Hur många saker ser du på bilden som man inte ska lämna på en strand?
 
@@ -359,11 +359,11 @@ Ni tittar på kristallerna.
 – Jag ska hjälpa er, säger Solstråle. 
 
 – Överst är det kärlekens färg som börjar på &#39;&#39;R&#39;&#39;. 
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor1 to (lowercase: $color1))(if: $lowercaseColor1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– Efter det kommer färgen som börjar på bokstaven&#39;&#39; O&#39;&#39; och har samma färg som en apelsin.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor2 to (lowercase: $color2))(if: $lowercaseColor2 is &quot;orange&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Nästa färg kan alla, det är ju solens färg &#39;&#39;G&#39;&#39;. 
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color3 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor3 to (lowercase: $color3))(if: $lowercaseColor3 is &quot;gul&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Sen kommer gräsets färg, den färgen börjar också på &#39;&#39;G&#39;&#39;.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color4 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor4 to (lowercase: $color4))(if: $lowercaseColor4 is &quot;grön&quot;)[(set: $kristall to it + 1)(replace: ?result4)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result4)[Försök igen!]]]|result4&gt;[]&lt;/div&gt;– Havet har samma färg som nästa i ordningen, &#39;&#39;B&#39;&#39;.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color5 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor5 to (lowercase: $color5))(if: $lowercaseColor5 is &quot;blå&quot;)[(replace: ?result5)[**Rätt svar! Guldmynt: (print:$kristall).**]](else:)[(replace: ?result5)[Försök igen!]]]|result5&gt;[]&lt;/div&gt;
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor1 to (lowercase: $color1))(if: $lowercaseColor1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar!**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– Efter det kommer färgen som börjar på bokstaven&#39;&#39; O&#39;&#39; och har samma färg som en apelsin.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor2 to (lowercase: $color2))(if: $lowercaseColor2 is &quot;orange&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar!**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Nästa färg kan alla, det är ju solens färg &#39;&#39;G&#39;&#39;. 
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color3 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor3 to (lowercase: $color3))(if: $lowercaseColor3 is &quot;gul&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar!**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Sen kommer gräsets färg, den färgen börjar också på &#39;&#39;G&#39;&#39;.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color4 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor4 to (lowercase: $color4))(if: $lowercaseColor4 is &quot;grön&quot;)[(set: $kristall to it + 1)(replace: ?result4)[**Rätt svar!**]](else:)[(replace: ?result4)[Försök igen!]]]|result4&gt;[]&lt;/div&gt;– Havet har samma färg som nästa i ordningen, &#39;&#39;B&#39;&#39;.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara&quot;)[(set: $color5 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseColor5 to (lowercase: $color5))(if: $lowercaseColor5 is &quot;blå&quot;)[(replace: ?result5)[**Rätt svar!**]](else:)[(replace: ?result5)[Försök igen!]]]|result5&gt;[]&lt;/div&gt;
 – De två färgerna som är kvar är svåra, så de hjälper jag er med. Först kommer färgen &#39;&#39;INDIGO&#39;&#39;, den färgen kan du se när du tittar på en blåbärspaj. Den mörkare färgen som är precis mellan blå och lila, det är indigo! Sista färgen är &#39;&#39;VIOLETT&#39;&#39;. Tänk er att ni blandar jordgubbssylt med blåbärssylt. Den fina färgen som blir när de blandas ihop, det är violett! säger Solståle. 
 
 Ni hjälps åt att ta placera alla kristallerna i ordningen som Solstråle lärt er.
@@ -430,14 +430,14 @@ Kapten harklar sig och spänner ögonen i er innan han säger:
 Pirater älskar mig, och det borde du med.
 Jag är färgen på äpplen och rosor.
 Så säg mig, kamrat, vilken färg är jag?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 1&quot;)[(set: $svar1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar1 to (lowercase: $svar1))(if: $lowercaseSvar1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Ni får en röd kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– För er andra utmaning behöver ni läsa denna texten noga. Svaret på vilken färg nästa kristalL har döljer sig i Bokstäverna som rör pÅ sig. Vilken färg har nästa kristall?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 2&quot;)[(set: $svar2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar2 to (lowercase: $svar2))(if: $lowercaseSvar2 is &quot;blå&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar! Ni får en blå kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Den tredje utmaningen är en mattefråga. På mitt skepp finns det 3 kanoner på ena sidan och 2 kanoner på den andra sidan. Hur många kanoner finns det sammanlagt på skeppet?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 3&quot;)[(set: $svar3 to (prompt: &quot;Hur många kanoner?&quot;, &quot;&quot;))(if: $svar3 is &quot;5&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar! Ni får en orange kristall. Guldmynt: (print:$kristall).**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Är ni inte trötta på mina utmaningar nu? skrattar Kaptenen.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 1&quot;)[(set: $svar1 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar1 to (lowercase: $svar1))(if: $lowercaseSvar1 is &quot;röd&quot;)[(set: $kristall to it + 1)(replace: ?result1)[**Rätt svar! Ni får en röd kristall.**]](else:)[(replace: ?result1)[Försök igen!]]]|result1&gt;[]&lt;/div&gt;– För er andra utmaning behöver ni läsa denna texten noga. Svaret på vilken färg nästa kristalL har döljer sig i Bokstäverna som rör pÅ sig. Vilken färg har nästa kristall?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 2&quot;)[(set: $svar2 to (prompt: &quot;Vilken färg?&quot;, &quot;&quot;))(set: $lowercaseSvar2 to (lowercase: $svar2))(if: $lowercaseSvar2 is &quot;blå&quot;)[(set: $kristall to it + 1)(replace: ?result2)[**Rätt svar! Ni får en blå kristall.**]](else:)[(replace: ?result2)[Försök igen!]]]|result2&gt;[]&lt;/div&gt;– Den tredje utmaningen är en mattefråga. På mitt skepp finns det 3 kanoner på ena sidan och 2 kanoner på den andra sidan. Hur många kanoner finns det sammanlagt på skeppet?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 3&quot;)[(set: $svar3 to (prompt: &quot;Hur många kanoner?&quot;, &quot;&quot;))(if: $svar3 is &quot;5&quot;)[(set: $kristall to it + 1)(replace: ?result3)[**Rätt svar! Ni får en orange kristall.**]](else:)[(replace: ?result3)[Försök igen!]]]|result3&gt;[]&lt;/div&gt;– Är ni inte trötta på mina utmaningar nu? skrattar Kaptenen.
 
 – NEJ, vi måste få tillbaka kristallerna så ge oss nästa utmaning! säger Kim bestämt.
 
 – Okej, då kommer fjärde utmaningen, som är svårast av dem alla. Hur många dolda glittrande stjärnor finns det på den mörkaste natten?&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Utmaning 4&quot;)[(set: $svar4 to (prompt: &quot;Hur många stjärnor finns det?&quot;, &quot;&quot;))(replace: ?results)[**– På den här gåtan finns inget rätt svar...**]](set: $svar4 to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[...men kanske, om ni tänker på gåtan under alla era äventyr och utforskningar, kommer ni kanske en dag att komma fram till en insikt som ingen pirat tidigare har haft. Men fram till dess är gåtans svar lika svårt att hitta som en skatt på botten av havet. Haha.. där fick jag er allt, nu får ni gå på plankan! skrattar kaptenen och pekar på en lång planka som går ut från skeppet. 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå på plankan-&gt;Plankan]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="100,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/planka.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå på plankan-&gt;Plankan]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="22" name="Plankan" tags="" position="50,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/6cd2bb202e63c82505333bccff662c7350c070b4/spring/planka.jpg&quot;&gt;
 
 Du och Kim tittar osäkert på varandra innan ni sakta börja gå mot plankan. Under tiden som kaptenen är koncentrade på er smyger Solstråle iväg. Ni hinner bara ta ett första skakiga steget ut på plankan innan en pirat kommer springandes:
 
@@ -621,7 +621,7 @@ Ni är välkomna tillbaka när ni vill, och jag ska berätta för alla i staden 
 
 Kim blir genast glad igen och ger kristallerna till Solstråle, som tackar er för hjälpen. Ni blundar och tänker er tillbaka till gräsmattan där ni låg och kollade på molnen.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Lämna förrådet" tags="" position="275,1400" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f87b52a4351e258059ecbf437a48c8dcd913bd1a/spring/pirates2.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="Lämna förrådet" tags="" position="300,1450" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/f87b52a4351e258059ecbf437a48c8dcd913bd1a/spring/pirates2.jpg&quot;&gt;
 
 Ni går fram till piraterna bestämda steg och låtsas som om ni tillhör gänget. Piraterna tittar upp från sitt spel.
 
@@ -639,11 +639,11 @@ Piraten ni pratar med rycker på axlarna och fokuserar på spelet igen. Men när
 
 Ni nickar och antar utmaningen.
 
-&lt;div class=&quot;rubrik3&gt;[[Leta Kristaller]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Leta Kristaller" tags="" position="250,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/hidden-stone.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&gt;[[Leta Kristaller]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Leta Kristaller" tags="" position="275,1650" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/ab1e8f56109d771f08d9613ed6fea4b46f4d8f81/spring/hidden-stone.jpg&quot;&gt;
 
 Du och Kim börjar leta överallt för att hitta regnbågskristallerna. Piraterna tittar roat på och kaptenen ropar:
 – Hur många kristaller hittar ni?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[{(set: $number to (prompt: &quot;Hur många kristaller ser du?&quot;, &quot;&quot;))(if: $number is &quot;7&quot;)[(set: $kristall to it + 1)(replace: ?results)[Rätt svar! Guldmynt: (print:$kristall).]](else:)[(replace: ?results)[Försök igen eller fortsätt vidare..]]}][]&lt;results|&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[Äntlingen hittar ni alla 7 kristaller och tittar glatt mot varandra och Kim säger:
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[{(set: $number to (prompt: &quot;Hur många kristaller ser du?&quot;, &quot;&quot;))(if: $number is &quot;7&quot;)[(set: $kristall to it + 1)(replace: ?results)[**Rätt svar!**]](else:)[(replace: ?results)[Försök igen eller fortsätt vidare..]]}][]&lt;results|&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[Äntlingen hittar ni alla 7 kristaller och tittar glatt mot varandra och Kim säger:
 – Det var en svår utmaning att hitta alla, men vi löste det tillsammans.
 
 Kaptenen ser inte glad ut att ni lyckades hitta alla regnbågskristaller. 
@@ -726,7 +726,7 @@ Solstråle suckar och säger:
 &quot;Oj då... att hoppa fram var ingen bra idé. Pirater kanske är vidskepliga, men de är också bra på att fånga inkräktare. Nästa gång, försök att vara listig istället!&quot;
 
 (Försök igen)
-[[sick-sack]] ]]</tw-passagedata><tw-passagedata pid="42" name="Lås" tags="" position="1400,1200" size="100,100">
+[[sick-sack]] ]]</tw-passagedata><tw-passagedata pid="42" name="Lås" tags="" position="1300,1250" size="100,100">
 bild skattkammare musen
 
 Ni smyger in i skattkammaren och ser den full av gamla kistor, guldmynt och andra skatter. Men när ni letar bland alla högar av guld och juveler, ser ni att de saknade regnbågskristallerna inte finns där.
