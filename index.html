@@ -13,7 +13,7 @@
 tw-story {
  	background: linear-gradient(45deg,  
 	#D4A373, #acb79b, #B5744E, #6D8C5B);
-  	color: #171717;
+  	color: #313638;
   	font-family: "Nunito", Arial;
     padding-top: 30px;
   	padding-bottom: 30px;
@@ -23,7 +23,7 @@ tw-story {
   	width: 100%;
   	border-radius: 50px;
   	padding: 30px;
-  	border: solid;
+  	border: 2px solid #313638;
   	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   	
 }
@@ -43,8 +43,9 @@ tw-story {
   text-align: center;
 }
 .rubrik4 {
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.3;
+
 }
 
 .pic {
@@ -52,7 +53,6 @@ tw-story {
   	border-width: thin;
     width: 100%;
   	border-radius: 20px;
-  	
 }
 
 video {
@@ -69,19 +69,18 @@ video {
 
 tw-link {
 	display: inline-block;
-	padding: 5px 15px 5px 15px;
+	padding: 3px 13px 3px 13px;
     margin: 10px;
 	background-color: #f0f8ff;
-	border: solid 2px #2E35DF;
+	border: 2px solid #313638;
   	border-radius: 30px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #313638;
 }
-
-
 tw-icon[alt] { 
   opacity: 1.0;
-
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">(set: $garbage to 0)
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">
+(set: $garbage to 0)
 &lt;div class=&quot;container&quot;&gt;
 
 &lt;div class=&quot;rubrik&quot;&gt;KIMS MYSTIFIKA UPPTÄCKTER&lt;/div&gt;
@@ -107,8 +106,7 @@ Du tittar upp på den stora skolbyggnaden framför dig och känner en nervös pi
 Plötsligt rullar en boll fram till dina fötter och när du tittar upp möts du av ett barn som springer mot dig med ett leende på läpparna. En röst ropar ut namnet &quot;Kim&quot;, och du förstår att det är till barnet som just dykt upp. Ni vinkar till varandra och barnet springer tillbaka till sin förälder. Klockan börjar ringa in, du och din mamma börjar sakta gå mot skolans stora dörr.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]&lt;/div&gt;
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... här finns en genväg till portalen. Om du redan läst men vill undersöka andra vägar...
-[[Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot;&gt;
+&lt;div class=&quot;rubrik4&quot;&gt;– Psst... här finns en genväg för dig som redan läst och vill undersöka andra vägar...[[Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot;&gt;
 
 Ute på skolgården skiner solen och luften känns varm. Barn i alla åldrar springer runt, några leker medans andra spelar fotboll. En bit bort ser du några äldre barn som ska börja leka kurragömma. Du skulle vilja vara med, men vågar inte närma dig de större barnen. Plötsligt kommer Kim springandes, tar tag i din hand och drar med dig till gruppen som precis ska börja leka.
 
@@ -144,8 +142,7 @@ Ni beslutar er för att sätta er ner i det mjuka gräset. Kim tar fram en påse
 
 Kim säger:
 – Äppelskrutt får man slänga i skogen, det blir mat till maskar och andra djur sen blir det till jord. Får vi slänga plastpåsen i naturen?
-(link-repeat: &quot;Gissa!&quot;)[{(set: $nej to (prompt: &quot;Får plastpåsen slängas i naturen?&quot;, &quot;&quot;))(set: $lowercaseNej to (lowercase: $nej))(if: (either: ($lowercaseNej) is &quot;nej&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är nej.]]}][]&lt;results|
-&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Anledningen till att man inte får slänga skräp i naturen är för att djur kan bli sjuka om de äter av det eller så kan de fastna i skräpet. Det tar upp till 400 år för plast att brytas ner i naturen, så **plastpåsen** får vi ta med oss och slänga i skolans soptunna, upplyser Kim dig om.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa!&quot;)[{(set: $nej to (prompt: &quot;Får plastpåsen slängas i naturen?&quot;, &quot;&quot;))(set: $lowercaseNej to (lowercase: $nej))(if: (either: ($lowercaseNej) is &quot;nej&quot;))[(set: $skog to it + 1)(replace: ?results)[**Rätt svar! ⭐️**]](else:)[(replace: ?results)[Testa igen innan du fortsätter..]]}][]&lt;results|&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Anledningen till att man inte får slänga skräp i naturen är för att djur kan bli sjuka om de äter av det eller så kan de fastna i skräpet. Det tar upp till 400 år för plast att brytas ner i naturen, så **plastpåsen** får vi ta med oss och slänga i skolans soptunna, upplyser Kim dig om.
 
 Du nickar och ni reser er  för att göra er klara för att gå vidare upp mot toppen. Efter en stund blir promenaden riktigt svår och jobbig. Plötsligt hör ni en arg röst:
 – Och vad tror ni två att ni pysslar med egentligen!
@@ -174,7 +171,7 @@ Räven lägger huvudet lite på sned och säger sedan:
 
 Innan ni fortsätter er promenad upp mot toppen plockar ni upp en **plastburk** som ligger på marken, då hör ni plötsligt ett surrande ljud.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det som surrar?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Gå till toppen" tags="" position="775,1800" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/eagel.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det som surrar?]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Gå till toppen" tags="" position="800,1800" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/eagel.jpg&quot;&gt;
 
 Ni hoppar till av rädsla och vrider er runt för att ta reda på varifrån rösten kom. Där på en klippavsats sitter en stor brun fågel och blänger surt på er. 
 
@@ -194,7 +191,7 @@ Surret tillhörde en liten humla, ni stannar upp och tittar på den. Humlan är 
 
 Kim vänder sig till dig och säger: 
 – Jag har en fråga till dig. Det är något som flyger i luften på våren och kan orsaka allergier och det fastnar ofta på humlans rumpa. Vad är det?
-(link-repeat: &quot;Gissa&quot;)[{(set: $pollen to (prompt: &quot;Vad är det? (N E L P L O)&quot;, &quot;&quot;))(set: $lowercasePollen to (lowercase: $pollen))(if: (either: ($lowercasePollen) is &quot;pollen&quot;))[(replace: ?results)[**Helt rätt! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du forsätter..]]}][]&lt;results|
+(link-repeat: &quot;Gissa&quot;)[{(set: $pollen to (prompt: &quot;Vad är det? (N E L P L O)&quot;, &quot;&quot;))(set: $lowercasePollen to (lowercase: $pollen))(if: (either: ($lowercasePollen) is &quot;pollen&quot;))[(set: $skog to it + 1)(replace: ?results)[**Helt rätt! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du forsätter..]]}][]&lt;results|
 Efter er korta paus vid humlan forsätter ni promenaden mot berget.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå vidare-&gt;Grottan]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Geting" tags="" position="1125,1275" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/wasp.jpg&quot;&gt;
 
@@ -205,13 +202,13 @@ Det surrande ljudet kommer från en geting. Kim stannar och verkar tveka.
 Du nickar. Det är viktigt att hålla avstånd. Men samtidigt, så är du lite nyfiken att titta närmare på den.
 
 – Var tror du den bor någonstans? frågar Kim plötsligt och ser sig omkring.
-(link-repeat: &quot;Gissa!&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat!]](else:)[(replace: ?results)[Svaret är getingbo.]]}][]&lt;results|
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat! ⭐️]](else:)[(replace: ?results)[Testa igen innan du forsätter..]]}][]&lt;results|&lt;/div&gt;
 Du berättar för Kim att du vill gå lite närmare för att se hur den ser ut. Kim vill inte följa med. Du går en bit fram men håller fortfarande avstånd till getingen som svävar över ett äppelskrutt, den verkar uppskatta söta saker. Getingen har gula och svarta ränder som blänker i solljuset och dess långa smala vingar brummar när den flyger. Efter att ha tittat en liten stund går du tillbaka till Kim.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/1b97eabd210d7c94c42b62352cc65af8c73695ff/autum/bee_wasp-97053.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="525,1825" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/731c11ba5d4b794e609678daf417d1d8270733e8/autum/bush.jpg&quot;&gt;
 
-Du blundar och tänker på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat **(print: $garbage)** sopor och lyckats få **(print: $skog)** skogspoäng.  
+Du blundar och tänker på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat **(print: $garbage) sopor** och lyckats få **(print: $skog) skogspoäng**.  
 
 **Bra jobbat och på återseende!**(enchant: &quot;Bra jobbat och på återseende!&quot;, (text-style: &quot;sway&quot;))
 
@@ -345,14 +342,14 @@ Ni tittar på varandra med förvåning och Kim säger:
 – Tack för varningen, vi håller avstånd.
 
 – Och en sak till vill jag berätta för er innan ni går, det händer att människor sparkar på svampar. Snälla ni gör inte det. För vi svampar är superviktiga för skogen! Tänk på oss som skogens städare. Vi hjälper till att bryta ner gamla löv och träd så att jorden får ny näring. Och vet ni vad? Massor av små djur, som sniglar och insekter äter svampar. Om du sparkar på oss blir deras mat förstörd. Och vissa av oss är dessutom sällsynta. Så snälla låt oss stå där ni hittar oss. Men jag har en liten fråga till er innan ni går. Kan ni nämna två stycken växter eller djur som finns i skogen? frågar svampen.
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Svara svampen!&quot;)[(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))(replace: ?results)[$skriva]](set: $skriva to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Mycket bra svar. Ha en fortsatt fin dag, säger svampen.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Berätta&quot;)[(set: $skriva to (prompt: &quot;Skriv två djur eller växter som finns i skogen?&quot;, &quot;&quot;))(replace: ?results)[**$skriva**]](set: $skriva to &quot;&quot;)|results&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[– Mycket bra svar. Ha en fortsatt fin dag, säger svampen.
 
 Ni tackar svampen för pratstunden och fortsätter sedan på er vandring. Glada över att ha träffat en så ovanlig varelse och med nya kunskaper om vilka svampar man ska undvika i skogen. Ni bestämmer er för att gå uppför ett litet berg. Efter en stunds promenad hör ni något som surrar.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det som surrar?-&gt;Geting]]&lt;/div&gt;&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="25" name="Gå mot ljudet" tags="" position="900,1075" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/foxnest.jpg&quot;&gt;
 
 Ni följer det märkliga ljudet djupare in i skogen, och det blir allt kraftigare ju närmare ni kommer. Ljudet väcker en känsla av oro hos er, men er nyfikenhet driver er att fortsätta framåt. Till sist når ni fram till ett hål i marken, ni stannar framför det och tittar in. Det är helt klart härifrån ljudet kommer, i hålet ser ni två ögon som lyser i mörkret. Vad är det för något?
-(link-repeat: &quot;Gissa&quot;)[{(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseFox to (lowercase: $fox))(if: (either: ($lowercaseFox) is &quot;räv&quot;))[(replace: ?results)[**Bra jobbat! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du fortsätter..]}][]&lt;results|
+(link-repeat: &quot;Gissa&quot;)[{(set: $fox to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseFox to (lowercase: $fox))(if: (either: ($lowercaseFox) is &quot;räv&quot;))[(set: $skog to it + 1)(replace: ?results)[**Bra jobbat! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du fortsätter..]}][]&lt;results|
 &lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det för djur?-&gt;räv]]&lt;/div&gt;&lt;/div&gt;
 &lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/foxscream.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="26" name="Gå tillbaka till Kim" tags="" position="1050,1475" size="100,100">(set: $skriv to (prompt: &quot;Beskriv getingen för Kim.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/4a1ec8b974b3fdbdeb79d94e77b8da720bb22930/autum/talk-kim.jpg&quot;&gt;
 
@@ -363,16 +360,10 @@ När du kommer tillbaka frågar Kim:
 
 – Oj, vad spännande! Tack för att du berättade! säger Kim.
 
--När jag stod här och väntade kom jag på en rolig uppgift, jag vet svaret men kan du rimma på dessa ord? säger Kim
-(svars uppgift till varje ord) 
-
-Sol – 
-Katt –
-Troll – 
-(gömt svar)
-Wow, vad du kan! Visst är det roligt att rimma! utbrister Kim. 
-
-Sedan fortsätter ni er promenad. Efter en stunds vandring uppåt blir ni mycket trötta och väljer att ta en paus.
+-När jag stod här och väntade kom jag på en rolig uppgift, välj det ord som rimmar på **katt**? frågar Kim.
+&lt;div class=&quot;rubrik4&quot;&gt;(link-rerun: &quot;Äpple 🍎&quot;)[Försök igen!](link-rerun: &quot;Bok 📖&quot;)[Försök igen!](link-rerun: &quot;Hatt 🎩&quot;)[**Hatt rimmar på katt!**]&lt;/div&gt;– Vilket föremål rimmar på **sol**?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-rerun: &quot;Hund 🐶&quot;)[Testa igen!](link-repeat: &quot;Stol 🪑&quot;)[**Stol rimmar på sol!**](link-repeat: &quot;Sten 🪨&quot;)[Testa igen!]&lt;/div&gt;– Och slutligen, vad rimmar på **troll**?
+&lt;div class=&quot;rubrik4&quot;&gt;(link-rerun: &quot;Sko 🥾&quot;)[Testa igen!](link-rerun: &quot;Blomma 🌻&quot;)[Testa igen!](link-rerun:&quot;Boll ⚽️&quot;)[**Boll rimmar på troll!**]&lt;/div&gt;Sedan fortsätter ni er promenad. Efter en stunds vandring uppåt blir ni mycket trötta och väljer att ta en paus.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Ta en paus-&gt;Skruttet]]&lt;/div&gt;&lt;/div&gt; </tw-passagedata><tw-passagedata pid="27" name="Vem är det som fnissar?" tags="" position="100,1600" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;video autoplay&gt;&lt;source src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/4c1fb9f86949366d17491bc3453b12b1775de943/autum/squirrel2.mp4&quot; type=&quot;video/mp4&quot;&gt;Your browser does not support the video tag.&lt;/video&gt;
 
@@ -412,7 +403,7 @@ Du och Kim tittar på varandra och tar en steg bakåt. Ni känner att ni nog int
 
 När ni kommer fram till en stor ek, tvärstannar ekorren och tittar upp. Snabbt klättrar den upp en bit och försvinner in i en liten håla i stammen. Kim tittar på dig och säger:
 – Vad tror du Sally använder för att skapa sitt hem?
-&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa&quot;)[(set: $hem to (prompt: &quot;Vad tror du Sally använder för att skapa sitt hem?&quot;, &quot;&quot;))(replace: ?results1)[**– $hem**]](set: $hem to &quot;&quot;)|results1&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[Strax kikar Sally ut igen, hon fnissar och säger: 
+&lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa&quot;)[(set: $hem to (prompt: &quot;Vad tror du Sally använder för att skapa sitt hem?&quot;, &quot;&quot;))(replace: ?results1)[**$hem**]](set: $hem to &quot;&quot;)|results1&gt;[]&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;(link: &quot;Fortsätt&quot;)[(show: ?hidden)]&lt;/div&gt;|hidden)[Strax kikar Sally ut igen, hon fnissar och säger: 
 – Titta! Ett hem är aldrig riktigt klart. Man måste städa ofta för att ha det varmt och mysigt. Rensa bort gamla nötter och löv, kanske hitta några mjuka grässtrån att stoppa i väggarna. Annars blir det kallt och dragigt. 
 
 Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en gammal fågelfjäder. Sen frågar Kim: 
