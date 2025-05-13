@@ -21,16 +21,23 @@ tw-story {
 .container {
   	background-color: rgba(235, 229, 194, 0.9);
   	width: 100%;
-  	border-radius: 50px;
+  	border-radius: 30px;
   	padding: 30px;
+  	border: 2px solid #313638;
+  	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 	
+}
+.container2 {
+  	background-color: rgba(235, 229, 194, 0.9);
+  	width: 100%;
+  	border-radius: 50%;
+  	padding: 50px;
   	border: 2px solid #313638;
   	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   	
 }
-
 .rubrik {
   text-align: center;
-  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: bold;
 }
 
@@ -39,15 +46,19 @@ tw-story {
   font-size: clamp(2rem, 3.5vw, 3rem);
  
 }
+
 .rubrik3 {
   text-align: center;
+  
 }
 .rubrik4 {
-  font-size: 21px;
+  font-size: 22px;
   line-height: 1.3;
-
 }
-
+.rubrik5 {
+  font-size: 22px;
+  line-height: 1.3;
+}
 .pic {
     border-style: solid;
   	border-width: thin;
@@ -56,7 +67,7 @@ tw-story {
 }
 
 video {
-  border-style: solid;
+  	border-style: solid;
   	border-width: thin;
     width: 100%;
   	border-radius: 20px;
@@ -71,24 +82,29 @@ tw-link {
 	display: inline-block;
 	padding: 3px 13px 3px 13px;
     margin: 10px;
-	background-color: #f0f8ff;
+	background-color: #F9F6EE;
 	border: 2px solid #313638;
   	border-radius: 30px;
   	box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
     color: #313638;
 }
+
 tw-icon[alt] { 
   opacity: 1.0;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">
-(set: $garbage to 0)
-&lt;div class=&quot;container&quot;&gt;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">(set: $garbage to 0)
+&lt;div class=&quot;container2&quot;&gt;
 
-&lt;div class=&quot;rubrik&quot;&gt;KIMS MYSTIFIKA UPPTÄCKTER&lt;/div&gt;
+
+
+
+&lt;div class=&quot;rubrik&quot;&gt;Kims mystifika upptäckter&lt;/div&gt;
 
 &lt;div class=&quot;rubrik2&quot;&gt;Skogens hemligheter&lt;/div&gt;
+
 &lt;div class=&quot;rubrik2&quot;&gt;Kapitel 1&lt;/div&gt;
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]&lt;/div&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!-&gt;Välkommen in]]
+&lt;/div&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="750,600" size="100,100">(set: $rum to (prompt: &quot;Skriv vad du kan se när du tittar dig runt i klassrummet.&quot;, &quot;&quot;))&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b40c800b88c18dfecc91ba9b1355790c961432b8/autum/classroom.jpg&quot;&gt;
 
 När du kliver in i klassrummet ser du **$rum**. Din lärare Birgitta visar alla barnen till sina bänkar, medan föräldrarna tar plats på stolarna bakom. Med ett varmt leende välkomnar hon er och ber alla att berätta lite om sig själva. Orden fastnar i halsen när det blir din tur att prata. Nervositeten gör det svårt att få fram något. Bredvid dig sitter Kim, som vinkade till dig på skolgården tidigare. Du kastar en försiktig blick åt sidan när hen börjar berätta och märker att orden flyter lätt för Kim, utan minsta tvekan. 
@@ -106,7 +122,7 @@ Du tittar upp på den stora skolbyggnaden framför dig och känner en nervös pi
 Plötsligt rullar en boll fram till dina fötter och när du tittar upp möts du av ett barn som springer mot dig med ett leende på läpparna. En röst ropar ut namnet &quot;Kim&quot;, och du förstår att det är till barnet som just dykt upp. Ni vinkar till varandra och barnet springer tillbaka till sin förälder. Klockan börjar ringa in, du och din mamma börjar sakta gå mot skolans stora dörr.
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]&lt;/div&gt;
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... här finns en genväg för dig som redan läst och vill undersöka andra vägar...[[Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot;&gt;
+&lt;div class=&quot;rubrik5&quot;&gt;– Psst... här finns en genväg för dig som redan läst och vill undersöka andra vägar...[[Genväg-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot;&gt;
 
 Ute på skolgården skiner solen och luften känns varm. Barn i alla åldrar springer runt, några leker medans andra spelar fotboll. En bit bort ser du några äldre barn som ska börja leka kurragömma. Du skulle vilja vara med, men vågar inte närma dig de större barnen. Plötsligt kommer Kim springandes, tar tag i din hand och drar med dig till gruppen som precis ska börja leka.
 
@@ -205,11 +221,12 @@ Du nickar. Det är viktigt att hålla avstånd. Men samtidigt, så är du lite n
 &lt;div class=&quot;rubrik4&quot;&gt;(link-repeat: &quot;Gissa&quot;)[{(set: $hem to (prompt: &quot;Vad heter getingens hem?&quot;, &quot;&quot;))(set: $lowercaseHem to (lowercase: $hem))(if: (either: ($lowercaseHem) is &quot;getingbo&quot;))[(replace: ?results)[Bra jobbat! ⭐️]](else:)[(replace: ?results)[Testa igen innan du forsätter..]]}][]&lt;results|&lt;/div&gt;Du berättar för Kim att du vill gå lite närmare för att se hur den ser ut. Kim vill inte följa med. Du går en bit fram men håller fortfarande avstånd till getingen som svävar över ett äppelskrutt, den verkar uppskatta söta saker. Getingen har gula och svarta ränder som blänker i solljuset och dess långa smala vingar brummar när den flyger. Efter att ha tittat en liten stund går du tillbaka till Kim.
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå tillbaka till Kim]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/1b97eabd210d7c94c42b62352cc65af8c73695ff/autum/bee_wasp-97053.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="13" name="Busken" tags="" position="525,1825" size="100,100">&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/731c11ba5d4b794e609678daf417d1d8270733e8/autum/bush.jpg&quot;&gt;
 
-Du blundar och tänker på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat **(print: $garbage) sopor** och lyckats få **(print: $skog) skogspoäng**.  
+Du blundar och tänker på busken där ni lekte kurragömma. Plötsligt känner du en virvlande känsla i kroppen, och när du öppnar ögonen igen befinner ni er tillbaka på skolgården. Innan ni går in i skolan passerar ni förbi en papperskorg och kastar skräpet ni hittat längs vägen. Ni har hittills kastat **(print: $garbage) sopor** och lyckats få **(print: $skog) skogspoäng**. 
 
 **Bra jobbat och på återseende!**(enchant: &quot;Bra jobbat och på återseende!&quot;, (text-style: &quot;sway&quot;))
 
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... om du är nyfiken på de andra valen i denna berättelse kan du gå tillbaka och välja en annan väg för att göra nya spännande möten...&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i portalen igen-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Gå till trädet" tags="" position="325,875" size="100,100">(set: $skog to it + 1)(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/tree.jpg&quot;&gt;
+
+&lt;div class=&quot;rubrik5&quot;&gt;– Psst... klicka här om du vill gå tillbaka för att undersöka fler vägar...[[Gå till portalen-&gt;Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Gå till trädet" tags="" position="325,875" size="100,100">(set: $skog to it + 1)(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/tree.jpg&quot;&gt;
 
 Ni blir nyfikna på det fundersamma trädet och väljer att fortsätta mot det. 
 
@@ -234,9 +251,8 @@ Trädet ler mot er, och nickar med hela sin trädkrona, nu ser han glad ut. Ni v
 Det mystiska ljudet lockar er att lämna stigen och fortsätta djupare in i skogen. Ljudet framkallar en känsla av spänning och lite rädsla, men samtidigt väcker det er nyfikenhet om vad det kan vara för något som låter. Ni kommer fram till en bäck som ni börjar följa. Plötsligt hör ni hur det brakar till i skogen, det är något stort som är påväg. Bakom ett träd kan ni se ett horn sticka fram. 
 
 – Vad är det för något som kommer? undrar Kim förskräckt.
-(link-repeat: &quot;Gissa!&quot;)[{(set: $elk to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseElk to (lowercase: $elk))(if: (either: ($lowercaseElk) is &quot;älg&quot;))[(set: $skog to it + 1)(replace: ?results)[**Rätt svar! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du fortsätter..]]}][]&lt;results|
-&lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det för djur?-&gt;Skogens konung]]&lt;/div&gt;&lt;/div&gt;
-&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="475,1200" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/elk.jpg&quot;&gt;
+(link-repeat: &quot;Gissa&quot;)[{(set: $elk to (prompt: &quot;Vad är det för något?&quot;, &quot;&quot;))(set: $lowercaseElk to (lowercase: $elk))(if: (either: ($lowercaseElk) is &quot;älg&quot;))[(set: $skog to it + 1)(replace: ?results)[**Bra jobbat! ⭐️**]](else:)[(replace: ?results)[Testa igen, innan du fortsätter..]}][]&lt;results|
+&lt;div class=&quot;rubrik3&quot;&gt;[[Vad är det för djur?-&gt;Skogens konung]]&lt;/div&gt;&lt;/div&gt;&lt;audio src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5023438c60e5de9416f011792838a1fb702a78b3/autum/elksound.mp3&quot; autoplay&gt;</tw-passagedata><tw-passagedata pid="16" name="Skogens konung" tags="" position="475,1200" size="100,100">(set: $garbage to it + 1)&lt;div class=&quot;container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/elk.jpg&quot;&gt;
 
 Ett stort djur med väldiga horn kliver ner i bäcken där ni står. Det är en älg. Den tittar nyfiket på er med sina stora, vänliga ögon. Trots er rädsla känner ni er också nyfikna.
 
