@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Kapitel 1 (Sugercube)" startnode="29" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="5e1f7dee-6834-47f6-be5c-d473eccfbf6e" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+	<tw-storydata name="Kapitel 1 (Sugercube)" startnode="1" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="5e1f7dee-6834-47f6-be5c-d473eccfbf6e" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
   background: linear-gradient(45deg,  
@@ -117,7 +117,13 @@ body[data-tags~="firstpage"] {
   background-position: center;
 }
 
+#story {
+    margin-left: 0 !important;
+  	margin-right: 0 !important;
+  	
+}
 
+/*
 #ui-bar {
   background-color: rgba(235, 229, 194, 0.8);
   width: 270px;
@@ -170,6 +176,16 @@ body[data-tags~="firstpage"] {
   background-color: #f0f0f0;
   cursor: not-allowed;    
   opacity: 0.6;          
+}
+*/
+#back-button {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    z-index: 9999;
 }
 
 .wave span {
@@ -284,7 +300,7 @@ input[type="text"]:hover {
   margin: 0;
 }
 
-#passages button {
+#passages button, .gamebutton {
   font-weight: bold;
   padding: 5px 10px;
   border: none;
@@ -296,25 +312,25 @@ input[type="text"]:hover {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
-#passages button:hover {
+#passages button:hover, .gamebutton:hover {
   background: linear-gradient(145deg, #da9, #b75);
   transform: scale(1.05);
 }
 
-#passages button:active {
+#passages button:active, .gamebutton {
   transform: scale(0.98);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 #passages a.link-internal {
   display: inline-block;
-  color: #7a4e1c;
+  color: #8c6e3a;
   font-weight: bold;
   font-size: 1.4rem;
   padding: 6px 18px;
   margin: 12px 24px 12px 16px;
-  background-color: #fff4e1;
-  border: solid 2px #7a4e1c;
+  background-color: #f9f2e3;
+  border: solid 2px #8c6e3a;
   border-radius: 30px;
   box-shadow: 2px 2px 6px rgba(122, 78, 28, 0.4);
   text-decoration: none;
@@ -323,9 +339,7 @@ input[type="text"]:hover {
 }
 
 #passages a.link-internal:hover {
-  background-color: #7a4e1c;
-  color: #fff4e1;
-  border-color: #fff4e1;
+ 
   box-shadow: 2px 2px 8px rgba(75, 58, 28, 0.5);
   transform: scale(1.05) translate(-1px, -1px);
   cursor: pointer;
@@ -363,11 +377,92 @@ input[type="text"]:hover {
   transform: scale(0.97);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.ui.stowBarInitially = true;</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
+
+.custom-popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #2c2c2c;
+    color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #000;
+    z-index: 1000;
+    
+  	font-size: 1.5rem;
+    
+}
+.custom-popup input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Config.ui.stowBarInitially = true; */
+
+// Spara startpassagen vid spelets start
+var startPassage = null;
+$(document).on(':storyready', function () {
+    startPassage = passage(); // lagrar namnet på första passagen
+
+    // Ta bort sidopanelen
+    if (typeof UIBar !== 'undefined') {
+        UIBar.destroy();
+    }
+
+    // Nollställ marginalerna så att inget glapp blir kvar
+    $('#story').css({
+        'margin-left': '0',
+        'margin-right': '0'
+    });
+});
+
+// Visa tillbaka-knappen vid varje passagerender
+$(document).on(':passagerender', function () {
+    // Ta bort eventuell gammal knapp
+    $('#back-button').remove();
+
+    // Visa bara om vi inte är på startsidan och det finns historik
+    if (History.length > 1 && passage() !== startPassage) {
+        $('body').append(`
+            <div id="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </div>
+        `);
+
+        // Klickhändelse
+        $('#back-button').on('click', function () {
+            // Stäng alla möjliga popups/modaler
+            if (typeof Dialog !== 'undefined') Dialog.close();
+            if (typeof UI !== 'undefined' && UI.alerts) UI.alerts.hide();
+            $('.popup, .dialog, .alert').remove(); // anpassa klasser efter dina popups
+
+            // Backa ett steg i historiken
+            Engine.backward();
+        });
+    }
+});
+
+$(document).on('click', '#openPopup', function() {
+  $('#customPopup').show();
+});
+
+$(document).on('click', '#popupSubmit', function() {
+  const answer = $('#popupInput').val();
+  if(answer) {
+    State.variables.input = answer;
+    $('#svar1').html('Du svarar: – ' + answer);
+  }
+  $('#customPopup').hide();
+});
+</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
 
 
 &lt;div class=&quot;rubrik&quot;&gt;Kims mystifika upptäckter&lt;/div&gt;
-&lt;div class=&quot;rubrik2&quot;&gt;Skogens hemligheter
+&lt;div class=&quot;rubrik2&quot;&gt;Skogens hemligheter TEST!
 Kapitel 1&lt;/div&gt;
 &lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!|Välkommen in]]
 
@@ -790,15 +885,30 @@ En bit bort börjar ni bli trötta på äventyr, men då ringer skolklockan – 
 
 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen|Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Ekorrens hem" tags="" position="225,1775" size="100,100">&lt;&lt;set $garbage += 1&gt;&gt;&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/squirrelhome.jpg&quot;&gt;
-
 När ni kommer fram till en stor ek, stannar Sally och klättrar upp för att sedan försvinna in i en håla i stammen.
-
 – $name, vad tror du hon använder för att bygga sitt hem? frågar Kim.
+&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Berätta&quot;&gt;&gt;
+&lt;&lt;script&gt;&gt;
+            const popup = document.createElement(&quot;div&quot;);
+            popup.className = &quot;custom-popup&quot;;
+            popup.innerHTML = `
+                &lt;p&gt;Vad tror du?&lt;/p&gt;
+                &lt;input type=&quot;text&quot; id=&quot;customInput&quot;&gt;
+                &lt;button class=&quot;gamebutton&quot; id=&quot;submitAnswer&quot;&gt;Svara&lt;/button&gt;
+            `;
+            document.body.appendChild(popup);
 
-&lt;&lt;set $input = &quot;&quot;&gt;&gt;&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Berätta&quot;&gt;&gt;&lt;&lt;set $input = prompt(&quot;Vad tror du?&quot;, &quot;&quot;)&gt;&gt;&lt;&lt;replace &quot;#svar1&quot;&gt;&gt;&lt;&lt;if $input != &quot;&quot;&gt;&gt;Du svarar: &#39;&#39;– $input&#39;&#39;&lt;&lt;/if&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;svar1&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;rubrik3&quot;&gt;&lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;&lt;&lt;replace &quot;#more1&quot;&gt;&gt;
-Strax kikar Sally ut och fnissar:
-– Ett hem blir aldrig riktigt klart! Man måste städa ofta så det är varmt och mysigt. Jag rensar bort gamla nötter och löv och stoppar in mjukt gräs i väggarna.
+            document.getElementById(&quot;submitAnswer&quot;).onclick = function() {
+                const answer = document.getElementById(&quot;customInput&quot;).value.trim();
+                if(answer !== &quot;&quot;) {
+                    document.getElementById(&quot;svar1&quot;).innerHTML = &quot;Du svarar:  – &quot; + answer + &quot;&quot;;
+                }
+                document.body.removeChild(popup);
+            };
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+&lt;span id=&quot;svar1&quot;&gt;&lt;/span&gt;&lt;div class=&quot;rubrik3&quot;&gt;&lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;&lt;&lt;replace &quot;#more1&quot;&gt;&gt;Strax kikar Sally ut och fnissar:
+– Ett hem blir aldrig riktigt klart! Man måste städa ofta så det är varmt och mysigt. Jag rensar bort gamla nötter och löv och stoppar in mjukt gräs i väggarna. 
 
 Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en gammal fågelfjäder. Kim frågar:
 – Men var hittar du allt det där?
@@ -809,15 +919,7 @@ Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en g
 
 – Det är så jag håller mig varm! Ingen vill frysa på vintern. Men innan ni går har jag en till utmaning. Kan ni lista ut vilken färg det sista hjärtat har?
 ❤️ 💛 💙 ❤️ 💛 💙 ❤️ 💛 ❓
-&lt;&lt;set $input = &quot;&quot;&gt;&gt;
-&lt;input type=&quot;text&quot; id=&quot;input&quot; placeholder=&quot;Skriv ditt svar här...&quot;&gt;&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Gissa&quot;&gt;&gt;&lt;&lt;set $input = document.getElementById(&quot;input&quot;).value.toLowerCase().trim()&gt;&gt;&lt;&lt;if $input == &quot;blå&quot;&gt;&gt;&lt;&lt;set $point += 1&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;&#39;&#39;Rätt svar! ⭐️&#39;&#39;&lt;&lt;/replace&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;Försök igen..&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;svar2&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-&lt;div class=&quot;rubrik3&quot;&gt;&lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;&lt;&lt;replace &quot;#more2&quot;&gt;&gt;
-– Den här &#39;&#39;blå&#39;&#39;! ropar Sally.
-
-Nu börjar det bli dags att åka tillbaka till skolan. Ni säger hejdå till Sally, hon vinkar glatt med svansen och kilar tillbaka in i sitt bo. Skolklockan ringer.
-
-&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;Busken]]&lt;/div&gt;&lt;&lt;/replace&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;more1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;more2&quot;&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="775,1525" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/cave.jpg&quot;&gt;
+&lt;&lt;set $input = &quot;&quot;&gt;&gt;&lt;input type=&quot;text&quot; id=&quot;input&quot; placeholder=&quot;Skriv ditt svar här...&quot;&gt;&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Gissa&quot;&gt;&gt;&lt;&lt;set $input = document.getElementById(&quot;input&quot;).value.toLowerCase().trim()&gt;&gt;&lt;&lt;if $input == &quot;blå&quot;&gt;&gt;&lt;&lt;set $point += 1&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;&#39;&#39;Rätt svar! ⭐️&#39;&#39;&lt;&lt;/replace&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;Försök igen..&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;svar2&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;Busken]]&lt;/div&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;more1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;more2&quot;&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="775,1525" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/cave.jpg&quot;&gt;
 
 Efter en stunds promenad når ni äntligen fram till berget, där stannar ni och betraktar det. Ni kan se en mörk öppning i berget, en grotta. Den ser inte ut att vara särskilt stor, men den ger ett lockande intryck, som om den väntar på att bli utforskad.  Ni stannar vid ingången och ser på den mörka öppningen. Kim rynkar pannan och säger: 
 – Det känns som något kan bo där inne. $namn, vad tror du bor i grottan?
