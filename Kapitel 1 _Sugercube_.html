@@ -272,7 +272,6 @@ input[type="text"] {
   color: #3e2f1c;                  /* mörkbrun text */
   transition: all 0.3s ease;
   box-shadow: 0 0 5px rgba(125, 80, 20, 0.2);
-  font-family: "Georgia", serif;
 }
 
 input[type="text"]:focus {
@@ -300,7 +299,7 @@ input[type="text"]:hover {
   margin: 0;
 }
 
-#passages button, .gamebutton {
+#passages button {
   font-weight: bold;
   padding: 5px 10px;
   border: none;
@@ -312,12 +311,12 @@ input[type="text"]:hover {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
 }
 
-#passages button:hover, .gamebutton:hover {
+#passages button:hover {
   background: linear-gradient(145deg, #da9, #b75);
   transform: scale(1.05);
 }
 
-#passages button:active, .gamebutton {
+#passages button:active {
   transform: scale(0.98);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
@@ -334,7 +333,6 @@ input[type="text"]:hover {
   border-radius: 30px;
   box-shadow: 2px 2px 6px rgba(122, 78, 28, 0.4);
   text-decoration: none;
-  font-family: "Georgia", serif;
   transition: all 0.4s ease-out;
 }
 
@@ -378,27 +376,57 @@ input[type="text"]:hover {
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }
 
-.custom-popup {
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    background-color: #2c2c2c;
-    color: #f8f8f8;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #000;
-    z-index: 1000;
-    
-  	font-size: 1.5rem;
-    
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
 }
+
+/* Själva popup-rutan */
+.custom-popup {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgb(235, 229, 194); 
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
+/* Inputfält i popup */
 .custom-popup input {
-    width: 100%;
-    padding: 5px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: none;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Gör popup-knappar lika som dina vanliga knappar */
+.custom-popup button {
+  font-weight: bold;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #c96, #a54);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+.custom-popup button:hover {
+  background: linear-gradient(145deg, #da9, #b75);
+  transform: scale(1.05);
+}
+
+.custom-popup button:active {
+  transform: scale(0.98);
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Config.ui.stowBarInitially = true; */
 
 // Spara startpassagen vid spelets start
@@ -446,19 +474,67 @@ $(document).on(':passagerender', function () {
     }
 });
 
-$(document).on('click', '#openPopup', function() {
-  $('#customPopup').show();
-});
 
-$(document).on('click', '#popupSubmit', function() {
-  const answer = $('#popupInput').val();
-  if(answer) {
-    State.variables.input = answer;
-    $('#svar1').html('Du svarar: – ' + answer);
-  }
-  $('#customPopup').hide();
-});
-</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
+function showPopup({question, callback}) {
+    // Ta bort eventuell tidigare popup
+    $(".custom-global-popup").remove();
+
+    // Skapa popup med overlay
+    const popupHtml = `
+        <div class="popup-overlay custom-global-popup">
+            <div class="custom-popup">
+                <p>${question}</p>
+                <input type="text" id="popupInput">
+                <button id="popupSubmit">Svara</button>
+            </div>
+        </div>
+    `;
+    $("body").append(popupHtml);
+
+    // Knapp-händelse
+    $("#popupSubmit").off("click").on("click", function() {
+        const answer = $("#popupInput").val().trim();
+        if(answer !== "" && typeof callback === "function") {
+            callback(answer);
+        }
+        $(".custom-global-popup").remove();
+    });
+}
+
+// ---------- PASSAGEDISPLAY ----------
+$(document).on(':passagedisplay', function(event) {
+    // Exempel: Namn-popup i startpassagen
+    if (["Välkommen in"].includes(event.passage.title)) {
+        showPopup({
+            question: "Vad heter du?",
+            callback: function(answer) {
+                State.variables.namn = answer;
+            }
+        });
+    }
+
+    // Exempel: Ekorren-passagen
+    if (["Ekorrens hem"].includes(event.passage.title)) {
+        $(".knapprad button").off("click").on("click", function() {
+            showPopup({
+                question: "Vad tror du?",
+                callback: function(answer) {
+                    $("#svar1").html("Du svarar: – " + answer);
+                }
+            });
+        });
+    }
+
+    // Här kan du lägga till fler passager med egna frågor
+    if (["Gå in i klassrummet"].includes(event.passage.title)) {
+        showPopup({
+            question: "Vad finns i ett klassrum?",
+            callback: function(answer) {
+                State.variables.namn = answer;
+            }
+        });
+    }
+});</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
 
 
 &lt;div class=&quot;rubrik&quot;&gt;Kims mystifika upptäckter&lt;/div&gt;
@@ -466,24 +542,25 @@ $(document).on('click', '#popupSubmit', function() {
 Kapitel 1&lt;/div&gt;
 &lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!|Välkommen in]]
 
-&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="750,600" size="100,100">&lt;&lt;set $rum = prompt(&quot;Vad finns i ett klassrum?&quot;, &quot;&quot;)&gt;&gt;&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b40c800b88c18dfecc91ba9b1355790c961432b8/autum/classroom.jpg&quot;&gt;
+&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Gå in i klassrummet" tags="" position="750,600" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/b40c800b88c18dfecc91ba9b1355790c961432b8/autum/classroom.jpg&quot;&gt;
 
 När du går in i klassrummet ser du &#39;&#39;$rum&#39;&#39;. Läraren Birgitta hjälper barnen att hitta sina platser, medan föräldrarna slår sig ner längst bak. Hon hälsar alla välkomna och ber var och en att berätta lite om sig själv. När det blir din tur fastnar orden. Du känner dig nervös. Bredvid dig sitter Kim, som du träffade ute. Kim pratar lugnt och självsäkert, helt utan att verka nervös.
 
 Längst fram visar Birgitta bilder på dagens aktiviteter. Hon berättar att det snart är rast och att föräldrarna då ska gå. Ett sting av oro kryper fram i magen, men du kramar mamma innan du följer med klassen ut.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="750,450" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/corridor.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;nameOverlay&quot; class=&quot;popup-overlay&quot; style=&quot;display:none;&quot;&gt;&lt;div class=&quot;custom-popup&quot;&gt;&lt;p&gt;Vad finns i ett klassrum?&lt;/p&gt;&lt;input type=&quot;text&quot; id=&quot;nameInput&quot;&gt;
+&lt;button id=&quot;nameSubmit&quot;&gt;OK&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="750,450" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/corridor.jpg&quot;&gt;
 
 Du kliver in i en lång korridor full av barn och tar nyfiket in allt omkring dig. Mamma går vid din sida fram till klassrummet. Läraren möter dig med ett leende och visar var jacka och väska ska hängas. Eftersom det är din första dag får mamma stanna en stund.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="750,325" size="100,100">&lt;&lt;set $namn = prompt(&quot;Vad heter du?&quot;, &quot;&quot;)&gt;&gt;&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/school.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå in i klassrummet]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Välkommen in" tags="" position="750,325" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/school.jpg&quot;&gt;
 
 Du står framför den stora skolbyggnaden, magen pirrar av nervositet. Det är din första dag i förskoleklass, och du håller mammas hand. I väskan ligger ditt älskade gosedjur som ger trygghet. 
 
-På skolgården leker barn eller klamrar sig fast vid sina föräldrar. En boll rullar till dina fötter – ett barn springer leende fram. Någon ropar &quot;Kim&quot; och ni vinkar innan barnet springer tillbaka. Klockan ringer, du och mamma går mot skolans stora dörr.
-
+På skolgården leker barn eller klamrar sig fast vid sina föräldrar. En boll rullar till dina fötter – ett barn springer leende fram. Någon ropar &quot;Kim&quot; och ni vinkar innan barnet springer tillbaka. Klockan ringer, du och mamma går mot skolans stora dörr. 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]&lt;/div&gt;
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... genväg för dig som redan läst inledningen...  [[Genväg|Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot; alt=&quot;Skolgård med barn som leker&quot;&gt;
+&lt;div class=&quot;rubrik4&quot;&gt;– Psst... genväg för dig som redan läst inledningen...  [[Genväg|Portalen]]&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;nameOverlay&quot; class=&quot;popup-overlay&quot; style=&quot;display:none;&quot;&gt;&lt;div class=&quot;custom-popup&quot;&gt;&lt;p&gt;Vad heter du?&lt;/p&gt;&lt;input type=&quot;text&quot; id=&quot;nameInput&quot;&gt;
+&lt;button id=&quot;nameSubmit&quot;&gt;OK&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot; alt=&quot;Skolgård med barn som leker&quot;&gt;
 
 Solen skiner och skolgården sjuder av liv. Överallt leker barn. En grupp ska just leka kurragömma. Du vill vara med, men vågar inte riktigt. Då kommer Kim som tar din hand och drar dig med till barnen som ska leka kurragömma.
 
@@ -884,41 +961,37 @@ Ni vinkar hejdå till Bengt och fortsätter gå.
 En bit bort börjar ni bli trötta på äventyr, men då ringer skolklockan – dags att åka tillbaka till skolan!
 
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen|Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Ekorrens hem" tags="" position="225,1775" size="100,100">&lt;&lt;set $garbage += 1&gt;&gt;&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/squirrelhome.jpg&quot;&gt;
-När ni kommer fram till en stor ek, stannar Sally och klättrar upp för att sedan försvinna in i en håla i stammen.
-– $name, vad tror du hon använder för att bygga sitt hem? frågar Kim.
-&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Berätta&quot;&gt;&gt;
-&lt;&lt;script&gt;&gt;
-            const popup = document.createElement(&quot;div&quot;);
-            popup.className = &quot;custom-popup&quot;;
-            popup.innerHTML = `
-                &lt;p&gt;Vad tror du?&lt;/p&gt;
-                &lt;input type=&quot;text&quot; id=&quot;customInput&quot;&gt;
-                &lt;button class=&quot;gamebutton&quot; id=&quot;submitAnswer&quot;&gt;Svara&lt;/button&gt;
-            `;
-            document.body.appendChild(popup);
+&lt;div class=&quot;rubrik3&quot;&gt;[[Portalen|Busken]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Ekorrens hem" tags="" position="225,1775" size="100,100">&lt;div class=&quot;box container&quot;&gt;
+  &lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/5f92c9a0cf6c39089ec35080d7fe36f7674af65f/autum/squirrelhome.jpg&quot;&gt;
 
-            document.getElementById(&quot;submitAnswer&quot;).onclick = function() {
-                const answer = document.getElementById(&quot;customInput&quot;).value.trim();
-                if(answer !== &quot;&quot;) {
-                    document.getElementById(&quot;svar1&quot;).innerHTML = &quot;Du svarar:  – &quot; + answer + &quot;&quot;;
-                }
-                document.body.removeChild(popup);
-            };
-&lt;&lt;/script&gt;&gt;
-&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;span id=&quot;svar1&quot;&gt;&lt;/span&gt;&lt;div class=&quot;rubrik3&quot;&gt;&lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;&lt;&lt;replace &quot;#more1&quot;&gt;&gt;Strax kikar Sally ut och fnissar:
-– Ett hem blir aldrig riktigt klart! Man måste städa ofta så det är varmt och mysigt. Jag rensar bort gamla nötter och löv och stoppar in mjukt gräs i väggarna. 
+  När ni kommer fram till en stor ek, stannar Sally och klättrar upp för att sedan försvinna in i en håla i stammen.  
+  – $name, vad tror du hon använder för att bygga sitt hem? frågar Kim.
 
-Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en gammal fågelfjäder. Kim frågar:
-– Men var hittar du allt det där?
+  &lt;div class=&quot;knapprad&quot;&gt;
+    &lt;&lt;button &quot;Berätta&quot;&gt;&gt;
+      &lt;&lt;script&gt;&gt;
+        // Popupen hanteras i Story JS via :passagedisplay
+        // När knappen klickas visas popupen automatiskt
+      &lt;&lt;/script&gt;&gt;
+    &lt;&lt;/button&gt;&gt;
+  &lt;/div&gt;
 
-– Skogen är full av saker! Jag har ett hemligt förråd med gamla löv, frön och bär. Men inget slår torra barkbitar från ett riktigt bra träd! Men det här är &lt;b&gt;&lt;span class=&quot;wave&quot;&gt;&lt;span style=&quot;--i:0&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;--i:1&quot;&gt;k&lt;/span&gt;&lt;span style=&quot;--i:2&quot;&gt;r&lt;/span&gt;&lt;span style=&quot;--i:3&quot;&gt;ä&lt;/span&gt;&lt;span style=&quot;--i:4&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;, säger Sally och visar upp en gammal plastpåse. Den får ni gärna ta till skolans soptunna. Den vill inte jag ha.
+  &lt;span id=&quot;svar1&quot;&gt;&lt;/span&gt;
 
-– Det kan vi göra, säger Kim och tar emot plasten. Du är en riktig samlare.
+  &lt;div class=&quot;rubrik3&quot;&gt;
+    &lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;
+      &lt;&lt;replace &quot;#more1&quot;&gt;&gt;
+        Strax kikar Sally ut och fnissar:
+        – Ett hem blir aldrig riktigt klart! Man måste städa ofta så det är varmt och mysigt. Jag rensar bort gamla nötter och löv och stoppar in mjukt gräs i väggarna.  
+        Ni kikar in och ser en samling löv, små kvistar, nötter och till och med en gammal fågelfjäder. Kim frågar:  
+        – Men var hittar du allt det där?
 
-– Det är så jag håller mig varm! Ingen vill frysa på vintern. Men innan ni går har jag en till utmaning. Kan ni lista ut vilken färg det sista hjärtat har?
-❤️ 💛 💙 ❤️ 💛 💙 ❤️ 💛 ❓
+        – Skogen är full av saker! Jag har ett hemligt förråd med gamla löv, frön och bär. Men inget slår torra barkbitar från ett riktigt bra träd! Men det här är &lt;b&gt;&lt;span class=&quot;wave&quot;&gt;&lt;span style=&quot;--i:0&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;--i:1&quot;&gt;k&lt;/span&gt;&lt;span style=&quot;--i:2&quot;&gt;r&lt;/span&gt;&lt;span style=&quot;--i:3&quot;&gt;ä&lt;/span&gt;&lt;span style=&quot;--i:4&quot;&gt;p&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;, säger Sally och visar upp en gammal plastpåse. Den får ni gärna ta till skolans soptunna. Den vill inte jag ha.
+
+        – Det kan vi göra, säger Kim och tar emot plasten. Du är en riktig samlare.
+
+        – Det är så jag håller mig varm! Ingen vill frysa på vintern. Men innan ni går har jag en till utmaning. Kan ni lista ut vilken färg det sista hjärtat har?  
+        ❤️ 💛 💙 ❤️ 💛 💙 ❤️ 💛 ❓
 &lt;&lt;set $input = &quot;&quot;&gt;&gt; &lt;input type=&quot;text&quot; id=&quot;input&quot; placeholder=&quot;Skriv ditt svar här...&quot;&gt;&lt;div class=&quot;knapprad&quot;&gt;&lt;&lt;button &quot;Gissa&quot;&gt;&gt;&lt;&lt;set $input = document.getElementById(&quot;input&quot;).value.toLowerCase().trim()&gt;&gt;&lt;&lt;if $input == &quot;blå&quot;&gt;&gt;&lt;&lt;set $point += 1&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;&#39;&#39;Rätt svar! ⭐️&#39;&#39;&lt;&lt;/replace&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;replace &quot;#svar2&quot;&gt;&gt;Försök igen..&lt;&lt;/replace&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;svar2&quot;&gt;&lt;/span&gt;&lt;/div&gt; &lt;div class=&quot;rubrik3&quot;&gt;&lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;&lt;&lt;replace &quot;#more2&quot;&gt;&gt; – Den här &#39;&#39;blå&#39;&#39;! ropar Sally. Nu börjar det bli dags att åka tillbaka till skolan. Ni säger hejdå till Sally, hon vinkar glatt med svansen och kilar tillbaka in i sitt bo. Skolklockan ringer. &lt;div class=&quot;rubrik3&quot;&gt;[[Portalen-&gt;Busken]]&lt;/div&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;div id=&quot;more1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;more2&quot;&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Grottan" tags="" position="775,1525" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/c5238994926a6d63fe17416a2a89a101ace40914/autum/cave.jpg&quot;&gt;
 
 Efter en stunds promenad når ni äntligen fram till berget, där stannar ni och betraktar det. Ni kan se en mörk öppning i berget, en grotta. Den ser inte ut att vara särskilt stor, men den ger ett lockande intryck, som om den väntar på att bli utforskad.  Ni stannar vid ingången och ser på den mörka öppningen. Kim rynkar pannan och säger: 
