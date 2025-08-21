@@ -427,31 +427,25 @@ input[type="text"]:hover {
 .custom-popup button:active {
   transform: scale(0.98);
   box-shadow: inset 2px 2px 5px rgba(0,0,0,0.3);
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Config.ui.stowBarInitially = true; */
-
-// Spara startpassagen vid spelets start
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Spara startpassagen
 var startPassage = null;
-$(document).on(':storyready', function () {
-    startPassage = passage(); // lagrar namnet på första passagen
+var isBackNavigation = false;
 
-    // Ta bort sidopanelen
+$(document).on(':storyready', function () {
+    startPassage = passage();
+
+    // Ta bort sidopanelen om den finns
     if (typeof UIBar !== 'undefined') {
         UIBar.destroy();
     }
 
-    // Nollställ marginalerna så att inget glapp blir kvar
-    $('#story').css({
-        'margin-left': '0',
-        'margin-right': '0'
-    });
+    $('#story').css({'margin-left': '0', 'margin-right': '0'});
 });
 
-// Visa tillbaka-knappen vid varje passagerender
+// ---------- BAKÅTKNAPP ----------
 $(document).on(':passagerender', function () {
-    // Ta bort eventuell gammal knapp
     $('#back-button').remove();
 
-    // Visa bara om vi inte är på startsidan och det finns historik
     if (History.length > 1 && passage() !== startPassage) {
         $('body').append(`
             <div id="back-button">
@@ -461,25 +455,19 @@ $(document).on(':passagerender', function () {
             </div>
         `);
 
-        // Klickhändelse
         $('#back-button').on('click', function () {
-            // Stäng alla möjliga popups/modaler
-            if (typeof Dialog !== 'undefined') Dialog.close();
-            if (typeof UI !== 'undefined' && UI.alerts) UI.alerts.hide();
-            $('.popup, .dialog, .alert').remove(); // anpassa klasser efter dina popups
-
-            // Backa ett steg i historiken
+            isBackNavigation = true; // flagga för bakåt
+            $(".custom-global-popup").remove(); // stäng popup
             Engine.backward();
         });
     }
 });
 
-
+// ---------- SHOW POPUP ----------
 function showPopup({question, callback}) {
     // Ta bort eventuell tidigare popup
     $(".custom-global-popup").remove();
 
-    // Skapa popup med overlay
     const popupHtml = `
         <div class="popup-overlay custom-global-popup">
             <div class="custom-popup">
@@ -491,54 +479,50 @@ function showPopup({question, callback}) {
     `;
     $("body").append(popupHtml);
 
-    // Knapp-händelse
     $("#popupSubmit").off("click").on("click", function() {
         const answer = $("#popupInput").val().trim();
-        if(answer !== "" && typeof callback === "function") {
-            callback(answer);
-        }
+        if(typeof callback === "function") callback(answer);
         $(".custom-global-popup").remove();
     });
 }
 
 // ---------- PASSAGEDISPLAY ----------
 $(document).on(':passagedisplay', function(event) {
-    // Exempel: Namn-popup i startpassagen
-    if (["Välkommen in"].includes(event.passage.title)) {
+    // Skippa popup vid bakåt-navigering
+    if (isBackNavigation) {
+        isBackNavigation = false;
+        return;
+    }
+
+    // Exempel: Startpassagen
+    if (["Välkommen in"].includes(event.passage.title) && !State.variables.namn) {
         showPopup({
             question: "Vad heter du?",
             callback: function(answer) {
                 State.variables.namn = answer;
+                Engine.play(passage()); // uppdatera passagen
             }
         });
     }
 
-    // Exempel: Ekorren-passagen
-    if (["Ekorrens hem"].includes(event.passage.title)) {
-        $(".knapprad button").off("click").on("click", function() {
-            showPopup({
-                question: "Vad tror du?",
-                callback: function(answer) {
-                    $("#svar1").html("Du svarar: – " + answer);
-                }
-            });
-        });
-    }
-
-    // Här kan du lägga till fler passager med egna frågor
-    if (["Gå in i klassrummet"].includes(event.passage.title)) {
+    // Exempel: Klassrumspassagen
+    if (["Gå in i klassrummet"].includes(event.passage.title) && !State.variables.rum) {
         showPopup({
             question: "Vad finns i ett klassrum?",
             callback: function(answer) {
-                State.variables.namn = answer;
+                State.variables.rum = answer;
+                Engine.play(passage());
             }
         });
     }
-});</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
+
+    // Lägg till fler passager här
+});
+</script><tw-tag name="data" color="red"></tw-tag><tw-passagedata pid="1" name="Start" tags="firstpage" position="750,175" size="100,100">&lt;div class=&quot;box container2&quot;&gt;
 
 
 &lt;div class=&quot;rubrik&quot;&gt;Kims mystifika upptäckter&lt;/div&gt;
-&lt;div class=&quot;rubrik2&quot;&gt;Skogens hemligheter TEST!
+&lt;div class=&quot;rubrik2&quot;&gt;Skogens hemligheter
 Kapitel 1&lt;/div&gt;
 &lt;div class=&quot;rubrik3&quot;&gt;[[Välkommen in i berättelsen!|Välkommen in]]
 
@@ -548,8 +532,7 @@ När du går in i klassrummet ser du &#39;&#39;$rum&#39;&#39;. Läraren Birgitta
 
 Längst fram visar Birgitta bilder på dagens aktiviteter. Hon berättar att det snart är rast och att föräldrarna då ska gå. Ett sting av oro kryper fram i magen, men du kramar mamma innan du följer med klassen ut.
 
-&lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;nameOverlay&quot; class=&quot;popup-overlay&quot; style=&quot;display:none;&quot;&gt;&lt;div class=&quot;custom-popup&quot;&gt;&lt;p&gt;Vad finns i ett klassrum?&lt;/p&gt;&lt;input type=&quot;text&quot; id=&quot;nameInput&quot;&gt;
-&lt;button id=&quot;nameSubmit&quot;&gt;OK&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="750,450" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/corridor.jpg&quot;&gt;
+&lt;div class=&quot;rubrik3&quot;&gt;[[Gå ut på skolgården]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Gå in genom dörren" tags="" position="750,450" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/74f67f8a7022c8d5e30a11d0d89d46f64b4ee6d6/autum/corridor.jpg&quot;&gt;
 
 Du kliver in i en lång korridor full av barn och tar nyfiket in allt omkring dig. Mamma går vid din sida fram till klassrummet. Läraren möter dig med ett leende och visar var jacka och väska ska hängas. Eftersom det är din första dag får mamma stanna en stund.
 
@@ -559,8 +542,7 @@ Du står framför den stora skolbyggnaden, magen pirrar av nervositet. Det är d
 
 På skolgården leker barn eller klamrar sig fast vid sina föräldrar. En boll rullar till dina fötter – ett barn springer leende fram. Någon ropar &quot;Kim&quot; och ni vinkar innan barnet springer tillbaka. Klockan ringer, du och mamma går mot skolans stora dörr. 
 &lt;div class=&quot;rubrik3&quot;&gt;[[Gå in genom dörren]]&lt;/div&gt;
-&lt;div class=&quot;rubrik4&quot;&gt;– Psst... genväg för dig som redan läst inledningen...  [[Genväg|Portalen]]&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;nameOverlay&quot; class=&quot;popup-overlay&quot; style=&quot;display:none;&quot;&gt;&lt;div class=&quot;custom-popup&quot;&gt;&lt;p&gt;Vad heter du?&lt;/p&gt;&lt;input type=&quot;text&quot; id=&quot;nameInput&quot;&gt;
-&lt;button id=&quot;nameSubmit&quot;&gt;OK&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot; alt=&quot;Skolgård med barn som leker&quot;&gt;
+&lt;div class=&quot;rubrik4&quot;&gt;– Psst... genväg för dig som redan läst inledningen...  [[Genväg|Portalen]]&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Gå ut på skolgården" tags="" position="750,750" size="100,100">&lt;div class=&quot;box container&quot;&gt;&lt;img class=&quot;pic&quot; src=&quot;https://raw.githubusercontent.com/sbjorkemyr/f-klass/91207709399517af5849940d637d9d7f0472cdb5/autum/schoolyard.jpg&quot; alt=&quot;Skolgård med barn som leker&quot;&gt;
 
 Solen skiner och skolgården sjuder av liv. Överallt leker barn. En grupp ska just leka kurragömma. Du vill vara med, men vågar inte riktigt. Då kommer Kim som tar din hand och drar dig med till barnen som ska leka kurragömma.
 
