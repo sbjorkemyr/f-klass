@@ -464,10 +464,11 @@ $(document).on(':passagerender', function () {
 });
 
 // ---------- SHOW POPUP ----------
-function showPopup({question, callback}) {
+window.showPopup = function({question, callback}) {
     // Ta bort eventuell tidigare popup
     $(".custom-global-popup").remove();
 
+    // Skapa popup med overlay
     const popupHtml = `
         <div class="popup-overlay custom-global-popup">
             <div class="custom-popup">
@@ -479,13 +480,13 @@ function showPopup({question, callback}) {
     `;
     $("body").append(popupHtml);
 
+    // Knapp-händelse
     $("#popupSubmit").off("click").on("click", function() {
         const answer = $("#popupInput").val().trim();
-        if(typeof callback === "function") callback(answer);
+        if (typeof callback === "function") callback(answer);
         $(".custom-global-popup").remove();
     });
-}
-
+};
 // ---------- PASSAGEDISPLAY ----------
 $(document).on(':passagedisplay', function(event) {
     // Skippa popup vid bakåt-navigering
@@ -949,16 +950,18 @@ En bit bort börjar ni bli trötta på äventyr, men då ringer skolklockan – 
   När ni kommer fram till en stor ek, stannar Sally och klättrar upp för att sedan försvinna in i en håla i stammen.  
   – $name, vad tror du hon använder för att bygga sitt hem? frågar Kim.
 
-  &lt;div class=&quot;knapprad&quot;&gt;
-    &lt;&lt;button &quot;Berätta&quot;&gt;&gt;
-      &lt;&lt;script&gt;&gt;
-        // Popupen hanteras i Story JS via :passagedisplay
-        // När knappen klickas visas popupen automatiskt
-      &lt;&lt;/script&gt;&gt;
-    &lt;&lt;/button&gt;&gt;
-  &lt;/div&gt;
-
-  &lt;span id=&quot;svar1&quot;&gt;&lt;/span&gt;
+&lt;div class=&quot;knapprad&quot;&gt;
+  &lt;&lt;button &quot;Berätta&quot;&gt;&gt;
+    &lt;&lt;script&gt;&gt;
+      showPopup({
+        question: &quot;Vad tror du hon använder för att bygga sitt hem?&quot;,
+        callback: function(answer) {
+          $(&quot;#svar1&quot;).html(&quot;Du svarar: – &quot; + answer);
+        }
+      });
+    &lt;&lt;/script&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
 
   &lt;div class=&quot;rubrik3&quot;&gt;
     &lt;&lt;link &quot;Fortsätt&quot;&gt;&gt;
